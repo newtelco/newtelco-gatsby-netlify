@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
-import { Link } from 'gatsby';
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import { Link } from 'gatsby'
 
 export const LanguageWrapper = styled.ul`
   display: flex;
@@ -13,15 +13,15 @@ export const LanguageWrapper = styled.ul`
     top: 0;
     right: 0;
   `}
-`;
+`
 
 export const LanguageItem = styled.li`
   margin-left: var(--space-sm);
-`;
+`
 
 export const LanguageLink = styled(Link)`
   display: inline-block;
   margin-right: 0.5rem;
   color: var(--grayColor);
   font-size: 1.4rem;
-`;
+`

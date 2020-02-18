@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import TitlePage from '../components/TitlePage';
-import SEO from '../components/seo';
+import React from 'react'
+import { graphql } from 'gatsby'
+import TitlePage from '../components/TitlePage'
+import SEO from '../components/seo'
 
-import * as S from '../components/Content/styled';
+import * as S from '../components/Content/styled'
 
 const Post = props => {
-  const post = props.data.markdownRemark;
+  const post = props.data.markdownRemark
 
   return (
     <>
@@ -20,8 +20,8 @@ const Post = props => {
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </S.Content>
     </>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query Post($locale: String!, $title: String!) {
@@ -37,6 +37,6 @@ export const query = graphql`
       html
     }
   }
-`;
+`
 
-export default Post;
+export default Post

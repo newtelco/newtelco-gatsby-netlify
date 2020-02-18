@@ -1,8 +1,8 @@
-import React from 'react';
-import useTranslations from '../useTranslations';
-import SocialLinks from '../SocialLinks';
+import React from 'react'
+import useTranslations from '../useTranslations'
+import SocialLinks from '../SocialLinks'
 
-import * as S from './styled';
+import * as S from './styled'
 
 const Footer = () => {
   const {
@@ -10,7 +10,7 @@ const Footer = () => {
     seeMorePWA,
     maintainedBy,
     contributeMessage,
-  } = useTranslations();
+  } = useTranslations()
 
   return (
     <S.FooterWrapper>
@@ -28,10 +28,7 @@ const Footer = () => {
         </p>
         <p>
           {maintainedBy}{' '}
-          <a
-            href="https://twitter.com/_diogorodrigues"
-            target="_blank"
-          >
+          <a href="https://twitter.com/_diogorodrigues" target="_blank">
             @_diogorodrigues
           </a>
           . {contributeMessage}{' '}
@@ -45,7 +42,7 @@ const Footer = () => {
         </p>
       </S.FooterContainer>
     </S.FooterWrapper>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

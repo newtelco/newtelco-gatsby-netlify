@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Content = styled.section`
   margin: auto;
@@ -423,4 +423,4 @@ export const Content = styled.section`
       border: none;
     }
   }
-`;
+`

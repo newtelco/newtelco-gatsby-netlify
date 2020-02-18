@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const ListWrapper = styled.section`
   margin-bottom: 20px;
@@ -11,4 +11,4 @@ export const ListWrapper = styled.section`
   ${media.greaterThan('large')`
         grid-template-columns: repeat(auto-fit, minmax(250px, calc(50% - 10px)));
     `}
-`;
+`

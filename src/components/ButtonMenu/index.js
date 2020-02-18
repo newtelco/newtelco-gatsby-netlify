@@ -1,5 +1,5 @@
-import React from 'react';
-import * as S from './styled';
+import React from 'react'
+import * as S from './styled'
 
 export const ButtonMenu = props => {
   return (
@@ -9,7 +9,7 @@ export const ButtonMenu = props => {
     >
       <span></span>
     </S.ButtonHamburger>
-  );
-};
+  )
+}
 
-export default ButtonMenu;
+export default ButtonMenu

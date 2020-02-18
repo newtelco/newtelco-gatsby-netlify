@@ -78,11 +78,11 @@ Alt-H2
 ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
 ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
--   Unordered list can use asterisks
+- Unordered list can use asterisks
 
-*   Or minuses
+* Or minuses
 
--   Or pluses
+- Or pluses
 
 ## Links
 

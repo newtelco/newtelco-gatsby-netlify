@@ -1,0 +1,21 @@
+{
+    "home": "Home",
+
+    "hello": "Gruess Di!",
+    "subline": "Internationalle Gatsby Seite fuer Newtelco - Dev Umgebung",
+    "latestPosts": "Letzte Posts",
+    "category": "Kategorie",
+    "allPosts": "Alle Posts",
+    "toRead": "Zum Lesen",
+
+    "next": "Next",
+    "prev": "Zurueck",
+    "of": "de",
+
+    "button": "Knopf",
+
+    "aboutProject": "Newtelco Test Projekt mit i18n und Netlify CMS",
+    "seeMorePWA": "Dies ist ein PWA - Zum Offline Lesen",
+    "maintainedBy": "Maintained von ndomino",
+    "contributeMessage": "Bitte contribute!"
+}

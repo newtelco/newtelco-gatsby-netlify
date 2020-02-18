@@ -1,12 +1,12 @@
-import React from 'react';
-import useMenu from '../useMenu';
-import useTranslations from '../useTranslations';
+import React from 'react'
+import useMenu from '../useMenu'
+import useTranslations from '../useTranslations'
 
-import * as S from './styled';
+import * as S from './styled'
 
 const Navigation = ({ isActive, handleToggleMenu }) => {
-  const menuItems = useMenu();
-  const { button } = useTranslations();
+  const menuItems = useMenu()
+  const { button } = useTranslations()
 
   return (
     <>
@@ -16,7 +16,8 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
             to={menu.link}
             aria-label={menu.name}
             activeClassName="active"
-            onClick={() => handleToggleMenu()}>
+            onClick={() => handleToggleMenu()}
+          >
             {menu.name}
           </S.NavigationLink>
         ))}
@@ -26,7 +27,7 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
         </S.NavigationButton>
       </S.Navigation>
     </>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

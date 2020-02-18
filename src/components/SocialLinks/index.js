@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { Twitter } from 'styled-icons/boxicons-logos/Twitter';
-import { Github } from 'styled-icons/boxicons-logos/Github';
+import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
+import { Github } from 'styled-icons/boxicons-logos/Github'
 
-import * as S from './styled';
+import * as S from './styled'
 
 const SocialLinks = () => {
   return (
@@ -27,7 +27,7 @@ const SocialLinks = () => {
         </S.SocialLinksLink>
       </S.SocialLinksItem>
     </S.SocialLinksList>
-  );
-};
+  )
+}
 
-export default SocialLinks;
+export default SocialLinks

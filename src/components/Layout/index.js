@@ -1,11 +1,11 @@
-import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import GlobalStyles from '../../styles/global';
+import React from 'react'
+import Header from '../Header'
+import Footer from '../Footer'
+import GlobalStyles from '../../styles/global'
 
-import * as S from './styled';
+import * as S from './styled'
 
-const LocaleContext = React.createContext();
+const LocaleContext = React.createContext()
 
 // Use the built-in Context API to make the "locale" available to every component in the tree
 // This e.g. enables the LocalizedLink to function correctly
@@ -22,6 +22,6 @@ const Layout = ({ children, pageContext: { locale } }) => (
       <Footer />
     </S.Wrapper>
   </LocaleContext.Provider>
-);
+)
 
-export { Layout, LocaleContext };
+export { Layout, LocaleContext }

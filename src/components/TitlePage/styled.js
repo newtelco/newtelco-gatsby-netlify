@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const TitleElement = styled.h1`
   line-height: 140%;
@@ -16,4 +16,4 @@ export const TitleElement = styled.h1`
     line-height: 1.1;
     font-size: 4rem;
   `}
-`;
+`

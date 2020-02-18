@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import useTranslations from '../useTranslations';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import useTranslations from '../useTranslations'
 
-import * as S from './styled';
+import * as S from './styled'
 
 const PostItem = ({
   slug,
@@ -15,7 +15,7 @@ const PostItem = ({
   description,
   image,
 }) => {
-  const { toRead } = useTranslations();
+  const { toRead } = useTranslations()
 
   const { listImages } = useStaticQuery(
     graphql`
@@ -33,20 +33,20 @@ const PostItem = ({
           }
         }
       }
-    `,
-  );
+    `
+  )
 
   const postImgCover = listImages.edges.find(img => {
-    return img.node.childImageSharp.fluid.src.includes('cover');
-  });
+    return img.node.childImageSharp.fluid.src.includes('cover')
+  })
 
-  const imgName = image ? image.split('/')[3] : false;
+  const imgName = image ? image.split('/')[3] : false
 
   const postImg = imgName
     ? listImages.edges.find(img => {
-        return img.node.childImageSharp.fluid.src.includes(imgName);
+        return img.node.childImageSharp.fluid.src.includes(imgName)
       })
-    : false;
+    : false
 
   return (
     <S.PostItemLink to={slug}>
@@ -65,9 +65,7 @@ const PostItem = ({
         )}
 
         <S.PostItemInfo>
-          <S.PostItemTag background={background}>
-            {category}
-          </S.PostItemTag>
+          <S.PostItemTag background={background}>{category}</S.PostItemTag>
           <S.PostItemDate>
             {date} • {timeToRead} min {toRead}
           </S.PostItemDate>
@@ -76,8 +74,8 @@ const PostItem = ({
         </S.PostItemInfo>
       </S.PostItemWrapper>
     </S.PostItemLink>
-  );
-};
+  )
+}
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
@@ -87,6 +85,6 @@ PostItem.propTypes = {
   timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-};
+}
 
-export default PostItem;
+export default PostItem

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
-export const Post = styled.article``;
+export const Post = styled.article``
 
 export const PostTitle = styled.h1`
   font-size: 4rem;
@@ -11,7 +11,7 @@ export const PostTitle = styled.h1`
     font-size: 2.8rem;
     line-height: 1.1;
   `}
-`;
+`
 
 export const MainContent = styled.section`
   margin: auto;
@@ -167,4 +167,4 @@ export const MainContent = styled.section`
       opacity: 0.8;
     }
   }
-`;
+`

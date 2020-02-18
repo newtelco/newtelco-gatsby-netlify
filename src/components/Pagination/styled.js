@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const PaginationWrapper = styled.ul`
   align-items: center;
@@ -21,4 +21,4 @@ export const PaginationWrapper = styled.ul`
       color: var(--highlight);
     }
   }
-`;
+`

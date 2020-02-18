@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
-import LocalizedLink from '../LocalizedLink';
-import { Link } from 'gatsby';
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import LocalizedLink from '../LocalizedLink'
+import { Link } from 'gatsby'
 
 export const Navigation = styled.nav`
   display: none;
@@ -15,7 +15,7 @@ export const Navigation = styled.nav`
     flex-direction: row;
     align-items: center;
   `}
-`;
+`
 
 export const NavigationLink = styled(LocalizedLink)`
   color: var(--text-dark);
@@ -60,7 +60,7 @@ export const NavigationLink = styled(LocalizedLink)`
       width: 100%;
     }
   }
-`;
+`
 
 export const NavigationButton = styled(Link)`
   background: var(--primary-color);
@@ -74,4 +74,4 @@ export const NavigationButton = styled(Link)`
   ${media.greaterThan('medium')`
     margin-left: var(--space-lg);
   `}
-`;
+`

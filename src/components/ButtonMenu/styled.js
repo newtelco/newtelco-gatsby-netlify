@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const ButtonHamburger = styled.button`
   background: transparent;
@@ -64,4 +64,4 @@ export const ButtonHamburger = styled.button`
       bottom: -10px;
     }
   }
-`;
+`

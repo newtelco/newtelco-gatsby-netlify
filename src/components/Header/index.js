@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import useTranslations from '../useTranslations';
-import Navigation from '../Navigation';
-import Languages from '../Languages';
-import ButtonMenu from '../ButtonMenu';
-import Logo from '../Logo';
+import React, { useState } from 'react'
+import useTranslations from '../useTranslations'
+import Navigation from '../Navigation'
+import Languages from '../Languages'
+import ButtonMenu from '../ButtonMenu'
+import Logo from '../Logo'
 
-import * as S from './styled';
+import * as S from './styled'
 
 const Header = () => {
-  const { home } = useTranslations();
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const { home } = useTranslations()
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   function handleToggleMenu() {
-    setToggleMenu(!toggleMenu);
+    setToggleMenu(!toggleMenu)
   }
 
   return (
@@ -26,16 +26,16 @@ const Header = () => {
           <Languages />
         </S.NavLanguages>
 
-        <ButtonMenu
-          handleClick={handleToggleMenu}
-          isActive={toggleMenu}
-        />
+        <ButtonMenu handleClick={handleToggleMenu} isActive={toggleMenu} />
         <S.NavMenu>
-          <Navigation isActive={toggleMenu} handleToggleMenu={handleToggleMenu} />
+          <Navigation
+            isActive={toggleMenu}
+            handleToggleMenu={handleToggleMenu}
+          />
         </S.NavMenu>
       </S.Container>
     </S.HeaderWrapper>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
