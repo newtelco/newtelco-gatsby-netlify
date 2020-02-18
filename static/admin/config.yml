@@ -1,8 +1,8 @@
 backend:
     name: github
-    repo: diogorodrigues/iceberg-gatsby-multilang
+    repo: ndom91/newtelco-gatsby-netlify
     branch: master
-    site_domain: https://iceberg-gatsby-multilang.netlify.com/
+    site_domain: https://newtelco-gatsby.netlify.com/
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
