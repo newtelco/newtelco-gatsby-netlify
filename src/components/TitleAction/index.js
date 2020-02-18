@@ -1,5 +1,6 @@
 import React from 'react'
 import useTranslations from '../useTranslations'
+import { Link } from 'gatsby'
 
 import * as S from './styled'
 
@@ -22,7 +23,9 @@ const TitleAction = props => {
           <S.Text>{email}:</S.Text> <S.TextValue>{emailAddress}</S.TextValue>
         </S.TextWrapper>
       </div>
-      <S.Button>{contactAction}</S.Button>
+      <Link to="/contact">
+        <S.Button>{contactAction}</S.Button>
+      </Link>
     </S.Wrapper>
   )
 }
