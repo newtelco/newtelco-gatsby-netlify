@@ -1,0 +1,21 @@
+{
+  "home": "Início",
+
+  "hello": "Site multilíngue em Gatsby",
+  "subline": "Internacionalização / i18n sem plugins ou pacotes de terceiros para Posts e Páginas. URLs diferentes dependendo do idioma. Foco em SEO, PWA, Otimização de imagens, Styled Components e muito mais. Esse starter também é integrado ao Netlify CMS para gerenciar todas as páginas, posts e imagens.",
+  "latestPosts": "Útimos posts",
+  "category": "Categoria",
+  "allPosts": "Todos os Posts",  
+  "toRead": "de leitura",
+
+  "next": "Próximo",
+  "prev": "Anterior",
+  "of": "de",
+
+  "button": "Botão",
+
+  "aboutProject": "Iceberg Gatsby é um PWA, salve o site em sua homescreen para vê-lo offline.",
+  "seeMorePWA": "Leia mais sobre PWA aqui",
+  "maintainedBy": "Projeto mantido por",
+  "contributeMessage": "Você sempre poderá contribuir com esse projeto no"
+}
