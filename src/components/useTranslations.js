@@ -32,6 +32,10 @@ const query = graphql`
           name
           translations: childTranslationsJson {
             home
+            phone
+            email
+            phoneNumber
+            emailAddress
 
             hello
             subline
@@ -39,6 +43,8 @@ const query = graphql`
             category
             allPosts
             toRead
+
+            contactAction
 
             next
             prev
@@ -49,7 +55,6 @@ const query = graphql`
             aboutProject
             seeMorePWA
             maintainedBy
-            contributeMessage
           }
         }
       }

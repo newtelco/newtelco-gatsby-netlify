@@ -8,11 +8,24 @@ import Logo from '../Logo'
 import * as S from './styled'
 
 const TitleAction = props => {
-  const { contact, contactAction } = useTranslations()
+  const {
+    phone,
+    email,
+    phoneNumber,
+    emailAddress,
+    contactAction,
+  } = useTranslations()
 
   return (
     <S.Wrapper>
-      <S.Text>{contact}</S.Text>
+      <div>
+        <S.TextWrapper>
+          <S.Text>{phone}:</S.Text> <S.TextValue>{phoneNumber}</S.TextValue>
+        </S.TextWrapper>
+        <S.TextWrapper>
+          <S.Text>{email}:</S.Text> <S.TextValue>{emailAddress}</S.TextValue>
+        </S.TextWrapper>
+      </div>
       <S.Button>{contactAction}</S.Button>
     </S.Wrapper>
   )

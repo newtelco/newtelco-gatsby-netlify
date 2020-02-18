@@ -1,5 +1,9 @@
 {
   "home": "Home",
+  "phone": "Telefon",
+  "email": "Email",
+  "phoneNumber": "+49 69 27 00 75 20",
+  "emailAddress": "service@newtelco.de",
 
   "hello": "Newtelco GmbH",
   "subline": "Newtelco ist Ihr Partner in Rechenzentrum Services, und viel mehr!",
@@ -8,8 +12,7 @@
   "allPosts": "Alle Posts",
   "toRead": "Zum Lesen",
 
-  "contact": "Rufe uns an unter +49 69 75 00 27 20 oder klicken Sie um uns zu Emailen!",
-  "contactAction": "Email",
+  "contactAction": "Kontaktieren",
 
   "next": "Next",
   "prev": "Zurueck",
@@ -17,8 +20,7 @@
 
   "button": "Knopf",
 
-  "aboutProject": "Newtelco Test Projekt mit i18n und Netlify CMS",
-  "seeMorePWA": "Dies ist ein PWA - Zum Offline Lesen",
-  "maintainedBy": "Maintained von ndomino",
-  "contributeMessage": "Bitte contribute!"
+  "aboutProject": "Newtelco Home",
+  "seeMorePWA": "PWA",
+  "maintainedBy": "Maintained von ndomino"
 }

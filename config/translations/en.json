@@ -1,5 +1,9 @@
 {
   "home": "Home",
+  "phone": "Phone",
+  "email": "Email",
+  "phoneNumber": "+49 69 27 00 75 20",
+  "emailAddress": "service@newtelco.de",
 
   "hello": "Newtelco GmbH",
   "subline": "Newtelco is your partner in datacenter colocation, NCEX services, and much more!",
@@ -8,8 +12,7 @@
   "allPosts": "All Posts",
   "toRead": "to read",
 
-  "contact": "Contact us at +49 69 75 00 27 20 or click to Email us!",
-  "contactAction": "Email",
+  "contactAction": "Contact",
 
   "next": "Next",
   "prev": "Prev",
@@ -17,8 +20,7 @@
 
   "button": "Button",
 
-  "aboutProject": "Iceberg Gatsby is a PWA, save it for offline reading.",
+  "aboutProject": "Newtelco Home",
   "seeMorePWA": "See more PWA here",
-  "maintainedBy": "Maintained by",
-  "contributeMessage": "You can always contribute with the project on"
+  "maintainedBy": "Maintained by"
 }

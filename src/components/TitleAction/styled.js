@@ -3,8 +3,10 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
-  width: 40%;
-  margin: 50px;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 50px 0px;
   background-color: var(--body-bg);
   border-radius: 5px;
   box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
@@ -18,18 +20,34 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const Text = styled.div`
-  margin: 20px;
-  font-weight: 300;
+export const TextWrapper = styled.div`
+  margin: 5px 10px;
+`
+
+export const Text = styled.span`
+  font-size: 1.6rem;
   color: var(--gray);
+  font-weight: 600;
   line-height: 120%;
 `
 
+export const TextValue = styled.span`
+  font-size: 1.7rem;
+  color: var(--gray);
+`
+
 export const Button = styled.button`
-  width: 100px;
-  height: 40px;
+  width: 110px;
+  height: 50px;
+  margin: 20px;
   border-radius: 5px;
   background-color: var(--primary-color);
+  color: var(--body-bg);
   border: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.4rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
