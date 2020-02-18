@@ -5,8 +5,9 @@ import PostItem from '../components/PostItem'
 import TitlePage from '../components/TitlePage'
 import LocalizedLink from '../components/LocalizedLink'
 import useTranslations from '../components/useTranslations'
-
+import styled from 'styled-components'
 import * as S from '../components/ListWrapper/styled'
+import Section from '../components/Section'
 
 const Index = ({ data: { allMarkdownRemark } }) => {
   // useTranslations is aware of the global context (and therefore also "locale")
@@ -18,48 +19,11 @@ const Index = ({ data: { allMarkdownRemark } }) => {
   return (
     <div className="homepage">
       <SEO title="Home" />
-      <TitlePage text={hello} />
-      <p>{subline}</p>
-      <hr style={{ margin: `2rem 0` }} />
-      <h2>
-        <strong>{latestPosts}</strong>
-      </h2>
+      <TitlePage text={hello} subtitle={subline} />
+      <Section>Products</Section>
+      <Section>Services</Section>
 
-      <br />
-
-      <S.ListWrapper>
-        {postList.map(
-          ({
-            node: {
-              frontmatter: {
-                background,
-                category,
-                date,
-                description,
-                title,
-                image,
-              },
-              timeToRead,
-              fields: { slug },
-            },
-          }) => (
-            <PostItem
-              slug={`/blog/${slug}`}
-              background={background}
-              category={category}
-              date={date}
-              timeToRead={timeToRead}
-              title={title}
-              description={description}
-              image={image}
-            />
-          )
-        )}
-      </S.ListWrapper>
-
-      <br />
-
-      <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink>
+      {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
     </div>
   )
 }

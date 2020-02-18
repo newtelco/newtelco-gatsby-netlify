@@ -1,21 +1,24 @@
 {
-    "home": "Home",
+  "home": "Home",
 
-    "hello": "Gruess Di!",
-    "subline": "Internationalle Gatsby Seite fuer Newtelco - Dev Umgebung",
-    "latestPosts": "Letzte Posts",
-    "category": "Kategorie",
-    "allPosts": "Alle Posts",
-    "toRead": "Zum Lesen",
+  "hello": "Newtelco GmbH",
+  "subline": "Newtelco ist Ihr Partner in Rechenzentrum Services, und viel mehr!",
+  "latestPosts": "Letzte Posts",
+  "category": "Kategorie",
+  "allPosts": "Alle Posts",
+  "toRead": "Zum Lesen",
 
-    "next": "Next",
-    "prev": "Zurueck",
-    "of": "de",
+  "contact": "Rufe uns an unter +49 69 75 00 27 20 oder klicken Sie um uns zu Emailen!",
+  "contactAction": "Email",
 
-    "button": "Knopf",
+  "next": "Next",
+  "prev": "Zurueck",
+  "of": "de",
 
-    "aboutProject": "Newtelco Test Projekt mit i18n und Netlify CMS",
-    "seeMorePWA": "Dies ist ein PWA - Zum Offline Lesen",
-    "maintainedBy": "Maintained von ndomino",
-    "contributeMessage": "Bitte contribute!"
+  "button": "Knopf",
+
+  "aboutProject": "Newtelco Test Projekt mit i18n und Netlify CMS",
+  "seeMorePWA": "Dies ist ein PWA - Zum Offline Lesen",
+  "maintainedBy": "Maintained von ndomino",
+  "contributeMessage": "Bitte contribute!"
 }

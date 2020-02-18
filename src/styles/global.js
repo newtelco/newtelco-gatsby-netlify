@@ -82,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
     --gray: #475060;
     --gray-dark: #2e333e;
 
-    --primary-color: #0066f9;
+    --primary-color: #67b246;
     --secondary-color: #2e333e;
     --thirdy-color: #001ff9;
 
