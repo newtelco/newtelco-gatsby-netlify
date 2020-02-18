@@ -21,16 +21,16 @@ const Header = () => {
           <Logo />
         </S.LogoLink>
 
-        <S.NavLanguages>
-          <Languages />
-        </S.NavLanguages>
-
         <S.NavMenu>
           <Navigation
             isActive={toggleMenu}
             handleToggleMenu={handleToggleMenu}
           />
         </S.NavMenu>
+
+        <S.NavLanguages>
+          <Languages />
+        </S.NavLanguages>
       </S.Container>
     </S.HeaderWrapper>
   )
