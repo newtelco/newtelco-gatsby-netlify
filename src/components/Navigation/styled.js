@@ -6,7 +6,6 @@ import { Link } from 'gatsby'
 export const Navigation = styled.nav`
   display: none;
   flex-direction: column;
-  margin-top: var(--space-sm);
   &.active {
     display: flex;
   }

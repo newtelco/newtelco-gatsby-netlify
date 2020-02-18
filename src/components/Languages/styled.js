@@ -13,12 +13,14 @@ export const LanguageWrapper = styled.ul`
     top: 0;
     right: 0;
   `}
+  transition: visibility 250ms, opacity 250ms ease-in-out;
 
   list-style: none;
   position: relative;
 
   & > ul {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     top: 28px; /* the height of the main nav */
   }
@@ -39,16 +41,18 @@ export const LanguageChoiceWrapper = styled.ul`
   background-color: var(--body-bg);
   border-radius: 0 0 5px 5px;
   padding: 10px 0px;
+  transition: visibility 250ms, opacity 250ms ease-in-out;
 
   &:hover {
-    display: inherit;
+    visibility: visible;
+    opacity: 1;
   }
 `
 
 export const LanguageItemDropdown = styled.li`
   display: list-item;
 
-  width: 80px;
+  width: 60px;
   float: none;
   display: list-item;
   position: relative;
@@ -57,16 +61,17 @@ export const LanguageItemDropdown = styled.li`
 export const LanguageItem = styled.li`
   margin-left: var(--space-sm);
   display: inline-block;
+  transition: visibility 150ms, opacity 150ms ease-in-out;
 
   &:hover ~ ul {
     cursor: pointer;
-    display: inherit;
+    opacity: 1;
+    visibility: visible;
   }
 `
 
 export const LanguageLink = styled(Link)`
   display: inline-block;
-  margin-right: 0.5rem;
   color: var(--grayColor);
   font-size: 1.4rem;
   margin: 4px;
@@ -77,4 +82,9 @@ export const LanguageLink = styled(Link)`
   font-size: 20px;
   line-height: 60px;
   text-decoration: none;
+`
+
+export const CountryImage = styled.img`
+  width: 32px;
+  margin-right: 0px !important;
 `

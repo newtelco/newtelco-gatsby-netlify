@@ -13,7 +13,7 @@ export const MapImage = styled.img`
   `}
 
   ${media.greaterThan('large')`
-    max-width: 60%;
+    max-width: 50%;
     right: 125px;
   `}
 `

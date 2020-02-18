@@ -25,14 +25,14 @@ export const TextWrapper = styled.div`
 `
 
 export const Text = styled.span`
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--gray);
   font-weight: 600;
   line-height: 120%;
 `
 
 export const TextValue = styled.span`
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: var(--gray);
 `
 
@@ -45,9 +45,12 @@ export const Button = styled.button`
   color: var(--body-bg);
   border: none;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
 
   &:hover {
     cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 1px 15px rgba(50, 50, 93, 0.5);
   }
 `

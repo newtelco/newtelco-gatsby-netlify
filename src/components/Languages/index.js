@@ -11,7 +11,7 @@ const Languages = () => {
       <S.LanguageChoiceWrapper>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/" hrefLang="en">
-            <img
+            <S.CountryImage
               src="https://www.countryflags.io/us/shiny/32.png"
               alt="Language EN"
             />
@@ -19,7 +19,7 @@ const Languages = () => {
         </S.LanguageItemDropdown>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/de" hrefLang="de">
-            <img
+            <S.CountryImage
               src="https://www.countryflags.io/de/shiny/32.png"
               alt="Language DE"
             />
