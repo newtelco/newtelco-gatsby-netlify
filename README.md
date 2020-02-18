@@ -1,8 +1,8 @@
-# Newtelco 2020 Homepage
-
 <img align="right" src="./src/images/newtelco-sm.svg" width="150">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cf33095a-f908-48bc-9356-7e59a85a4e26/deploy-status)](https://app.netlify.com/sites/newtelco-gatsby/deploys)))]]
+# Newtelco 2020 Homepage
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cf33095a-f908-48bc-9356-7e59a85a4e26/deploy-status)](https://app.netlify.com/sites/newtelco-gatsby/deploys)
 
 [Demo on Netlify](https://newtelco-gatsby.netlify.com/)
 
