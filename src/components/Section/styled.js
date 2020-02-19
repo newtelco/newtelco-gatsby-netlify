@@ -27,8 +27,7 @@ export const Container = styled.div`
 export const Header = styled.h3`
   font-size: 3rem;
   font-weight: 600;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 100px auto 50px auto;
 
   &:before {
     display: inline-block;

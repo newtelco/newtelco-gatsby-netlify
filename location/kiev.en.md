@@ -7,4 +7,8 @@ section: true
 image: '/assets/img/ncex.png'
 ---
 
-Kiev English
+NewTelco Ukraine Ltd. <br />
+Simyi Prakhovykh 50 <br />
+(Gaydara) <br />
+01033 Kiev <br />
+Ukraine

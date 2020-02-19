@@ -7,4 +7,7 @@ section: true
 image: '/assets/img/ncex.png'
 ---
 
-Tbilisi Russian
+NewTelco Georgia Ltd. <br />
+A. Politkovskaia Str. 5 <br />
+0186 Tbilisi <br />
+Georgia

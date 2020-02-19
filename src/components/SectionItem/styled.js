@@ -19,6 +19,10 @@ export const Wrapper = styled.div`
     padding: 15px;
     min-width: 250px;
   `}
+  ${media.greaterThan('huge')`
+    padding: 15px;
+    min-width: 300px;
+  `}
 `
 
 export const Container = styled.div`
@@ -48,5 +52,10 @@ export const Content = styled.section`
   flex: 1;
   width: 100%;
   padding: 10px;
-  font-size: 1.1rem;
+  ${media.greaterThan('medium')`
+    font-size: 1.1rem;
+  `}
+  ${media.greaterThan('large')`
+    font-size: 1.3rem;
+  `}
 `

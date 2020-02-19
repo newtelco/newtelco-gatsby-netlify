@@ -7,4 +7,7 @@ section: true
 image: '/assets/img/frankfurt.png'
 ---
 
-Frankfurt Russian
+NewTelco GmbH <br />
+Moenchhofstrasse 24 <br />
+60326 Frankfurt am Main <br />
+Germany
