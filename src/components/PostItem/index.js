@@ -37,14 +37,14 @@ const PostItem = ({
   )
 
   const postImgCover = listImages.edges.find(img => {
-    return img.node.childImageSharp.fluid.src.includes('cover')
+    return img?.node?.childImageSharp?.fluid.src.includes('cover')
   })
 
   const imgName = image ? image.split('/')[3] : false
 
   const postImg = imgName
     ? listImages.edges.find(img => {
-        return img.node.childImageSharp.fluid.src.includes(imgName)
+        return img?.node?.childImageSharp?.fluid.src.includes(imgName)
       })
     : false
 
