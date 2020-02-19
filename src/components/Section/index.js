@@ -30,9 +30,9 @@ const Section = props => {
     edge => edge.node.fields.locale === locale
   )
 
-  const localeCurrentSection = localeSectionItems.filter(edge => {
-    return edge.node.parent.sourceInstanceName === localeName
-  })
+  const localeCurrentSection = localeSectionItems.filter(
+    edge => edge.node.parent.sourceInstanceName === localeName
+  )
 
   return (
     <S.Wrapper>
@@ -59,7 +59,7 @@ const query = graphql`
           translations: childTranslationsJson {
             products
             services
-            locations
+            location
           }
         }
       }

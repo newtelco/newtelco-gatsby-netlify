@@ -4,7 +4,7 @@ date: 2019-07-01 01:21:23
 category: 'section'
 page: false
 section: true
-image: '/assets/img/ncex.png'
+image: '/assets/img/ncex.svg'
 ---
 
-NCEX Russian
+Клиентам NewTelco не требуется создавать свою собственную точку присутствия на базе Ethernet, поскольку они могут воспользоваться преимуществами, предлагаемыми нашей инновационной платформой NCEX Neutral Carrier Ethernet Exchange)(, которая предлагает возможность гибкого и выгодного соединения с множеством ведущих операторов связи.

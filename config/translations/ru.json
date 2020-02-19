@@ -7,7 +7,7 @@
 
   "products": "Товары",
   "services": "Сервисы",
-  "locations": "Места",
+  "location": "Места",
 
   "hello": "Newtelco GmbH",
   "subline": "Newtelco - ваш партнер во всем, что связано с центром обработки данных",
@@ -26,5 +26,5 @@
 
   "aboutProject": "Newtelco Home",
   "seeMorePWA": "PWA",
-  "maintainedBy": "Поддерживается ndomino"
+  "maintainedBy": "Поддерживается"
 }

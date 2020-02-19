@@ -39,7 +39,7 @@ const query = graphql`
 
             products
             services
-            locations
+            location
 
             hello
             subline
