@@ -8,15 +8,15 @@ import Section from '../components/Section'
 const Index = ({ data: { allMarkdownRemark } }) => {
   // useTranslations is aware of the global context (and therefore also "locale")
   // so it'll automatically give back the right translations
-  const { hello, subline } = useTranslations()
+  const { hello, subline, products, services, locations } = useTranslations()
 
   return (
     <div className="homepage">
       <SEO title="Home" />
       <TitlePage text={hello} subtitle={subline} />
-      <Section>Products</Section>
-      <Section>Services</Section>
-
+      <Section title={products}></Section>
+      <Section title={services}></Section>
+      <Section title={locations}></Section>
       {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
     </div>
   )

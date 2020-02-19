@@ -3,15 +3,19 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
-  min-height: 500px;
+  margin: 15px;
+  height: 350px;
   flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
 `
 
 export const Content = styled.section`
   display: flex;
   flex: 1;
   width: 100%;
-  justify-content: space-around;
+  padding: 10px;
 `
 
 export const Container = styled.div`
@@ -24,27 +28,14 @@ export const Container = styled.div`
   `}
 `
 
+export const HeaderImg = styled.img`
+  border-radius: 5px;
+  width: 192px;
+  margin: 10px;
+`
+
 export const Header = styled.h3`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin: 0 auto;
-  margin-bottom: 10px;
-
-  &:before {
-    display: inline-block;
-    content: '';
-    border-top: 0.3rem solid var(--primary-color);
-    width: 8rem;
-    margin: 0 1rem;
-    transform: translateY(-1rem);
-  }
-
-  &:after {
-    display: inline-block;
-    content: '';
-    border-top: 0.3rem solid var(--primary-color);
-    width: 8rem;
-    margin: 0 1rem;
-    transform: translateY(-1rem);
-  }
+  padding: 5px 20px;
 `

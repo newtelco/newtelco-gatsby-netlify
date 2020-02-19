@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 
 import * as S from '../components/Content/styled'
 
-const Page = props => {
+const SectionItem = props => {
   const post = props.data.markdownRemark
 
   return (
@@ -12,7 +12,6 @@ const Page = props => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.image}
       />
       <S.Content>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
@@ -22,7 +21,7 @@ const Page = props => {
 }
 
 export const query = graphql`
-  query Page($locale: String!, $title: String!) {
+  query SectionItem($locale: String!, $title: String!) {
     markdownRemark(
       frontmatter: { title: { eq: $title } }
       fields: { locale: { eq: $locale } }
@@ -30,11 +29,10 @@ export const query = graphql`
       frontmatter {
         title
         description
-        image
       }
       html
     }
   }
 `
 
-export default Page
+export default SectionItem

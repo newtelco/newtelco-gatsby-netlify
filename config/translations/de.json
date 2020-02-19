@@ -5,6 +5,10 @@
   "phoneNumber": "+49 69 27 00 75 20",
   "emailAddress": "service@newtelco.de",
 
+  "products": "Produkte",
+  "services": "Dienstleistung",
+  "locations": "Standorte",
+
   "hello": "Newtelco GmbH",
   "subline": "Newtelco ist Ihr Partner in Rechenzentrum Services, und viel mehr!",
   "latestPosts": "Letzte Posts",

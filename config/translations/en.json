@@ -5,6 +5,10 @@
   "phoneNumber": "+49 69 27 00 75 20",
   "emailAddress": "service@newtelco.de",
 
+  "products": "Products",
+  "services": "Services",
+  "locations": "Locations",
+
   "hello": "Newtelco GmbH",
   "subline": "Newtelco is your partner in datacenter colocation, NCEX services, and much more!",
   "latestPosts": "Latest posts",

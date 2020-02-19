@@ -37,7 +37,6 @@ export const TextValue = styled.span`
 `
 
 export const Button = styled.button`
-  width: 110px;
   height: 50px;
   margin: 20px;
   border-radius: 5px;

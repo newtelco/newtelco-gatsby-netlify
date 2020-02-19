@@ -37,6 +37,10 @@ const query = graphql`
             phoneNumber
             emailAddress
 
+            products
+            services
+            locations
+
             hello
             subline
             latestPosts

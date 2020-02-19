@@ -212,3 +212,185 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  #Products (English)
+  - name: 'products-en' # Used in routes, e.g., /admin/collections/blog
+    label: 'Products (English)' # Used in the UI
+    folder: 'products' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'en.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Products (German)
+  - name: 'products-de' # Used in routes, e.g., /admin/collections/blog
+    label: 'Products (German)' # Used in the UI
+    folder: 'products' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'de.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+
+  #Products (Russian)
+  - name: 'products-ru' # Used in routes, e.g., /admin/collections/blog
+    label: 'Products (Russian)' # Used in the UI
+    folder: 'products' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'ru.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Services (English)
+  - name: 'services-en' # Used in routes, e.g., /admin/collections/blog
+    label: 'Services (English)' # Used in the UI
+    folder: 'services' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'en.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Services (German)
+  - name: 'services-de' # Used in routes, e.g., /admin/collections/blog
+    label: 'Services (German)' # Used in the UI
+    folder: 'services' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'de.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Services (Russian)
+  - name: 'services-ru' # Used in routes, e.g., /admin/collections/blog
+    label: 'Services (Russian)' # Used in the UI
+    folder: 'services' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'ru.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Locations (English)
+  - name: 'locations-en' # Used in routes, e.g., /admin/collections/blog
+    label: 'Locations (English)' # Used in the UI
+    folder: 'location' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'en.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Locations (German)
+  - name: 'locations-de' # Used in routes, e.g., /admin/collections/blog
+    label: 'Locations (German)' # Used in the UI
+    folder: 'location' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'de.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+
+  #Locations (Russian)
+  - name: 'locations-ru' # Used in routes, e.g., /admin/collections/blog
+    label: 'Locations (Russian)' # Used in the UI
+    folder: 'location' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'ru.md'
+    format: frontmatter
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD hh:mm:ss',
+        }
+      - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
+      - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Description', name: 'desc', widget: 'markdown' }
+

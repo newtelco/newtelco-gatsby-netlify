@@ -5,6 +5,10 @@
   "phoneNumber": "+49 69 27 00 75 20",
   "emailAddress": "service@newtelco.de",
 
+  "products": "Товары",
+  "services": "Сервисы",
+  "locations": "Места",
+
   "hello": "Newtelco GmbH",
   "subline": "Newtelco - ваш партнер во всем, что связано с центром обработки данных",
   "latestPosts": "Letzte Posts",
