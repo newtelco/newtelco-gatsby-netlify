@@ -20,4 +20,13 @@ module.exports = {
         defaultTitle: `Gatsby Anfaenger auch auf Deutsch!`,
         defaultDescription: `Beispiel Gatsby Seite mit i18n und Netlify CMS`,
     },
+    ru: {
+        path: `ru`,
+        locale: `ru-RU`,
+        dateFormat: `DD.MM.YYYY`,
+        siteLanguage: `ru`,
+        ogLanguage: `ru_RU`,
+        defaultTitle: `Gatsby Anfaenger auch auf Russisch!`,
+        defaultDescription: `Beispiel Gatsby Seite mit i18n und Netlify CMS`,
+    }
 }

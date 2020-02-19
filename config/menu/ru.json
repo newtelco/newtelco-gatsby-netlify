@@ -1,0 +1,10 @@
+{
+  "menuItems": [
+    { "name": "Дом", "link": "/" },
+    { "name": "Сервисы", "link": "/services" },
+    { "name": "Товары", "link": "/products" },
+    { "name": "команда", "link": "/team" },
+    { "name": "контакт", "link": "/contact" },
+    { "name": "Около", "link": "/about" }
+  ]
+}

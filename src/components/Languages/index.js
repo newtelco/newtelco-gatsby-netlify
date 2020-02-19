@@ -25,6 +25,14 @@ const Languages = () => {
             />
           </S.LanguageLink>
         </S.LanguageItemDropdown>
+        <S.LanguageItemDropdown>
+          <S.LanguageLink to="/ru" hrefLang="ru">
+            <S.CountryImage
+              src="https://www.countryflags.io/ru/shiny/32.png"
+              alt="Language RU"
+            />
+          </S.LanguageLink>
+        </S.LanguageItemDropdown>
       </S.LanguageChoiceWrapper>
     </S.LanguageWrapper>
   )

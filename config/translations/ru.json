@@ -1,0 +1,26 @@
+{
+  "home": "дом",
+  "phone": "телефон",
+  "email": "Эл. адрес",
+  "phoneNumber": "+49 69 27 00 75 20",
+  "emailAddress": "service@newtelco.de",
+
+  "hello": "Newtelco GmbH",
+  "subline": "Newtelco - ваш партнер во всем, что связано с центром обработки данных",
+  "latestPosts": "Letzte Posts",
+  "category": "категория",
+  "allPosts": "Alle Posts",
+  "toRead": "Zum Lesen",
+
+  "contactAction": "контакт",
+
+  "next": "следующий",
+  "prev": "назад",
+  "of": "ru",
+
+  "button": "кнопка",
+
+  "aboutProject": "Newtelco Home",
+  "seeMorePWA": "PWA",
+  "maintainedBy": "Поддерживается ndomino"
+}

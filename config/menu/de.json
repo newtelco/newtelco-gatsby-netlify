@@ -1,10 +1,10 @@
 {
   "menuItems": [
     { "name": "Home", "link": "/" },
-    { "name": "Uber", "link": "/ueber" },
     { "name": "Service", "link": "/services" },
     { "name": "Produkte", "link": "/products" },
     { "name": "Team", "link": "/team" },
-    { "name": "Kontakt", "link": "/kontakt" }
+    { "name": "Kontakt", "link": "/contact" },
+    { "name": "Uber", "link": "/about" }
   ]
 }
