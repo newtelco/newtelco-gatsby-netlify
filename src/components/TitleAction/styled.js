@@ -11,6 +11,9 @@ export const Wrapper = styled.div`
   border-radius: 5px;
   box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
 
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
   ${media.greaterThan('medium')`
     padding: var(--space) var(--space-sm);
   `}

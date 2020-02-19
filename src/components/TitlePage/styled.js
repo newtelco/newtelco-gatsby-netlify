@@ -19,7 +19,7 @@ export const TitleElement = styled.h1`
 `
 
 export const TitleWrapper = styled.div`
-  margin-top: calc(8 * var(--space-lg));
+  margin-top: calc(10 * var(--space-lg));
   margin-bottom: calc(10 * var(--space-lg));
 `
 

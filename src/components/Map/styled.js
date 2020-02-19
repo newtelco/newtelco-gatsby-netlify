@@ -6,6 +6,12 @@ export const MapImage = styled.img`
   top: -60px;
   z-index: -1;
 
+  ${media.lessThan('medium')`
+    max-width: 120%;
+    top: 40px;
+    right: -10%;
+  `}
+
   ${media.greaterThan('medium')`
     max-width: 80%;
     top: 0;
