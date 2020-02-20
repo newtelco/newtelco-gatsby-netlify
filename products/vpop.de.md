@@ -5,6 +5,5 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/vpop.svg'
+short: 'NewTelco ist ein lösungsorientiertes Unternehmen, das im Laufe der Jahre ein kostengünstiges Produkt entwickelt hat, das individuell auf komplexe Kundenanforderungen zugeschnitten werden kann. Bei der Gründung des Unternehmens setzte sich NewTelco das Ziel, ein innovatives neues Produkt zu schaffen'
 ---
-
-NewTelco ist ein lösungsorientiertes Unternehmen, das im Laufe der Jahre ein kostengünstiges Produkt entwickelt hat, das individuell auf komplexe Kundenanforderungen zugeschnitten werden kann. Bei der Gründung des Unternehmens setzte sich NewTelco das Ziel, ein innovatives neues Produkt zu schaffen

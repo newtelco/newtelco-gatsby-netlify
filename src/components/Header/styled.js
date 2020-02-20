@@ -20,6 +20,21 @@ export const Container = styled.div`
   padding: var(--space) var(--space);
   position: relative;
   min-height: 75px;
+
+  ${media.lessThan('medium')`
+    &.active {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      border: 15px solid #67b246;
+      background-color: #fff;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+  `}
   ${media.greaterThan('medium')`
     flex-direction: row;
   `}
@@ -36,6 +51,24 @@ export const LogoLink = styled(LocalizedLink)`
 
 export const NavMenu = styled.div`
   width: 100%;
+  transition: opacity 500ms ease-in-out, border-width 240ms linear;
+
+  ${media.lessThan('medium')`
+    opacity: 0;
+  `}
+
+  &.active {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    border: 15px solid #67b246;
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+  }
+
   ${media.greaterThan('medium')`
     margin-left: auto;
     width: auto;
@@ -44,4 +77,18 @@ export const NavMenu = styled.div`
 
 export const NavLanguages = styled.div`
   margin-left: var(--space);
+
+  ${media.lessThan('medium')`
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  `}
+
+  &.active {
+    position: absolute;
+    margin-left: 0px;
+    opacity: 1;
+    bottom: 20px;
+    left: calc(50% - 20px);
+    z-index: 2;
+  }
 `

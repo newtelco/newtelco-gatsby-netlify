@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import useTranslations from '../useTranslations'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
 import SectionItem from '../SectionItem'
@@ -40,7 +39,11 @@ const Section = props => {
       <S.Content>
         {localeCurrentSection.map(item => {
           return (
-            <SectionItem key={item.node.frontmatter.title} item={item.node} />
+            <SectionItem
+              key={item.node.frontmatter.title}
+              item={item.node}
+              noAction={localeName === 'location'}
+            />
           )
         })}
       </S.Content>

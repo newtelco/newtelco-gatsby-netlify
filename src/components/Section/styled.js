@@ -5,6 +5,20 @@ export const Wrapper = styled.div`
   display: flex;
   min-height: 500px;
   flex-direction: column;
+
+  &:nth-child(2n + 1):before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 150vw;
+    height: 118%;
+    max-height: 800px;
+    background-color: #67b246;
+    z-index: -1;
+    opacity: 0.9;
+    transform: translate(-24vw, 30px) rotate(-4deg);
+    overflow: hidden;
+  }
 `
 
 export const Content = styled.section`
@@ -12,6 +26,9 @@ export const Content = styled.section`
   flex: 1;
   width: 100%;
   justify-content: space-around;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `
 
 export const Container = styled.div`
@@ -25,7 +42,7 @@ export const Container = styled.div`
 `
 
 export const Header = styled.h3`
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
   margin: 100px auto 50px auto;
 

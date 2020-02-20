@@ -24,6 +24,14 @@ export const LanguageWrapper = styled.ul`
     position: absolute;
     top: 28px; /* the height of the main nav */
   }
+
+  ${media.lessThan('medium')`
+    display: none;
+
+    &.active {
+      display: inline-block;
+    }
+  `}
 `
 
 export const LanguageImage = styled.img`
@@ -41,11 +49,19 @@ export const LanguageChoiceWrapper = styled.ul`
   background-color: var(--body-bg);
   border-radius: 0 0 5px 5px;
   padding: 10px 0px;
-  transition: visibility 250ms, opacity 250ms ease-in-out;
+  transition: visibility 250ms ease-in-out 250ms,
+    opacity 250ms ease-in-out 250ms;
 
-  &:hover {
+  &:hover,
+  &.active {
     visibility: visible;
     opacity: 1;
+  }
+
+  &.active {
+    flex-direction: row;
+    top: -60px;
+    left: calc(50% - 55px);
   }
 `
 
@@ -67,6 +83,10 @@ export const LanguageItem = styled.li`
     cursor: pointer;
     opacity: 1;
     visibility: visible;
+  }
+
+  &.active {
+    display: none;
   }
 `
 

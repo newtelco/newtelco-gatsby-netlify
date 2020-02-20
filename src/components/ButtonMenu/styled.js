@@ -9,13 +9,14 @@ export const ButtonHamburger = styled.button`
   border: none;
   position: absolute;
   border-radius: 3px;
-  top: var(--space-sm);
-  left: var(--space-sm);
+  top: var(--space-md);
+  left: var(--space-md);
   ${media.greaterThan('medium')`
     display: none;
   `}
 
   &.active {
+    z-index: 2;
     span {
       background: transparent;
       &:before,

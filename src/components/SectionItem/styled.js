@@ -8,7 +8,13 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
+  background-color: #fff;
   box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
+  transition: transform 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
 
   ${media.greaterThan('medium')`
     padding: 10px;
@@ -58,4 +64,22 @@ export const Content = styled.section`
   ${media.greaterThan('large')`
     font-size: 1.3rem;
   `}
+`
+
+export const ActionBtn = styled.div`
+  border-radius: 5px;
+  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
+  background-color: #67b246;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  & > * {
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `

@@ -5,6 +5,5 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/technical.svg'
+short: 'NewTelco offers a comprehensive, 24/7 three-tier Technical Services portfolio guaranteed to slash your maintenance budget whilst providing maximum availability of service'
 ---
-
-NewTelco offers a comprehensive, 24/7 three-tier Technical Services portfolio guaranteed to slash your maintenance budget whilst providing maximum availability of service

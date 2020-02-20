@@ -5,6 +5,5 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/technical.svg'
+short: 'NewTelco bietet Ihnen ein umfassendes dreistufiges 24/7 Portfolio technischer Services. Die Serviceverfügbarkeit wird maximiert und Ihr Wartungsbudget garantiert reduziert'
 ---
-
-NewTelco bietet Ihnen ein umfassendes dreistufiges 24/7 Portfolio technischer Services. Die Serviceverfügbarkeit wird maximiert und Ihr Wartungsbudget garantiert reduziert:

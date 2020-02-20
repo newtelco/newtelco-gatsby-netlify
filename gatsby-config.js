@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Newtelco Gatsby Netlify Starter`,
-    description: `A simple but feature rich starter boilerplate for creating a multi-language Gatsby website (Internationalization / i18n) without third party plugins or packages and also focused on SEO. This starter also contains other main Gatsby configurations you might need.`,
+    title: `Newtelco GmbH`,
+    description: `Newtelco GmbH Homepage`,
     author: `@ndom91`,
-    siteUrl: `https://newtelco-gatsby.netlify.com/`,
+    siteUrl: `https://newtelco.dev/`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -117,7 +117,7 @@ module.exports = {
         name: `Newtelco GmbH`,
         short_name: `Newtelco`,
         start_url: `/`,
-        background_color: `#16202c`,
+        background_color: `#4b4c4d`,
         theme_color: `#67b246`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`,

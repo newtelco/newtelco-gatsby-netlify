@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Map from '../Map'
 import TitleAction from '../TitleAction'
 import * as S from './styled'

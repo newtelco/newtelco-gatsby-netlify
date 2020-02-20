@@ -231,6 +231,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Products (German)
@@ -251,6 +252,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
 
@@ -272,6 +274,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Services (English)
@@ -292,6 +295,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Services (German)
@@ -312,6 +316,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Services (Russian)
@@ -332,6 +337,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Locations (English)
@@ -352,6 +358,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Locations (German)
@@ -372,6 +379,7 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 
   #Locations (Russian)
@@ -392,5 +400,6 @@ collections:
         }
       - { label: 'isPage', name: 'page', widget: 'hidden', default: false }
       - { label: 'isSection', name: 'section', widget: 'hidden', default: true }
+      - { label: 'Short', name: 'short', widget: 'markdown' }
       - { label: 'Description', name: 'desc', widget: 'markdown' }
 

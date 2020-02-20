@@ -2,13 +2,13 @@ import React from 'react'
 import language from '../../images/language-solid.svg'
 import * as S from './styled'
 
-const Languages = () => {
+const Languages = props => {
   return (
-    <S.LanguageWrapper>
-      <S.LanguageItem>
+    <S.LanguageWrapper className={props.isActive ? 'active' : ''}>
+      <S.LanguageItem className={props.isActive ? 'active' : ''}>
         <S.LanguageImage src={language} alt="Language" />
       </S.LanguageItem>
-      <S.LanguageChoiceWrapper>
+      <S.LanguageChoiceWrapper className={props.isActive ? 'active' : ''}>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/" hrefLang="en">
             <S.CountryImage

@@ -5,6 +5,5 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/integration.svg'
+short: 'Durch qualitativ hochwertige Services, Unterstützung und Wartungsdienste für Kunden in Europa und der gesamten Welt konnte NewTelco eine exzellente Reputation als Systemintegrator erlangen.'
 ---
-
-Durch qualitativ hochwertige Services, Unterstützung und Wartungsdienste für Kunden in Europa und der gesamten Welt konnte NewTelco eine exzellente Reputation als Systemintegrator erlangen.

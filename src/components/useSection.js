@@ -12,10 +12,12 @@ export const useSection = () => {
                 category
                 title
                 description
+                short
                 image
               }
               fields {
                 locale
+                slug
               }
               html
               parent {

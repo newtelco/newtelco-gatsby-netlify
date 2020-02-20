@@ -6,6 +6,8 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
   */
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Raleway&display=swap');
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -55,10 +57,14 @@ const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  h1, h2, h3, h4 {
+    font-family: "Roboto Mono", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
   body {
+    overflow-x: hidden;
     background: var(--body-bg);
     font-weight: 400;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Raleway", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     font-size: 1.5rem;
     line-height: 160%;
@@ -105,6 +111,7 @@ const GlobalStyles = createGlobalStyle`
 
     --space: 2rem;
     --space-sm: 1rem;
+    --space-md: 1.5rem;
     --space-lg: 3rem;
 
   }

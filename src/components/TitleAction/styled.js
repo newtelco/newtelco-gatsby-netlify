@@ -41,7 +41,8 @@ export const TextValue = styled.span`
 
 export const Button = styled.button`
   height: 50px;
-  margin: 20px;
+  margin: 10px;
+  padding: 5px 15px;
   border-radius: 5px;
   background-color: var(--primary-color);
   color: var(--body-bg);

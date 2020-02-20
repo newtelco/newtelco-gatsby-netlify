@@ -5,10 +5,8 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/frankfurt.png'
----
-
-NewTelco Ukraine Ltd. <br />
-Simyi Prakhovykh 50 <br />
-(Gaydara) <br />
+short: 'NewTelco Ukraine Ltd. <br />
+Simyi Prakhovykh 50 (Gaydara) <br />
 01033 Kiev <br />
-Ukraine
+Ukraine'
+---

@@ -6,9 +6,20 @@ import { Link } from 'gatsby'
 export const Navigation = styled.nav`
   display: none;
   flex-direction: column;
+
   &.active {
     display: flex;
+    z-index: 99;
+    margin: 15vh 5vw;
   }
+
+  &.active a {
+    margin: 20px;
+    font-size: 2rem;
+    font-family: 'Raleway';
+    transform: translateX(0%);
+  }
+
   ${media.greaterThan('medium')`
     display: flex;
     flex-direction: row;
@@ -23,6 +34,8 @@ export const NavigationLink = styled(LocalizedLink)`
   padding: 0 var(--space-sm);
   margin-bottom: var(--space-sm);
   text-align: center;
+  font-weight: 300;
+
   ${media.greaterThan('medium')`
     margin-left: var(--space-sm);
     margin-bottom: 0;
@@ -30,6 +43,12 @@ export const NavigationLink = styled(LocalizedLink)`
   ${media.greaterThan('large')`
     margin-left: var(--space);
   `} 
+
+  ${media.lessThan('medium')`
+    transition: all 250ms ease-in-out 2s;
+    transform: translateX(-100%);
+  `}
+
 
   &:after {
     ${media.greaterThan('medium')`
@@ -49,6 +68,7 @@ export const NavigationLink = styled(LocalizedLink)`
   &:hover,
   &.active {
     font-weight: bold;
+
     ${media.greaterThan('medium')`
       font-weight: normal;
     `}

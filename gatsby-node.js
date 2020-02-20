@@ -67,8 +67,8 @@ exports.onCreateNode = ({ node, actions }) => {
     // Get the entire file name and remove the lang of it
     const slugFileName = name.split(`.`)[0]
     // Than remove the date if the name has the date info
-    const slug =
-      slugFileName.length >= 10 ? slugFileName.slice(11) : slugFileName
+    const slug = slugFileName
+    // slugFileName.length >= 10 ? slugFileName.slice(11) : slugFileName
 
     // Adding the nodes on GraphQL for each post as "fields"
     createNodeField({ node, name: `slug`, value: slug })
@@ -104,6 +104,12 @@ exports.createPages = async ({ graphql, actions }) => {
               page
               section
             }
+            parent {
+              ... on File {
+                base
+                sourceInstanceName
+              }
+            }
           }
         }
       }
@@ -127,6 +133,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Getting Slug and Title
     const slug = file.fields.slug
     const title = file.frontmatter.title
+    let section = false
 
     // Use the fields created in exports.onCreateNode
     const locale = file.fields.locale
@@ -135,6 +142,9 @@ exports.createPages = async ({ graphql, actions }) => {
     // Check if it's page (to differentiate post and page)
     const isPage = file.frontmatter.page
     const isSection = file.frontmatter.section
+    if (isSection) {
+      section = file.parent.sourceInstanceName
+    }
 
     // Setting a template for page or post depending on the content
     let template = isPage ? pageTemplate : postTemplate
@@ -145,7 +155,7 @@ exports.createPages = async ({ graphql, actions }) => {
     postsTotal = isPage ? postsTotal + 0 : postsTotal + 1
 
     createPage({
-      path: localizedSlug({ isDefault, locale, slug, isPage }),
+      path: localizedSlug({ isDefault, locale, slug, isPage, section }),
       component: template,
       context: {
         // Pass both the "title" and "locale" to find a unique file

@@ -5,9 +5,8 @@ category: 'section'
 page: false
 section: true
 image: '/assets/img/frankfurt.png'
----
-
-NewTelco Georgia Ltd. <br />
+short: 'NewTelco Georgia Ltd. <br />
 A. Politkovskaia Str. 5 <br />
 0186 Tbilisi <br />
-Georgia
+Georgia'
+---
