@@ -67,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Raleway", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     font-size: 1.5rem;
-    line-height: 160%;
+    line-height: 150%;
     ${media.greaterThan('large')`
       font-size: 1.7rem;
     `}
@@ -77,9 +77,12 @@ const GlobalStyles = createGlobalStyle`
   	max-width: 100%;
   	height: auto;
   }
-
   a {
     color: var(--primaryColor)
+  }
+  .no-scroll {
+    overflow: hidden;
+    max-height: 100vh;
   }
 
   :root { 

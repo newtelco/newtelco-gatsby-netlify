@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 
   ${media.lessThan('medium')`
     width: 100%;
+    padding: 10px;
   `}
   ${media.greaterThan('medium')`
     padding: var(--space) var(--space-sm);
@@ -32,11 +33,17 @@ export const Text = styled.span`
   color: var(--gray);
   font-weight: 600;
   line-height: 120%;
+  ${media.lessThan('medium')`
+    font-size: 1.7rem;
+  `}
 `
 
 export const TextValue = styled.span`
   font-size: 2rem;
   color: var(--gray);
+  ${media.lessThan('medium')`
+    font-size: 1.7rem;
+  `}
 `
 
 export const Button = styled.button`

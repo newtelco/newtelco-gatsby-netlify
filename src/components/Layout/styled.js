@@ -3,7 +3,6 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   ${media.lessThan('medium')`
     overflow-x: hidden;

@@ -58,6 +58,9 @@ export const Content = styled.section`
   flex: 1;
   width: 100%;
   padding: 10px;
+  ${media.lessThan('medium')`
+    padding: 30px;
+  `}
   ${media.greaterThan('medium')`
     font-size: 1.1rem;
   `}
@@ -74,6 +77,7 @@ export const ActionBtn = styled.div`
   padding: 5px 20px;
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 15px 0px;
 
   & > * {
     text-decoration: none;

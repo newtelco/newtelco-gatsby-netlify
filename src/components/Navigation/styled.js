@@ -15,7 +15,7 @@ export const Navigation = styled.nav`
 
   &.active a {
     margin: 20px;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-family: 'Raleway';
     transform: translateX(0%);
   }

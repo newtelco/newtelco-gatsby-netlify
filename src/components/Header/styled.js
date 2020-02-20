@@ -22,7 +22,9 @@ export const Container = styled.div`
   min-height: 75px;
 
   ${media.lessThan('medium')`
+  justify-content: center;
     &.active {
+      justify-content: flex-start;
       position: fixed;
       z-index: 1;
       top: 0;
@@ -47,6 +49,10 @@ export const LogoLink = styled(LocalizedLink)`
   display: inline-block;
   margin-right: 0.5rem;
   width: 170px;
+  z-index: 2;
+  ${media.lessThan('medium')`
+    width: 200px;
+  `}
 `
 
 export const NavMenu = styled.div`

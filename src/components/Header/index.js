@@ -15,6 +15,12 @@ const Header = () => {
     setToggleMenu(!toggleMenu)
   }
 
+  if (toggleMenu) {
+    document.body.classList.add('no-scroll')
+  } else {
+    document.body.classList.remove('no-scroll')
+  }
+
   return (
     <S.HeaderWrapper>
       <S.Container className={toggleMenu ? 'active' : ''}>
