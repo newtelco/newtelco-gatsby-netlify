@@ -15,6 +15,21 @@ export const Wrapper = styled.div`
   &:hover {
     transform: translateY(-6px);
   }
+  ${media.lessThan('medium')`
+    &:nth-child(2n + 1):before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 150vw;
+      height: 75%;
+      max-height: 800px;
+      background-color: #67b246;
+      z-index: -1;
+      opacity: 0.9;
+      transform: translate(-18vw, -19px) rotate(-4deg);
+      overflow: hidden;
+    }
+  `}
 
   ${media.greaterThan('medium')`
     padding: 10px;

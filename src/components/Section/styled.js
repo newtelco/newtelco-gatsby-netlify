@@ -19,6 +19,13 @@ export const Wrapper = styled.div`
     transform: translate(-24vw, 30px) rotate(-4deg);
     overflow: hidden;
   }
+
+  ${media.lessThan('medium')`
+    &:nth-child(2n + 1):before {
+      height: 0;
+      width: 0;
+    }
+  `}
 `
 
 export const Content = styled.section`
