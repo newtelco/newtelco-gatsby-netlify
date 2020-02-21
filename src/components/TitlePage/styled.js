@@ -35,12 +35,12 @@ export const TitleSubElement = styled.h3`
   color: var(--gray-light);
   margin-top: var(--space);
   max-width: 60%;
-  \
   ${media.lessThan('medium')`
     font-size: 1.3rem;
   `}
   ${media.greaterThan('medium')`
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    max-width: 40%;
   `}
   ${media.greaterThan('large')`
     font-size: 1.7rem;

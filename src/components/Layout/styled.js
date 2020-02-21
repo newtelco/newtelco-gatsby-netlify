@@ -4,6 +4,8 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   ${media.lessThan('medium')`
     overflow-x: hidden;
   `}
@@ -11,7 +13,8 @@ export const Wrapper = styled.div`
 
 export const SiteContent = styled.section`
   display: flex;
-  flex: 1;
+  /* flex: 1; */
+  flex: 1 0 auto;
   width: 100%;
 `
 

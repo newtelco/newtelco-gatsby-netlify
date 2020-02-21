@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
 import Section from '../components/Section'
+import SectionLocation from '../components/SectionLocation'
 
 const Index = ({ data: { allMarkdownRemark } }) => {
   // useTranslations is aware of the global context (and therefore also "locale")
@@ -16,7 +17,7 @@ const Index = ({ data: { allMarkdownRemark } }) => {
       <TitlePage text={hello} subtitle={subline} />
       <Section title={products}></Section>
       <Section title={services}></Section>
-      <Section title={location}></Section>
+      <SectionLocation title={location}></SectionLocation>
       {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
     </div>
   )

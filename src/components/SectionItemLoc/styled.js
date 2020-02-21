@@ -4,29 +4,46 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   display: flex;
   margin: 30px;
+  min-width: 70px;
+  flex-direction: column;
   align-items: center;
   border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
+  transition: transform 250ms ease-in-out;
 
-  &:nth-child(2n) {
-    flex-direction: row-reverse;
+  &:hover {
+    transform: translateY(-6px);
   }
+  ${media.lessThan('medium')`
+    &:nth-child(2n + 1):before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 150vw;
+      height: 75%;
+      max-height: 800px;
+      background-color: #67b246;
+      z-index: -1;
+      opacity: 0.9;
+      transform: translate(-18vw, -19px) rotate(-4deg);
+      overflow: hidden;
+    }
+  `}
 
   ${media.greaterThan('medium')`
     padding: 10px;
+    min-width: 200px;
   `}
 
   ${media.greaterThan('large')`
     padding: 15px;
+    min-width: 250px;
   `}
   ${media.greaterThan('huge')`
     padding: 15px;
+    min-width: 300px;
   `}
-`
-
-export const SectionTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `
 
 export const Container = styled.div`
@@ -41,13 +58,12 @@ export const Container = styled.div`
 
 export const HeaderImg = styled.img`
   border-radius: 5px;
-  width: 400px;
+  width: 256px;
   margin: 10px;
 `
 
 export const Header = styled.h3`
   font-size: 2rem;
-  text-align: center;
   font-weight: 600;
   padding: 5px 20px;
 `
@@ -56,15 +72,14 @@ export const Content = styled.section`
   display: flex;
   flex: 1;
   width: 100%;
+  padding: 10px;
   ${media.lessThan('medium')`
     padding: 30px;
   `}
   ${media.greaterThan('medium')`
-    padding: 40px;
     font-size: 1.1rem;
   `}
   ${media.greaterThan('large')`
-    padding: 50px;
     font-size: 1.3rem;
   `}
 `
@@ -77,8 +92,7 @@ export const ActionBtn = styled.div`
   padding: 5px 20px;
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 15px;
-  max-width: 100px;
+  margin: 15px 0px;
 
   & > * {
     text-decoration: none;

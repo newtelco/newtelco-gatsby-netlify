@@ -6,6 +6,12 @@ import * as S from './styled'
 const Navigation = ({ isActive, handleToggleMenu }) => {
   const menuItems = useMenu()
 
+  const closeMenu = () => {
+    if (isActive) {
+      handleToggleMenu()
+    }
+  }
+
   return (
     <>
       <S.Navigation className={isActive ? 'active' : ''}>
@@ -15,7 +21,7 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
             key={menu.name}
             aria-label={menu.name}
             activeClassName="active"
-            onClick={() => handleToggleMenu()}
+            onClick={() => closeMenu()}
           >
             {menu.name}
           </S.NavigationLink>

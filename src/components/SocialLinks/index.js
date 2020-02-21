@@ -12,11 +12,11 @@ const SocialLinks = () => {
     <S.SocialLinksList>
       <S.SocialLinksItem>
         <S.SocialLinksLink
-          href="https://github.com/ndom91/newtelco-gatsby-netlify"
-          title="Github"
+          href="https://facebook.com/newtelco"
+          title="Facebook"
           target="_blank"
         >
-          <Github />
+          <Facebook />
         </S.SocialLinksLink>
       </S.SocialLinksItem>
       <S.SocialLinksItem>
@@ -30,20 +30,20 @@ const SocialLinks = () => {
       </S.SocialLinksItem>
       <S.SocialLinksItem>
         <S.SocialLinksLink
-          href="https://facebook.com/newtelco"
-          title="Facebook"
-          target="_blank"
-        >
-          <Facebook />
-        </S.SocialLinksLink>
-      </S.SocialLinksItem>
-      <S.SocialLinksItem>
-        <S.SocialLinksLink
           href="https://instagram.com/newtelcoDE"
           title="Instagram"
           target="_blank"
         >
           <Instagram />
+        </S.SocialLinksLink>
+      </S.SocialLinksItem>
+      <S.SocialLinksItem>
+        <S.SocialLinksLink
+          href="https://github.com/ndom91/newtelco-gatsby-netlify"
+          title="Github"
+          target="_blank"
+        >
+          <Github />
         </S.SocialLinksLink>
       </S.SocialLinksItem>
     </S.SocialLinksList>

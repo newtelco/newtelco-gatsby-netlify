@@ -1,13 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
-import SectionItem from '../SectionItem'
+import SectionItemLoc from '../SectionItemLoc'
 import { useSection } from '../useSection'
-import LocalizedLink from '../LocalizedLink'
 
 import * as S from './styled'
 
-const Section = props => {
+const SectionLocation = props => {
   const { locale } = React.useContext(LocaleContext)
   const nodes = useSection()
 
@@ -36,26 +35,25 @@ const Section = props => {
 
   return (
     <S.Wrapper>
-      {localeName == 'services' && <S.SectionSvg />}
       <S.Header>{props.title}</S.Header>
       <S.Content>
-        {localeCurrentSection.slice(0, 2).map(item => {
+        {localeCurrentSection.map(item => {
           return (
-            <SectionItem key={item.node.frontmatter.title} item={item.node} />
+            <SectionItemLoc
+              key={item.node.frontmatter.title}
+              item={item.node}
+            />
           )
         })}
-        <S.ActionBtn>
-          <LocalizedLink to={'#'}>More</LocalizedLink>
-        </S.ActionBtn>
       </S.Content>
     </S.Wrapper>
   )
 }
 
-export default Section
+export default SectionLocation
 
 const query = graphql`
-  query getSectionNames {
+  query getLocSectionNames {
     rawData: allFile(filter: { sourceInstanceName: { eq: "translations" } }) {
       edges {
         node {
