@@ -49,6 +49,7 @@ export const LanguageChoiceWrapper = styled.ul`
   background-color: var(--body-bg);
   border-radius: 0 0 5px 5px;
   padding: 10px 0px;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
   transition: visibility 250ms ease-in-out 250ms,
     opacity 250ms ease-in-out 250ms;
 

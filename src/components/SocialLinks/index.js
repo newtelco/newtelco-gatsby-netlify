@@ -14,6 +14,7 @@ const SocialLinks = () => {
         <S.SocialLinksLink
           href="https://facebook.com/newtelco"
           title="Facebook"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Facebook />
@@ -23,6 +24,7 @@ const SocialLinks = () => {
         <S.SocialLinksLink
           href="https://twitter.com/newtelcoDE"
           title="Twitter"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Twitter />
@@ -32,6 +34,7 @@ const SocialLinks = () => {
         <S.SocialLinksLink
           href="https://instagram.com/newtelcoDE"
           title="Instagram"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Instagram />
@@ -41,6 +44,7 @@ const SocialLinks = () => {
         <S.SocialLinksLink
           href="https://github.com/ndom91/newtelco-gatsby-netlify"
           title="Github"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Github />

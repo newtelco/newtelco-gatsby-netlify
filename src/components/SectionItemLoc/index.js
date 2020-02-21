@@ -25,12 +25,7 @@ const SectionItemLoc = props => {
                 />
               </clipPath>
             </g>
-            <image
-              x="-50%"
-              y="-50%"
-              clip-path="url(#location-path)"
-              href={props.item.frontmatter.image}
-            />
+            <image x="-50%" y="-50%" href={props.item.frontmatter.image} />
           </svg>
         </S.SvgImage>
       </LocalizedLink>

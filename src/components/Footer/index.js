@@ -68,6 +68,7 @@ const Footer = () => {
           <p>
             {aboutProject}{' '}
             <a
+              rel="noopener noreferrer"
               href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
               target="_blank"
             >
@@ -77,7 +78,11 @@ const Footer = () => {
           </p>
           <p>
             {maintainedBy}{' '}
-            <a href="mailto:ndomino@newtelco.de" target="_blank">
+            <a
+              rel="noopener noreferrer"
+              href="mailto:ndomino@newtelco.de"
+              target="_blank"
+            >
               ndomino
             </a>
             .

@@ -3,8 +3,9 @@ import media from 'styled-media-query'
 
 export const MapImage = styled.img`
   position: absolute;
-  bottom: 100px;
-  right: calc(50% - 318px);
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
   z-index: 1;
   opacity: 0.15;
 

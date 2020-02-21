@@ -47,6 +47,7 @@ const query = graphql`
             category
             allPosts
             toRead
+            pageNotFound
 
             contactAction
 

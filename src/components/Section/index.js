@@ -35,13 +35,17 @@ const Section = props => {
   )
 
   return (
-    <S.Wrapper>
+    <S.Wrapper id={localeName === 'services' ? 'scrollTarget' : ''}>
       {localeName == 'services' && <S.SectionSvg />}
       <S.Header>{props.title}</S.Header>
       <S.Content>
-        {localeCurrentSection.slice(0, 2).map(item => {
+        {localeCurrentSection.slice(0, 2).map((item, index) => {
           return (
-            <SectionItem key={item.node.frontmatter.title} item={item.node} />
+            <SectionItem
+              key={item.node.frontmatter.title}
+              index={index}
+              item={item.node}
+            />
           )
         })}
         <S.ActionBtn>

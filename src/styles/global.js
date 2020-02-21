@@ -123,7 +123,7 @@ const GlobalStyles = createGlobalStyle`
     --text-light:var(--gray-light);
     --text-dark: var(--gray-dark);
 
-    --width-container: 1240px;
+    --width-container: 1170px;
 
     --space: 2rem;
     --space-sm: 1rem;
