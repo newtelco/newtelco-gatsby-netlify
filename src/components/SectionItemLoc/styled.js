@@ -7,15 +7,10 @@ export const Wrapper = styled.div`
   min-width: 70px;
   flex-direction: column;
   align-items: center;
-  border-radius: 5px;
+  /* border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
-  transition: transform 250ms ease-in-out;
-
-  &:hover {
-    transform: translateY(-6px);
-  }
-  ${media.lessThan('medium')`
+  box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2); */
+  /* ${media.lessThan('medium')`
     &:nth-child(2n + 1):before {
       position: absolute;
       display: inline-block;
@@ -29,9 +24,9 @@ export const Wrapper = styled.div`
       transform: translate(-18vw, -19px) rotate(-4deg);
       overflow: hidden;
     }
-  `}
+  `} */
 
-  ${media.greaterThan('medium')`
+  /* ${media.greaterThan('medium')`
     padding: 10px;
     min-width: 200px;
   `}
@@ -43,7 +38,16 @@ export const Wrapper = styled.div`
   ${media.greaterThan('huge')`
     padding: 15px;
     min-width: 300px;
-  `}
+  `} */
+`
+
+export const SvgImage = styled.div`
+  transform: scale(0.8);
+  transition: transform 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px) scale(0.8);
+  }
 `
 
 export const Container = styled.div`
@@ -60,6 +64,8 @@ export const HeaderImg = styled.img`
   border-radius: 5px;
   width: 256px;
   margin: 10px;
+
+  clip-path: url(#location-path);
 `
 
 export const Header = styled.h3`

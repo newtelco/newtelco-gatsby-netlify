@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
   */
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Raleway&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Raleway:100,300,500&display=swap');
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -110,7 +110,7 @@ const GlobalStyles = createGlobalStyle`
     --text-light:var(--gray-light);
     --text-dark: var(--gray-dark);
 
-    --width-container: 1040px;
+    --width-container: 1240px;
 
     --space: 2rem;
     --space-sm: 1rem;

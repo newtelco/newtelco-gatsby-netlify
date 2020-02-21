@@ -12,7 +12,7 @@ export const SectionSvg = styled.div`
   position: relative;
   &::before {
     position: absolute;
-    height: 1200px;
+    height: 1250px;
     opacity: 0.1;
     content: '';
     background: linear-gradient(to right, #8cbf86, #66b4a6, #408ca3);
@@ -38,7 +38,7 @@ export const SectionSvg = styled.div`
   ${media.greaterThan('large')`
     &::before {
       width: 1250px;
-      right: -3vw;
+      right: -1vw;
     }
   `}
 `
@@ -62,7 +62,7 @@ export const Container = styled.div`
 `
 
 export const Header = styled.h3`
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 600;
   margin: 100px auto 50px auto;
 
@@ -90,13 +90,14 @@ export const ActionBtn = styled.div`
   box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
   background-color: #67b246;
   color: #fff;
-  padding: 5px 20px;
-  font-size: 1.5rem;
+  padding: 15px 30px;
+  font-size: 2rem;
   text-align: center;
   font-weight: 600;
   margin: 0 auto;
   margin-top: 40px;
-  width: 150px;
+  width: 200px;
+  transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
 
   & > * {
     text-decoration: none;
@@ -104,5 +105,7 @@ export const ActionBtn = styled.div`
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 1px 25px rgba(50, 50, 93, 0.4);
+    transform: translateY(-5px);
   }
 `

@@ -46,7 +46,7 @@ export const HeaderImg = styled.img`
 `
 
 export const Header = styled.h3`
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: 600;
   padding: 5px 20px;
@@ -56,6 +56,9 @@ export const Content = styled.section`
   display: flex;
   flex: 1;
   width: 100%;
+  line-height: 210%;
+  font-weight: 300;
+
   ${media.lessThan('medium')`
     padding: 30px;
   `}
@@ -65,7 +68,7 @@ export const Content = styled.section`
   `}
   ${media.greaterThan('large')`
     padding: 50px;
-    font-size: 1.3rem;
+    font-size: 2rem;
   `}
 `
 
