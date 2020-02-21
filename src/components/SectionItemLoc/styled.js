@@ -26,10 +26,10 @@ export const SvgImage = styled.div`
   }
 
   ${media.lessThan('medium')`
-    transform: scale(0.5);
+    transform: scale(0.4) !important;
     &:hover {
       cursor: pointer;
-      transform: translateY(-10px) scale(0.5);
+      transform: translateY(-10px) scale(0.4) !important;
     }
   `}
 
@@ -106,6 +106,7 @@ export const Header = styled.h3`
 
   ${media.lessThan('medium')`
     font-size: 6rem;
+    margin-top: 270px;
   `}
 `
 

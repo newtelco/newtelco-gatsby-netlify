@@ -14,7 +14,7 @@ const Navigation = ({ isActive, handleToggleMenu }) => {
 
   return (
     <>
-      <S.Navigation className={isActive ? 'active' : ''}>
+      <S.Navigation style={isActive ? { display: 'none' } : {}}>
         {menuItems.map(menu => (
           <S.NavigationLink
             to={menu.link}

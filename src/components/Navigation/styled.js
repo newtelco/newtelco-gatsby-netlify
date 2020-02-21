@@ -15,10 +15,10 @@ export const Navigation = styled.nav`
 
   &.active a {
     margin: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Raleway';
     transform: translateX(0%);
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
   }
 
   ${media.greaterThan('medium')`

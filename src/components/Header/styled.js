@@ -21,22 +21,6 @@ export const Container = styled.div`
   position: relative;
   min-height: 75px;
 
-  ${media.lessThan('medium')`
-  justify-content: center;
-    &.active {
-      justify-content: flex-start;
-      position: fixed;
-      z-index: 99;
-      top: 0;
-      left: 0;
-      opacity: 1;
-      border: 15px solid #67b246;
-      background-color: #fff;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-    }
-  `}
   ${media.greaterThan('medium')`
     flex-direction: row;
   `}
@@ -62,18 +46,6 @@ export const NavMenu = styled.div`
   ${media.lessThan('medium')`
     opacity: 0;
   `}
-
-  &.active {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    border: 15px solid #67b246;
-    background-color: #fff;
-    height: 100vh;
-    width: 100vw;
-  }
 
   ${media.greaterThan('medium')`
     margin-left: auto;

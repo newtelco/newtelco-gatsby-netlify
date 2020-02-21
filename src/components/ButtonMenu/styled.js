@@ -10,19 +10,20 @@ export const ButtonHamburger = styled.button`
   position: absolute;
   border-radius: 3px;
   top: var(--space-md);
-  left: var(--space-md);
+  right: var(--space-md);
   ${media.greaterThan('medium')`
     display: none;
   `}
 
   &.active {
-    z-index: 2;
+    z-index: 100;
     span {
       background: transparent;
       &:before,
       &:after {
         top: 0;
         left: 0;
+        background-color: #fff;
       }
       &:before {
         transform: rotate(-45deg);
