@@ -6,6 +6,13 @@ export const ScrollBtnWrapper = styled.div`
   bottom: 5vh;
   right: 5vw;
   z-index: 101;
+  opacity: 0;
+  outline: none;
+  transition: opacity 250ms ease-in-out;
+
+  &.in-view {
+    opacity: 1;
+  }
 `
 
 export const ScrollBtn = styled.button`
@@ -16,6 +23,9 @@ export const ScrollBtn = styled.button`
   border: none;
   transition: transform 250ms ease-in-out;
 
+  &:focus {
+    outline: none;
+  }
   &:hover {
     cursor: pointer;
     transform: translateY(-4px);

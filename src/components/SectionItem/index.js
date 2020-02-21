@@ -1,5 +1,4 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 
 import * as S from './styled'
 
@@ -8,14 +7,15 @@ const SectionItem = props => {
   const item = props.item.fields.slug
   const locale = props.item.fields.locale
   const url = locale === 'en' ? `${section}/${item}` : `/${section}/${item}`
-
   const indexNr = props.index + 2
-  console.log(item, indexNr, indexNr % 2)
+
   return (
-    <S.Wrapper>
-      <Fade big left={indexNr % 2 === 0} right={indexNr % 2 === 1}>
-        <S.HeaderImg src={props.item.frontmatter.image} />
-      </Fade>
+    <S.Wrapper className={indexNr % 2 == 0 ? 'row' : 'rowReverse'}>
+      <S.HeaderImg
+        className={props.inView ? 'sectionInView imageWrapper' : 'imageWrapper'}
+        id={indexNr % 2 == 0 ? 'right' : 'left'}
+        src={props.item.frontmatter.image}
+      />
       <S.SectionTextWrapper>
         <S.Header>{props.item.frontmatter.title}</S.Header>
         <S.Content>

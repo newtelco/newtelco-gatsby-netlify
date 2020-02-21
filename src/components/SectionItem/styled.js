@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   border-radius: 5px;
 
-  &:nth-child(2n) {
+  &.rowReverse{
     flex-direction: row-reverse;
   }
 
@@ -25,6 +25,19 @@ export const Wrapper = styled.div`
   ${media.greaterThan('huge')`
     padding: 15px;
   `}
+
+  & > .imageWrapper {
+    opacity: 0;
+  }
+
+  #right.sectionInView {
+    animation: slideInRight .7s ease-in-out;
+    opacity: 1;
+  }
+  #left.sectionInView {
+    animation: slideInLeft .7s ease-in-out;
+    opacity: 1;
+  }
 `
 
 export const SectionTextWrapper = styled.div`

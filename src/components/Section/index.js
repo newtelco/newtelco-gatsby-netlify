@@ -4,6 +4,7 @@ import { LocaleContext } from '../Layout'
 import SectionItem from '../SectionItem'
 import { useSection } from '../useSection'
 import LocalizedLink from '../LocalizedLink'
+import { useInView } from 'react-intersection-observer'
 
 import * as S from './styled'
 
@@ -34,6 +35,12 @@ const Section = props => {
     edge => edge.node.parent.sourceInstanceName === localeName
   )
 
+  const [ref, inView, entry] = useInView({
+    threshold: 0,
+    rootMargin: '50px 20px 75px 30px',
+    triggerOnce: true,
+  })
+
   return (
     <S.Wrapper id={localeName === 'services' ? 'scrollTarget' : ''}>
       {localeName == 'services' && <S.SectionSvg />}
@@ -41,11 +48,14 @@ const Section = props => {
       <S.Content>
         {localeCurrentSection.slice(0, 2).map((item, index) => {
           return (
-            <SectionItem
-              key={item.node.frontmatter.title}
-              index={index}
-              item={item.node}
-            />
+            <span ref={ref}>
+              <SectionItem
+                key={item.node.frontmatter.title}
+                index={index}
+                item={item.node}
+                inView={inView}
+              />
+            </span>
           )
         })}
         <S.ActionBtn>

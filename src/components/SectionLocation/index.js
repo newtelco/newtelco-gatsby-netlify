@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
 import SectionItemLoc from '../SectionItemLoc'
 import { useSection } from '../useSection'
+import Fade from 'react-reveal/Fade'
 
 import * as S from './styled'
 
@@ -37,14 +38,16 @@ const SectionLocation = props => {
     <S.Wrapper>
       <S.Header>{props.title}</S.Header>
       <S.Content>
-        {localeCurrentSection.map(item => {
-          return (
-            <SectionItemLoc
-              key={item.node.frontmatter.title}
-              item={item.node}
-            />
-          )
-        })}
+        <Fade top cascade>
+          {localeCurrentSection.map(item => {
+            return (
+              <SectionItemLoc
+                key={item.node.frontmatter.title}
+                item={item.node}
+              />
+            )
+          })}
+        </Fade>
       </S.Content>
     </S.Wrapper>
   )
