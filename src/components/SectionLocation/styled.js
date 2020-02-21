@@ -5,27 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   min-height: 500px;
   flex-direction: column;
-
-  /* &:nth-child(2n + 1):before {
-    position: absolute;
-    display: inline-block;
-    content: '';
-    width: 150vw;
-    height: 118%;
-    max-height: 800px;
-    background-color: #67b246;
-    z-index: -1;
-    opacity: 0.9;
-    transform: translate(-24vw, 30px) rotate(-4deg);
-    overflow: hidden;
-  } */
-
-  /* ${media.lessThan('medium')`
-    &:nth-child(2n + 1):before {
-      height: 0;
-      width: 0;
-    }
-  `} */
+  margin: 50px 0px 200px 0px;
 `
 export const SectionSvg = styled.div`
   position: absolute;
@@ -37,7 +17,7 @@ export const Content = styled.section`
   width: 100%;
   justify-content: space-around;
   ${media.lessThan('medium')`
-    flex-direction: column;
+    flex-direction: row;
   `}
 `
 

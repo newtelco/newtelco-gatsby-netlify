@@ -1,7 +1,11 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const SocialLinksList = styled.ul`
   display: flex;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `
 
 export const SocialLinksItem = styled.li`

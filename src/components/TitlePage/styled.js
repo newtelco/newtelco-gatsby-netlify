@@ -8,7 +8,7 @@ export const TitleElement = styled.h1`
 
   ${media.lessThan('medium')`
     line-height: 1.1;
-    font-size: 2.5rem;
+    font-size: 4rem;
   `}
   ${media.greaterThan('medium')`
     line-height: 1.1;
@@ -27,6 +27,9 @@ export const TitleElement = styled.h1`
 export const TitleWrapper = styled.div`
   margin-top: calc(10 * var(--space-lg));
   margin-bottom: calc(10 * var(--space-lg));
+  ${media.lessThan('medium')`
+    margin-top: calc(15 * var(--space-lg));
+  `}
 `
 
 export const TitleSubElement = styled.h3`
@@ -36,7 +39,8 @@ export const TitleSubElement = styled.h3`
   margin-top: var(--space);
   max-width: 60%;
   ${media.lessThan('medium')`
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    max-width: 70%;
   `}
   ${media.greaterThan('medium')`
     font-size: 1.7rem;

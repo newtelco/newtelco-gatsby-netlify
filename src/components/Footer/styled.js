@@ -49,6 +49,12 @@ export const FooterLinkSection = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
 
+  ${media.lessThan('medium')`
+    justify-content: space-around;
+    padding: 5px;
+    font-size: 1.3rem;
+  `}
+
   & a {
     text-decoration: none;
   }

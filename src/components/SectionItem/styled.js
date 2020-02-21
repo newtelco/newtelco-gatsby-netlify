@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
     flex-direction: row-reverse;
   }
 
+  ${media.lessThan('medium')`
+    flex-direction: column !important;
+  `}
+
   ${media.greaterThan('medium')`
     padding: 10px;
   `}
