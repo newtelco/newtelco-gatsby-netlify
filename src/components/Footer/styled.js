@@ -12,13 +12,18 @@ export const FooterWrapper = styled.div`
 export const FooterContainer = styled.div`
   width: 100%;
   padding: 30px;
-  /* z-index: 4; */
   background-color: var(--gray-extra-light);
+  ${media.lessThan('medium')`
+    padding: 10px 50px;
+  `}
   ${media.greaterThan('medium')`
-    padding: 20px;
+    padding: 10px 100px;
   `}
   ${media.greaterThan('large')`
-    padding: 30px;
+    padding: 10px 200px;
+  `}
+  ${media.greaterThan('huge')`
+    padding: 10px 250px;
   `}
 
   p {
@@ -55,8 +60,32 @@ export const FooterLinkSection = styled.div`
     font-size: 1.3rem;
   `}
 
-  & a {
+  & > a {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
     text-decoration: none;
+    overflow: hidden;
+  }
+  & > a:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #67b246;
+    height: 4px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  & > a:hover:before,
+  & > a:focus:before,
+  & > a:active:before {
+    right: 0;
   }
 `
 

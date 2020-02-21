@@ -26,7 +26,8 @@ export const SectionSvg = styled.div`
   ${media.lessThan('medium')`
     &::before {
       width: 100%;
-      right: -3vw;
+      right: -1%;
+      height: 1550px;
     }
   `}
   ${media.greaterThan('medium')`
@@ -62,7 +63,7 @@ export const Container = styled.div`
 `
 
 export const Header = styled.h3`
-  font-size: 4rem;
+  font-size: 3.7rem;
   font-weight: 600;
   margin: 100px auto 50px auto;
 

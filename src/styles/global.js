@@ -84,6 +84,19 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     max-height: 100vh;
   }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track-piece {
+    visibility: none;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.3);
+  }
 
   :root { 
     --gray-extra-light: #eaeaea; 

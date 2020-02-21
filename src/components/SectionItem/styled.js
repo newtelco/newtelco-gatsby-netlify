@@ -45,8 +45,18 @@ export const Container = styled.div`
 
 export const HeaderImg = styled.img`
   border-radius: 5px;
-  width: 400px;
-  margin: 10px;
+  ${media.lessThan('medium')`
+    width: 250px;
+    margin: 50px;
+  `}
+  ${media.greaterThan('medium')`
+    width: 350px;
+    margin: 50px;
+  `}
+  ${media.greaterThan('large')`
+    width: 400px;
+    margin: 20px;
+  `}
 `
 
 export const Header = styled.h3`
@@ -65,14 +75,19 @@ export const Content = styled.section`
 
   ${media.lessThan('medium')`
     padding: 30px;
+    font-size: 1.3rem;
   `}
   ${media.greaterThan('medium')`
     padding: 40px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   `}
   ${media.greaterThan('large')`
     padding: 50px;
-    font-size: 2rem;
+    font-size: 1.6rem;
+  `}
+  ${media.greaterThan('huge')`
+    padding: 70px;
+    font-size: 1.8rem;
   `}
 `
 

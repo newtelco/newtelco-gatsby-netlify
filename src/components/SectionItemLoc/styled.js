@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
 `
 
 export const SvgImage = styled.div`
-  transform: scale(0.8);
   transition: transform 250ms ease-in-out;
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@ export const SvgImage = styled.div`
   z-index: 9;
 
   &:hover {
-    transform: translateY(-10px) scale(0.8);
     cursor: pointer;
   }
 
@@ -34,6 +32,46 @@ export const SvgImage = styled.div`
       transform: translateY(-10px) scale(0.5);
     }
   `}
+
+  & {
+    display: inline-block;
+    vertical-align: middle;
+    transform: scale(0.6) perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  &:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 12.5%;
+    height: 30px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    /* transition-duration: 0.3s;
+    transition-property: transform, opacity; */
+    transition: transform 250ms ease-in-out, opacity 500ms ease-in-out;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(0.6) translateY(-10px);
+  }
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    opacity: 1;
+    transform: scale(0.6) translateY(10px);
+  }
 `
 
 export const Container = styled.div`
@@ -55,7 +93,7 @@ export const HeaderImg = styled.img`
 `
 
 export const Header = styled.h3`
-  font-size: 14rem;
+  font-size: 10rem;
   font-weight: 100;
   padding: 5px 20px;
   opacity: 0.8;
