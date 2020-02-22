@@ -11,7 +11,7 @@ const SectionItemLoc = props => {
   const url = locale === 'en' ? `${section}/${item}` : `/${section}/${item}`
 
   return (
-    <S.Wrapper>
+    <S.Wrapper className={props.inView ? 'locationInView' : ''}>
       <LocalizedLink to={url}>
         <S.SvgImage>
           <svg height="400px" width="340px">

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
 import SectionItemLoc from '../SectionItemLoc'
 import { useSection } from '../useSection'
-import Fade from 'react-reveal/Fade'
+import { useInView } from 'react-intersection-observer'
 
 import * as S from './styled'
 
@@ -34,20 +34,23 @@ const SectionLocation = props => {
     edge => edge.node.parent.sourceInstanceName === localeName
   )
 
+  const [ref, inView, entry] = useInView({
+    threshold: 0.9,
+    rootMargin: '50px 20px 75px 30px',
+    triggerOnce: true,
+  })
+
   return (
     <S.Wrapper>
       <S.Header>{props.title}</S.Header>
       <S.Content>
-        <Fade top cascade>
-          {localeCurrentSection.map(item => {
-            return (
-              <SectionItemLoc
-                key={item.node.frontmatter.title}
-                item={item.node}
-              />
-            )
-          })}
-        </Fade>
+        {localeCurrentSection.map(item => {
+          return (
+            <span key={item.node.frontmatter.title} ref={ref}>
+              <SectionItemLoc item={item.node} inView={inView} />
+            </span>
+          )
+        })}
       </S.Content>
     </S.Wrapper>
   )

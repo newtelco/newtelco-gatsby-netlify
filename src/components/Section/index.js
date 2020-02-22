@@ -36,7 +36,7 @@ const Section = props => {
   )
 
   const [ref, inView, entry] = useInView({
-    threshold: 0,
+    threshold: 0.5,
     rootMargin: '50px 20px 75px 30px',
     triggerOnce: true,
   })
@@ -48,13 +48,8 @@ const Section = props => {
       <S.Content>
         {localeCurrentSection.slice(0, 2).map((item, index) => {
           return (
-            <span ref={ref}>
-              <SectionItem
-                key={item.node.frontmatter.title}
-                index={index}
-                item={item.node}
-                inView={inView}
-              />
+            <span key={item.node.frontmatter.title} ref={ref}>
+              <SectionItem index={index} item={item.node} inView={inView} />
             </span>
           )
         })}

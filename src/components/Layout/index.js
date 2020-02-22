@@ -1,13 +1,9 @@
 import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
-import ScrollTop from '../ScrollTop'
 import GlobalStyles from '../../styles/global'
-import config from 'react-reveal/globals'
-import { useInView } from 'react-intersection-observer'
 
 const LocaleContext = React.createContext()
-config({ ssrFadeout: true })
 
 import * as S from './styled'
 
@@ -17,14 +13,6 @@ import * as S from './styled'
 // the locale available everywhere!
 
 const Layout = ({ children, pageContext: { locale } }) => {
-  // const [ref, inView, entry] = useInView({
-  //   /* Optional options */
-  //   threshold: 0,
-  // })
-
-  // if (inView) {
-  //   console.log('inView')
-  // }
   return (
     <LocaleContext.Provider value={{ locale }}>
       <GlobalStyles />
@@ -35,7 +23,6 @@ const Layout = ({ children, pageContext: { locale } }) => {
         </S.SiteContent>
         <Footer />
       </S.Wrapper>
-      {/* {inView && <ScrollTop />} */}
     </LocaleContext.Provider>
   )
 }

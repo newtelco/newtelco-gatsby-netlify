@@ -7,6 +7,27 @@ export const Wrapper = styled.div`
   min-width: 70px;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(-20%);
+  /* margin-top: 200px; */
+
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+
+  &.locationInView:nth-child(1) {
+    transition-delay: 150ms;
+  }
+  &.locationInView:nth-child(2) {
+    transition-delay: 250ms;
+  }
+  &.locationInView:nth-child(3) {
+    transition-delay: 350ms;
+  }
+
+  &.locationInView {
+    opacity: 1;
+    transform: translateY(0vh);
+    /* margin-top: 30px; */
+  }
 `
 
 export const SvgImage = styled.div`
