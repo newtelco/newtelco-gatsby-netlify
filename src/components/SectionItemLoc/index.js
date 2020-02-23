@@ -4,14 +4,14 @@ import LocalizedLink from '../LocalizedLink'
 
 import * as S from './styled'
 
-const SectionItemLoc = props => {
+const SectionItemLoc = React.forwardRef((props, ref) => {
   const section = props.item.parent.sourceInstanceName
   const item = props.item.fields.slug
   const locale = props.item.fields.locale
   const url = locale === 'en' ? `${section}/${item}` : `/${section}/${item}`
 
   return (
-    <S.Wrapper className={props.inView ? 'locationInView' : ''}>
+    <S.Wrapper ref={ref} className={props.inView ? 'locationInView' : ''}>
       <LocalizedLink to={url}>
         <S.SvgImage>
           <svg height="400px" width="340px">
@@ -39,6 +39,6 @@ const SectionItemLoc = props => {
       </S.Header>
     </S.Wrapper>
   )
-}
+})
 
 export default SectionItemLoc

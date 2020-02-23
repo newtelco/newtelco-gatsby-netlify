@@ -46,9 +46,12 @@ const SectionLocation = props => {
       <S.Content>
         {localeCurrentSection.map(item => {
           return (
-            <span key={item.node.frontmatter.title} ref={ref}>
-              <SectionItemLoc item={item.node} inView={inView} />
-            </span>
+            <SectionItemLoc
+              key={item.node.frontmatter.title}
+              item={item.node}
+              inView={inView}
+              ref={ref}
+            />
           )
         })}
       </S.Content>

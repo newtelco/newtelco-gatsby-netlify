@@ -25,11 +25,14 @@ export const TitleElement = styled.h1`
 `
 
 export const TitleWrapper = styled.div`
-  margin-top: calc(10 * var(--space-lg));
+  margin-top: 33vh;
+  margin-bottom: 33vh;
+  height: 33vh;
+  /* margin-top: calc(10 * var(--space-lg));
   margin-bottom: calc(10 * var(--space-lg));
   ${media.lessThan('medium')`
     margin-top: calc(15 * var(--space-lg));
-  `}
+  `} */
 `
 
 export const TitleSubElement = styled.h3`

@@ -9,24 +9,20 @@ export const Wrapper = styled.div`
   align-items: center;
   opacity: 0;
   transform: translateY(-20%);
-  /* margin-top: 200px; */
-
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-
-  &.locationInView:nth-child(1) {
+  transition: opacity 450ms ease-in-out, transform 450ms ease-in-out;
+  &:nth-of-type(1) {
     transition-delay: 150ms;
   }
-  &.locationInView:nth-child(2) {
+  &:nth-of-type(2) {
     transition-delay: 250ms;
   }
-  &.locationInView:nth-child(3) {
+  &:nth-of-type(3) {
     transition-delay: 350ms;
   }
 
   &.locationInView {
     opacity: 1;
     transform: translateY(0vh);
-    /* margin-top: 30px; */
   }
 `
 
@@ -78,8 +74,6 @@ export const SvgImage = styled.div`
       rgba(0, 0, 0, 0.35) 0%,
       rgba(0, 0, 0, 0) 80%
     );
-    /* transition-duration: 0.3s;
-    transition-property: transform, opacity; */
     transition: transform 250ms ease-in-out, opacity 500ms ease-in-out;
   }
   &:hover,
@@ -93,24 +87,6 @@ export const SvgImage = styled.div`
     opacity: 1;
     transform: scale(0.6) translateY(10px);
   }
-`
-
-export const Container = styled.div`
-  width: 100%;
-  max-width: var(--width-container);
-  margin: 0 auto;
-  padding: calc(var(--space) * 1.3) var(--space);
-  ${media.greaterThan('large')`
-    padding: calc(var(--space)*1.3) var(--space-sm);
-  `}
-`
-
-export const HeaderImg = styled.img`
-  border-radius: 5px;
-  width: 256px;
-  margin: 10px;
-
-  clip-path: url(#location-path);
 `
 
 export const Header = styled.h3`
