@@ -10,7 +10,7 @@ const SectionStats = props => {
   const { racks, customers, watts, tbps } = useTranslations()
 
   const [ref, inView, entry] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
     triggerOnce: true,
   })
 

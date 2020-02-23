@@ -12,6 +12,7 @@ const StatBlock = React.forwardRef((props, ref) => {
             start={0}
             end={props.value}
             duration={3.75}
+            delay={1}
             useEasing={true}
             decimals={props.value.toString().indexOf('.') !== -1 ? 1 : 0}
           />

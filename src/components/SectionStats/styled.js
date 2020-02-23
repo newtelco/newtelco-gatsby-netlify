@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin: 200px 0;
   position: relative;
+
+  ${media.lessThan('medium')`
+    height: 1250px;
+  `}
 `
 
 export const SvgImage = styled.div`
@@ -28,7 +32,7 @@ export const SvgImage = styled.div`
   ${media.lessThan('medium')`
     &::before {
       width: 100%;
-      height: 1050px;
+      height: 1350px;
     }
   `}
   ${media.greaterThan('medium')`
@@ -47,6 +51,11 @@ export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 150px;
+  ${media.lessThan('medium')`
+    & {
+      flex-direction: column;
+    }
+  `}
 `
 
 export const Datacenter = styled.img`
@@ -73,6 +82,7 @@ export const Datacenter = styled.img`
 
   ${media.lessThan('medium')`
     & {
+      width: 100%;
       left: 50%;
       transform: translateX(50%);
     }
@@ -85,4 +95,9 @@ export const Content = styled.section`
   padding-left: 50px;
   margin-top: 150px;
   max-height: 450px;
+
+  ${media.lessThan('medium')`
+    margin: 100px auto;
+    padding-left: 0px;
+  `}
 `

@@ -23,8 +23,8 @@ const Index = ({ data: { allMarkdownRemark } }) => {
       <SEO title="Home" />
       <TitlePage text={hello} subtitle={subline} />
       <SectionStats />
-      <SectionCategory title={products}></SectionCategory>
       <div ref={ref}>
+        <SectionCategory title={products}></SectionCategory>
         <SectionCategory title={services}></SectionCategory>
         <SectionLocation title={location}></SectionLocation>
         {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
