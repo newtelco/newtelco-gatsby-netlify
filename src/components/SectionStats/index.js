@@ -1,8 +1,5 @@
 import React from 'react'
-import { LocaleContext } from '../Layout'
-import LocalizedLink from '../LocalizedLink'
 import { useInView } from 'react-intersection-observer'
-// import datacenter from '../../images/datacenter.svg'
 import datacenter from '../../images/servers.png'
 import StatBlock from '../StatBlock'
 import useTranslations from '../useTranslations'
@@ -27,10 +24,10 @@ const SectionStats = props => {
           className={inView ? 'imageInView' : ''}
         />
         <S.Content ref={ref}>
-          <StatBlock inView={inView} label="Racks" value={457} />
-          <StatBlock inView={inView} label="Customers" value={120} />
-          <StatBlock inView={inView} label="Watts" value={13040} />
-          <StatBlock inView={inView} label="Tbps" value={3.5} />
+          <StatBlock inView={inView} label={racks} value={457} />
+          <StatBlock inView={inView} label={customers} value={120} />
+          <StatBlock inView={inView} label={watts} value={13040} />
+          <StatBlock inView={inView} label={tbps} value={3.5} />
         </S.Content>
       </S.ContentWrapper>
     </S.Wrapper>
