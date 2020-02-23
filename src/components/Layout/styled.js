@@ -4,6 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: space-between;
   height: 100%;
   ${media.lessThan('medium')`
