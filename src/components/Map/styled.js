@@ -8,7 +8,7 @@ export const MapImage = styled.img`
 
   ${media.lessThan('medium')`
     max-width: 120%;
-    top: 40px;
+    top: 20px;
     right: -10%;
   `}
 

@@ -98,27 +98,6 @@ const GlobalStyles = createGlobalStyle`
     background-color: rgba(0,0,0,0.3);
   }
 
-  @keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-30rem);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(30rem);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0rem) scale(1);
-    }
-  }
-
   :root { 
     --gray-extra-light: #eaeaea; 
     --gray-light: #747d8d;  

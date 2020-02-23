@@ -38,6 +38,28 @@ export const Wrapper = styled.div`
     animation: slideInLeft .7s ease-in-out;
     opacity: 1;
   }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30rem);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(30rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0rem) scale(1);
+    }
+  }
+
 `
 
 export const SectionTextWrapper = styled.div`
@@ -85,10 +107,26 @@ export const Content = styled.section`
   width: 100%;
   line-height: 210%;
   font-weight: 300;
+  opacity: 0;
+
+  &.textInView {
+    animation: slideInTop-sm .7s ease-in-out;
+    opacity: 1;
+  }
+  @keyframes slideInTop-sm {
+    0% {
+      opacity: 0;
+      transform: translateY(5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0rem) scale(1);
+    }
+  }
 
   ${media.lessThan('medium')`
     padding: 30px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   `}
   ${media.greaterThan('medium')`
     padding: 40px;

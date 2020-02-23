@@ -19,6 +19,9 @@ const Footer = () => {
         xmlns="http://www.w3.org/2000/svg"
         fill="#eaeaea"
         viewBox="0 0 1920 222.29"
+        style={{
+          transform: 'translateY(1px)',
+        }}
       >
         <g>
           <g>
