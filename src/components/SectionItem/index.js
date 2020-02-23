@@ -17,7 +17,9 @@ const SectionItem = props => {
         src={props.item.frontmatter.image}
       />
       <S.SectionTextWrapper>
-        <S.Header>{props.item.frontmatter.title}</S.Header>
+        <S.Header className={props.inView ? 'textInView' : ''}>
+          {props.item.frontmatter.title}
+        </S.Header>
         <S.Content className={props.inView ? 'textInView' : ''}>
           <div
             dangerouslySetInnerHTML={{ __html: props.item.frontmatter.short }}

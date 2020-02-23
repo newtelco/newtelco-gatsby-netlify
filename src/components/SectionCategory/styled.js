@@ -12,7 +12,7 @@ export const SectionSvg = styled.div`
   position: relative;
   &::before {
     position: absolute;
-    height: 1250px;
+    height: 1350px;
     opacity: 0.1;
     content: '';
     background: linear-gradient(to right, #8cbf86, #66b4a6, #408ca3);
@@ -20,26 +20,25 @@ export const SectionSvg = styled.div`
     z-index: -1;
     top: 0px;
     border-radius: 60px;
-    transform: skew(0deg, -10deg);
+    transform: skew(0deg, -10deg) translateX(50%);
     left: auto;
+    right: 50%;
   }
   ${media.lessThan('medium')`
     &::before {
       width: 100%;
-      right: -1%;
       height: 1550px;
     }
   `}
   ${media.greaterThan('medium')`
     &::before {
       width: 950px;
-      right: 4vw;
     }
   `}
   ${media.greaterThan('large')`
     &::before {
       width: 1250px;
-      right: -1vw;
+      top: 100px;
     }
   `}
 `

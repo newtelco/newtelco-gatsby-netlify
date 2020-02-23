@@ -14,8 +14,6 @@ const TitlePage = props => {
     rootMargin: '-75% 0px 0px 0px',
   })
 
-  console.log(inView)
-
   return (
     <S.TitleWrapper>
       <Map />

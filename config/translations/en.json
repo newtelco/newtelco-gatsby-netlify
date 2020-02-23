@@ -18,6 +18,10 @@
   "pageNotFound": "Page Not Found",
 
   "contactAction": "Contact",
+  "racks": "Racks",
+  "customers": "Customers",
+  "watts": "Watt",
+  "tbps": "Tbps",
 
   "next": "Next",
   "prev": "Prev",

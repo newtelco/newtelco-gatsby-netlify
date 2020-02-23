@@ -51,6 +51,11 @@ const query = graphql`
 
             contactAction
 
+            racks
+            customers
+            watts
+            tbps
+
             next
             prev
             of

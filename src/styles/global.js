@@ -2,12 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100:300,400|Libre+Baskerville|Major+Mono+Display&display=swap');
+
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
   */
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Raleway:100,300,500&display=swap');
-
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -58,13 +58,13 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   h1, h2, h3, h4 {
-    font-family: "Roboto Mono", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Libre Baskerville", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   body {
     overflow-x: hidden;
     background: var(--body-bg);
     font-weight: 400;
-    font-family: "Raleway", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Libre Franklin", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
     font-size: 1.5rem;
     line-height: 150%;
@@ -99,6 +99,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root { 
+    --font-face-san-serif: 'Libre Franklin';
+    --font-face-serif: 'Libre Baskerville';
+
     --gray-extra-light: #eaeaea; 
     --gray-light: #747d8d;  
     --gray: #475060;

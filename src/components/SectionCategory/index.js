@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer'
 
 import * as S from './styled'
 
-const Section = props => {
+const SectionCategory = props => {
   const { locale } = React.useContext(LocaleContext)
   const nodes = useSection()
 
@@ -61,7 +61,7 @@ const Section = props => {
   )
 }
 
-export default Section
+export default SectionCategory
 
 const query = graphql`
   query getSectionNames {

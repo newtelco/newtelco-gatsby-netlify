@@ -13,10 +13,9 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
       <S.Navigation>
         <ul>
           {menuItems.map(menu => (
-            <li>
+            <li key={menu.name}>
               <S.NavigationLink
                 to={menu.link}
-                key={menu.name}
                 aria-label={menu.name}
                 activeClassName="active"
                 onClick={toggleMenu}
@@ -28,7 +27,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
         </ul>
       </S.Navigation>
       <S.ShapeOverlays
-        class="shape-overlays"
+        className="shape-overlays"
         id="shape-overlays"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"

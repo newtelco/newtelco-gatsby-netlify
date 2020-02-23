@@ -99,6 +99,20 @@ export const Header = styled.h3`
   text-align: center;
   font-weight: 600;
   padding: 5px 20px;
+  opacity: 0;
+
+  &.textInView {
+    animation: slideInTop-sm 0.7s ease-in-out;
+    opacity: 1;
+  }
+  @keyframes slideInTop-sm {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `
 
 export const Content = styled.section`

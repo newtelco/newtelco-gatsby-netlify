@@ -66,6 +66,10 @@ export const NavigationLink = styled(LocalizedLink)`
     `}
   }
 
+  &:hover {
+    font-weight: 300;
+  }
+
   &:hover,
   &.active {
     font-weight: bold;
@@ -74,11 +78,17 @@ export const NavigationLink = styled(LocalizedLink)`
       font-weight: normal;
     `}
 
-    &:after {
+  &:after {
       opacity: 1;
       bottom: -10px;
       width: 100%;
     }
+  }
+  &.active:hover {
+    font-weight: normal;
+  }
+  &:hover {
+    font-weight: 300;
   }
 `
 

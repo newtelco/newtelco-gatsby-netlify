@@ -10,6 +10,21 @@ export const Wrapper = styled.div`
   background-color: var(--body-bg);
   border-radius: 5px;
   box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
+  opacity: 0;
+
+  animation: slideIn 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0vw);
+    }
+  }
 
   ${media.lessThan('medium')`
     width: 100%;

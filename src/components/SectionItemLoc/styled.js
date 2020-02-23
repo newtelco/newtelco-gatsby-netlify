@@ -99,7 +99,7 @@ export const Header = styled.h3`
   transform: translate(20px, 70px);
   z-index: 8;
   color: #67b246;
-  font-family: 'Raleway' !important;
+  font-family: var(--font-face-san-serif);
 
   ${media.lessThan('medium')`
     font-size: 6rem;

@@ -3,8 +3,9 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
-import Section from '../components/Section'
+import SectionCategory from '../components/SectionCategory'
 import SectionLocation from '../components/SectionLocation'
+import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
 
@@ -21,9 +22,10 @@ const Index = ({ data: { allMarkdownRemark } }) => {
     <div className="homepage">
       <SEO title="Home" />
       <TitlePage text={hello} subtitle={subline} />
-      <Section title={products}></Section>
+      <SectionStats />
+      <SectionCategory title={products}></SectionCategory>
       <div ref={ref}>
-        <Section title={services}></Section>
+        <SectionCategory title={services}></SectionCategory>
         <SectionLocation title={location}></SectionLocation>
         {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
       </div>
