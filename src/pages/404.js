@@ -17,15 +17,15 @@ const NotFound = () => {
           margin: '50px',
         }}
       >
+        <img src={image} alt="404 Image" style={{ maxWidth: '80%' }} />
         <h1
           style={{
             fontSize: '3rem',
-            marginBottom: '100px',
+            marginTop: '100px',
           }}
         >
           {pageNotFound}
         </h1>
-        <img src={image} alt="404 Image" />
       </div>
     </>
   )
