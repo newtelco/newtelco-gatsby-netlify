@@ -69,10 +69,10 @@ export const Navigation = styled.div`
   ul {
     list-style: none;
     padding: 0;
-    margin: 10vh auto;
+    margin: 5vh auto;
     display: inline-block;
     position: relative;
-    height: 100%;
+    height: 70%;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
     transition-delay: 300ms;
@@ -129,9 +129,10 @@ export const NavigationLink = styled(LocalizedLink)`
   z-index: 101;
   text-align: center;
   font-size: 2.5rem;
-  font-family: var(--font-face-serif);
+  font-family: var(--font-face-san-serif2);
+  font-weight: 300;
 
   &.active {
-    font-weight: 600;
+    font-weight: 700;
   }
 `

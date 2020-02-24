@@ -57,7 +57,7 @@ export const Text = styled.span`
 
   ${media.lessThan('medium')`
     font-size: 1.7rem;
-    margin-right: 5px;
+    margin-right: 10px;
   `}
 `
 

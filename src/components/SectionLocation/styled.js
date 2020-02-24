@@ -55,4 +55,16 @@ export const Header = styled.h3`
     margin: 0 1rem;
     transform: translateY(-1rem);
   }
+  ${media.lessThan('medium')`
+    &::before {
+      border-top: none;
+      display: none;
+      content: none;
+    }
+    &::after {
+      border-top: none;
+      display: none;
+      content: none;
+    }
+  `}
 `

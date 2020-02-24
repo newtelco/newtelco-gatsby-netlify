@@ -22,7 +22,7 @@ export const LanguageWrapper = styled.ul`
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 28px; /* the height of the main nav */
+    top: 28px;
   }
 
   ${media.lessThan('medium')`
@@ -69,6 +69,8 @@ export const LanguageChoiceWrapper = styled.ul`
     transform: translateX(calc(-50% + 10px));
     background-color: transparent;
     box-shadow: none;
+    width: 250px;
+    justify-content: space-around;
   }
 `
 
@@ -109,10 +111,8 @@ export const LanguageLink = styled(Link)`
   line-height: 30px;
   text-decoration: none;
   ${media.lessThan('medium')`
-    font-size: 30px;
-  `} /* margin: 4px; */
-  /* font-size: 20px; */
-  /* line-height: 60px; */
+    font-size: 34px;
+  `}
 `
 
 export const CountryImage = styled.img`

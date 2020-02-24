@@ -35,12 +35,12 @@ export const Wrapper = styled.div`
 `
 
 export const Value = styled.div`
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: 'Major Mono Display';
   font-weight: 100;
   color: var(--primary-color);
   ${media.lessThan('medium')`
-    font-size: 3rem;
+    font-size: 4rem;
   `}
 `
 

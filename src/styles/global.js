@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100:300,400|Libre+Baskerville|Major+Mono+Display&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,600|Roboto:100,300,700|Libre+Franklin:100:300,400|Libre+Baskerville|Major+Mono+Display&display=swap');
 
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -100,6 +100,7 @@ const GlobalStyles = createGlobalStyle`
 
   :root { 
     --font-face-san-serif: 'Libre Franklin';
+    --font-face-san-serif2: 'Roboto';
     --font-face-serif: 'Libre Baskerville';
 
     --gray-extra-light: #eaeaea; 

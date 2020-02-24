@@ -63,6 +63,24 @@ export const FooterLinkSection = styled.div`
     align-items;
     padding: 5px;
     font-size: 1.3rem;
+    min-width:100px;
+
+    &:nth-child(1) {
+      min-width:70px;
+      margin-left: 15px;
+    }
+    &:nth-child(2) {
+      min-width:90px;
+    }
+    &:nth-child(3) {
+      min-width:120px;
+    }
+    &:nth-child(4) {
+      min-width:90px;
+    }
+    &:nth-child(5) {
+      min-width:90px;
+    }
 
     & > a {
       margin: 6px 0;
