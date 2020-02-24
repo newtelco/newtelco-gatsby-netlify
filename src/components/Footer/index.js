@@ -110,7 +110,7 @@ const Footer = () => {
             </a>
             .
           </p>
-          <p>
+          <p style={{ textAlign: 'right' }}>
             {maintainedBy}{' '}
             <a
               rel="noopener noreferrer"

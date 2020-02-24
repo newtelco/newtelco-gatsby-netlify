@@ -4,7 +4,7 @@ const { NETBOX_KEY } = process.env
 const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/sites/'
 
 exports.handler = async (event, context) => {
-  return fetch(API_ENDPOINT, {
+  await fetch(API_ENDPOINT, {
     headers: {
       Accept: 'application/json',
       Authorization: `Token ${NETBOX_KEY}`,

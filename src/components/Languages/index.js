@@ -11,26 +11,29 @@ const Languages = props => {
       <S.LanguageChoiceWrapper className={props.isActive ? 'active' : ''}>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/" hrefLang="en">
-            <S.CountryImage
+            {/* <S.CountryImage
               src="https://www.countryflags.io/us/shiny/32.png"
               alt="Language EN"
-            />
+            /> */}
+            🇬🇧
           </S.LanguageLink>
         </S.LanguageItemDropdown>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/de" hrefLang="de">
-            <S.CountryImage
+            {/* <S.CountryImage
               src="https://www.countryflags.io/de/shiny/32.png"
               alt="Language DE"
-            />
+            /> */}
+            🇩🇪
           </S.LanguageLink>
         </S.LanguageItemDropdown>
         <S.LanguageItemDropdown>
           <S.LanguageLink to="/ru" hrefLang="ru">
-            <S.CountryImage
+            {/* <S.CountryImage
               src="https://www.countryflags.io/ru/shiny/32.png"
               alt="Language RU"
-            />
+            /> */}
+            🇷🇺
           </S.LanguageLink>
         </S.LanguageItemDropdown>
       </S.LanguageChoiceWrapper>

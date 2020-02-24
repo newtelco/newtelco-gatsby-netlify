@@ -101,14 +101,18 @@ export const LanguageLink = styled(Link)`
   display: inline-block;
   color: var(--grayColor);
   font-size: 1.4rem;
-  margin: 4px;
-
+  margin: 4px 6px;
   display: block;
   padding: 0 10px;
   color: #fff;
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 24px;
+  line-height: 30px;
   text-decoration: none;
+  ${media.lessThan('medium')`
+    font-size: 30px;
+  `} /* margin: 4px; */
+  /* font-size: 20px; */
+  /* line-height: 60px; */
 `
 
 export const CountryImage = styled.img`

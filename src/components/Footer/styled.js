@@ -59,9 +59,14 @@ export const FooterLinkSection = styled.div`
   }
 
   ${media.lessThan('medium')`
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items;
     padding: 5px;
     font-size: 1.3rem;
+
+    & > a {
+      margin: 6px 0;
+    }
   `}
 
   & > a {
