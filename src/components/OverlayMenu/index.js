@@ -12,7 +12,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
     <S.OverlayWrapper className={isActive ? 'active' : ''}>
       <S.HeaderImage src={newtelcoLogo} alt="Newtelco Logo" />
       <S.Navigation>
-        <ul>
+        <ul className={isActive ? 'active' : ''}>
           {menuItems.map(menu => (
             <li key={menu.name}>
               <S.NavigationLink

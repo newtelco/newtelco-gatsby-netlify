@@ -73,6 +73,13 @@ export const Navigation = styled.div`
     display: inline-block;
     position: relative;
     height: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    transition-delay: 300ms;
+
+    &.active {
+      opacity: 1;
+    }
 
     li {
       display: block;
@@ -80,17 +87,26 @@ export const Navigation = styled.div`
       position: relative;
       margin-left: 0px;
       text-align: center;
-      /* animation: fadeInRight 0.5s ease forwards;
-      animation-delay: 0.35s;
+      opacity: 0;
+      animation: fadeInRight 0.5s ease forwards;
 
+      &:nth-of-type(1) {
+        animation-delay: 150ms;
+      }
       &:nth-of-type(2) {
-        animation-delay: 0.4s;
+        animation-delay: 200ms;
       }
       &:nth-of-type(3) {
-        animation-delay: 0.45s;
+        animation-delay: 250ms;
       }
       &:nth-of-type(4) {
-        animation-delay: 0.5s;
+        animation-delay: 300ms;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 350ms;
+      }
+      &:nth-of-type(6) {
+        animation-delay: 400ms;
       }
       @keyframes fadeInRight {
         0% {
@@ -101,7 +117,7 @@ export const Navigation = styled.div`
           opacity: 1;
           left: 0;
         }
-      } */
+      }
     }
   }
 `
@@ -114,37 +130,6 @@ export const NavigationLink = styled(LocalizedLink)`
   text-align: center;
   font-size: 2.5rem;
   font-family: var(--font-face-serif);
-  opacity: 0;
-  animation: fadeInRight 0.5s ease forwards;
-
-  &:nth-of-type(1) {
-    animation-delay: 150ms;
-  }
-  &:nth-of-type(2) {
-    animation-delay: 200ms;
-  }
-  &:nth-of-type(3) {
-    animation-delay: 250ms;
-  }
-  &:nth-of-type(4) {
-    animation-delay: 300ms;
-  }
-  &:nth-of-type(5) {
-    animation-delay: 350ms;
-  }
-  &:nth-of-type(6) {
-    animation-delay: 400ms;
-  }
-  @keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      left: 200px;
-    }
-    100% {
-      opacity: 1;
-      left: 0;
-    }
-  }
 
   &.active {
     font-weight: 600;
