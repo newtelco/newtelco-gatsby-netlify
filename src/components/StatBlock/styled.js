@@ -27,6 +27,11 @@ export const Wrapper = styled.div`
     cursor: pointer;
     transform: translateY(-5px);
   }
+
+  ${media.lessThan('medium')`
+    width: 160px;
+    height: 160px;
+  `}
 `
 
 export const Value = styled.div`
@@ -34,9 +39,15 @@ export const Value = styled.div`
   font-family: 'Major Mono Display';
   font-weight: 100;
   color: var(--primary-color);
+  ${media.lessThan('medium')`
+    font-size: 3rem;
+  `}
 `
 
 export const Label = styled.div`
   font-size: 2.5rem;
   font-family: var(--font-face-serif);
+  ${media.lessThan('medium')`
+    font-size: 2rem;
+  `}
 `

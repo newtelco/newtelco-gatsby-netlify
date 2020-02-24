@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 
   ${media.lessThan('medium')`
     height: 1250px;
+    margin: 300px 0 175px 0;
   `}
 `
 
@@ -32,7 +33,7 @@ export const SvgImage = styled.div`
   ${media.lessThan('medium')`
     &::before {
       width: 100%;
-      height: 1350px;
+      height: 1150px;
     }
   `}
   ${media.greaterThan('medium')`
@@ -59,7 +60,6 @@ export const ContentWrapper = styled.div`
 `
 
 export const Datacenter = styled.img`
-  /* position: absolute; */
   top: 220px;
   left: 20px;
   max-width: 600px;
@@ -97,7 +97,9 @@ export const Content = styled.section`
   max-height: 450px;
 
   ${media.lessThan('medium')`
-    margin: 100px auto;
+    margin: 70px auto;
+    justify-content: center;
     padding-left: 0px;
+    margin-left: -25px;
   `}
 `
