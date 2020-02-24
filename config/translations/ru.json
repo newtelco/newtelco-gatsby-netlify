@@ -8,6 +8,16 @@
   "products": "Товары",
   "services": "Сервисы",
   "location": "Места",
+  "company": "Компания",
+
+  "colocation": "Colocation",
+  "ncex": "NCEX",
+  "vpop": "VPOP",
+  "lmrgmr": "LMR + GMR",
+  "consulting": "Консалтинг",
+  "integration": "интеграция",
+  "interconnection": "взаимосвязь",
+  "technical": "технический",
 
   "hello": "Newtelco GmbH",
   "subline": "Newtelco - ваш партнер во всем, что связано с центром обработки данных",
@@ -16,6 +26,10 @@
   "allPosts": "Alle Posts",
   "toRead": "Zum Lesen",
   "pageNotFound": "Страница не найдена",
+
+  "contact": "контакт",
+  "team": "команда",
+  "about": "Насчет нас",
 
   "contactAction": "контакт",
   "racks": "стеллаж",

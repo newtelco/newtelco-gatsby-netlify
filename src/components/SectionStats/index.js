@@ -26,7 +26,7 @@ const SectionStats = props => {
         <S.Content ref={ref}>
           <StatBlock inView={inView} label={racks} value={457} />
           <StatBlock inView={inView} label={customers} value={120} />
-          <StatBlock inView={inView} label={watts} value={13040} />
+          <StatBlock inView={inView} label={watts} value={1340} />
           <StatBlock inView={inView} label={tbps} value={3.5} />
         </S.Content>
       </S.ContentWrapper>

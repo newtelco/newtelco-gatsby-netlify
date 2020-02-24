@@ -40,6 +40,7 @@ const query = graphql`
             products
             services
             location
+            company
 
             hello
             subline
@@ -49,8 +50,11 @@ const query = graphql`
             toRead
             pageNotFound
 
-            contactAction
+            contact
+            team
+            about
 
+            contactAction
             racks
             customers
             watts

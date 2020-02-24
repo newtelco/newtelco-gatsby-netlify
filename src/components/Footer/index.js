@@ -1,7 +1,10 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import useTranslations from '../useTranslations'
 import SocialLinks from '../SocialLinks'
 import MapDots from '../MapDots'
+import LocalizedLink from '../LocalizedLink'
+import uniqBy from 'lodash.uniqby'
 
 import * as S from './styled'
 
@@ -10,8 +13,28 @@ const Footer = () => {
     aboutProject,
     seeMorePWA,
     maintainedBy,
-    contributeMessage,
+    products,
+    services,
+    location,
+    contact,
+    team,
+    about,
+    company,
   } = useTranslations()
+
+  const { allMarkdownRemark } = useStaticQuery(query)
+  const simplified = allMarkdownRemark.nodes.map(item => {
+    return {
+      title: item.frontmatter.title,
+      slug: item.fields.slug,
+      section: item.fields.section,
+    }
+  })
+
+  const links = uniqBy(simplified, 'slug')
+  const productsItems = links.filter(link => link.section === 'products')
+  const servicesItems = links.filter(link => link.section === 'services')
+  const locationItems = links.filter(link => link.section === 'location')
 
   return (
     <S.FooterWrapper>
@@ -39,32 +62,40 @@ const Footer = () => {
             <SocialLinks />
           </S.FooterLinkSection>
           <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>Newtelco</S.FooterLinkSectionHeader>
-            <a href="#">Newtelco Link 1</a>
-            <a href="#">Newtelco Link 2</a>
-            <a href="#">Newtelco Link 3</a>
-            <a href="#">Newtelco Link 4</a>
+            <S.FooterLinkSectionHeader>{products}</S.FooterLinkSectionHeader>
+            {productsItems.map(prod => {
+              return (
+                <LocalizedLink key={prod.slug} to={prod.slug}>
+                  {prod.title}
+                </LocalizedLink>
+              )
+            })}
           </S.FooterLinkSection>
           <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>Products</S.FooterLinkSectionHeader>
-            <a href="#">Newtelco Link 1</a>
-            <a href="#">Newtelco Link 2</a>
-            <a href="#">Newtelco Link 3</a>
-            <a href="#">Newtelco Link 4</a>
+            <S.FooterLinkSectionHeader>{services}</S.FooterLinkSectionHeader>
+            {servicesItems.map(service => {
+              return (
+                <LocalizedLink key={service.slug} to={service.slug}>
+                  {service.title}
+                </LocalizedLink>
+              )
+            })}
           </S.FooterLinkSection>
           <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>Services</S.FooterLinkSectionHeader>
-            <a href="#">Newtelco Link 1</a>
-            <a href="#">Newtelco Link 2</a>
-            <a href="#">Newtelco Link 3</a>
-            <a href="#">Newtelco Link 4</a>
+            <S.FooterLinkSectionHeader>{location}</S.FooterLinkSectionHeader>
+            {locationItems.map(loc => {
+              return (
+                <LocalizedLink key={loc.slug} to={loc.slug}>
+                  {loc.title}
+                </LocalizedLink>
+              )
+            })}
           </S.FooterLinkSection>
           <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>About Us</S.FooterLinkSectionHeader>
-            <a href="#">Newtelco Link 1</a>
-            <a href="#">Newtelco Link 2</a>
-            <a href="#">Newtelco Link 3</a>
-            <a href="#">Newtelco Link 4</a>
+            <S.FooterLinkSectionHeader>{company}</S.FooterLinkSectionHeader>
+            <LocalizedLink to="/about"> {about} </LocalizedLink>
+            <LocalizedLink to="/contact"> {contact} </LocalizedLink>
+            <LocalizedLink to="/team"> {team} </LocalizedLink>
           </S.FooterLinkSection>
         </S.FooterLinkContainer>
         <S.FooterBottomContainer>
@@ -97,3 +128,21 @@ const Footer = () => {
 }
 
 export default Footer
+
+const query = graphql`
+  query FooterEntries {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "section" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+        }
+        fields {
+          section
+          slug
+        }
+      }
+    }
+  }
+`

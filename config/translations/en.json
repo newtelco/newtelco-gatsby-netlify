@@ -8,6 +8,16 @@
   "products": "Products",
   "services": "Services",
   "location": "Locations",
+  "company": "Company",
+
+  "colocation": "Colocation",
+  "ncex": "NCEX",
+  "vpop": "VPOP",
+  "lmrgmr": "LMR + GMR",
+  "consulting": "Consulting",
+  "integration": "Integration",
+  "interconnection": "Interconnection",
+  "technical": "Technical",
 
   "hello": "Newtelco GmbH",
   "subline": "Newtelco is your partner in datacenter services and more!",
@@ -17,10 +27,14 @@
   "toRead": "to read",
   "pageNotFound": "Page Not Found",
 
+  "contact": "Contact",
+  "team": "Team",
+  "about": "About Us",
+
   "contactAction": "Contact",
   "racks": "Racks",
   "customers": "Customers",
-  "watts": "Watt",
+  "watts": "kWh",
   "tbps": "Tbps",
 
   "next": "Next",

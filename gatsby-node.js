@@ -70,10 +70,16 @@ exports.onCreateNode = ({ node, actions }) => {
     const slug = slugFileName
     // slugFileName.length >= 10 ? slugFileName.slice(11) : slugFileName
 
+    const section = path
+      .dirname(node.fileAbsolutePath)
+      .split(path.sep)
+      .pop()
+
     // Adding the nodes on GraphQL for each post as "fields"
     createNodeField({ node, name: `slug`, value: slug })
     createNodeField({ node, name: `locale`, value: lang })
     createNodeField({ node, name: `isDefault`, value: isDefault })
+    createNodeField({ node, name: `section`, value: section })
   }
 }
 
