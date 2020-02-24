@@ -30,34 +30,34 @@ const Index = () => {
 
 export default Index
 
-export const query = graphql`
-  query ProductsIndex($locale: String!, $dateFormat: String!, ) {
-    allMarkdownRemark(
-      filter: {
-        fields: { locale: { eq: $locale } }
-        fileAbsolutePath: {regex: "/(products)\/.*\\.md$/"}
-      }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            description
-            category
-            background
-            image
-            date(formatString: $dateFormat)
+// export const query = graphql`
+//   query ProductsIndex($locale: String!, $dateFormat: String!, ) {
+//     allMarkdownRemark(
+//       filter: {
+//         fields: { locale: { eq: $locale } }
+//         fileAbsolutePath: {regex: "/(products)\/.*\\.md$/"}
+//       }
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       limit: 2
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//             description
+//             category
+//             background
+//             image
+//             date(formatString: $dateFormat)
 
-          }
-          timeToRead
-          fields {
-            locale
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+//           }
+//           timeToRead
+//           fields {
+//             locale
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

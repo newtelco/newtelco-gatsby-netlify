@@ -24,7 +24,9 @@ const Product = props => {
     <>
       <S.Header>{props.product.node.frontmatter.title}</S.Header>
       <div ref={ref}>
-        {props.product.node.frontmatter.title === 'NCEX' && getRooms()}
+        {typeof window !== 'undefined' &&
+          props.product.node.frontmatter.title === 'NCEX' &&
+          getRooms()}
         <S.Product
           dangerouslySetInnerHTML={{ __html: props.product.node.html }}
           className={inView ? 'textInView' : ''}
