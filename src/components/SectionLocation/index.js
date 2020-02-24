@@ -35,7 +35,7 @@ const SectionLocation = props => {
   )
 
   const [ref, inView, entry] = useInView({
-    threshold: 0.9,
+    threshold: 0.8,
     rootMargin: '50px 20px 75px 30px',
     triggerOnce: true,
   })

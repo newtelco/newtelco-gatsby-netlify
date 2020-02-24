@@ -32,9 +32,9 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
       >
-        <path class="shape-overlays__path"></path>
-        <path class="shape-overlays__path"></path>
-        <path class="shape-overlays__path"></path>
+        <path className="shape-overlays__path"></path>
+        <path className="shape-overlays__path"></path>
+        <path className="shape-overlays__path"></path>
       </S.ShapeOverlays>
     </S.OverlayWrapper>
   )

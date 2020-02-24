@@ -1,6 +1,7 @@
 import React from 'react'
 import useTranslations from '../useTranslations'
 import { Link } from 'gatsby'
+import { Send } from 'react-feather'
 
 import * as S from './styled'
 
@@ -23,8 +24,13 @@ const TitleAction = props => {
           <S.Text>{email}:</S.Text> <S.TextValue>{emailAddress}</S.TextValue>
         </S.TextWrapper>
       </div>
-      <Link to="/contact">
-        <S.Button>{contactAction}</S.Button>
+      <Link to="/contact" style={{ textDecoration: 'none' }}>
+        <S.Button>
+          {contactAction}
+          <S.ButtonIcon>
+            <Send color="white" />
+          </S.ButtonIcon>
+        </S.Button>
       </Link>
     </S.Wrapper>
   )

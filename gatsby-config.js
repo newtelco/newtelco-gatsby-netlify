@@ -43,35 +43,35 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/content/blog`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/pages`,
+        path: `${__dirname}/content/pages`,
         name: `pages`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/products`,
+        path: `${__dirname}/content/products`,
         name: `products`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/services`,
+        path: `${__dirname}/content/services`,
         name: `services`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/location`,
+        path: `${__dirname}/content/location`,
         name: `location`,
       },
     },

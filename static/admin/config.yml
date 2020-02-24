@@ -13,7 +13,7 @@ collections:
   #Posts (English)
   - name: 'posts-en' # Used in routes, e.g., /admin/collections/blog
     label: 'Posts (English)' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
+    folder: 'content/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'en.md'
@@ -62,7 +62,7 @@ collections:
   #Posts (German)
   - name: 'posts-de' # Used in routes, e.g., /admin/collections/blog
     label: 'Posts (German)' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
+    folder: 'content/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'de.md'
@@ -110,7 +110,7 @@ collections:
   #Posts (Russian)
   - name: 'posts-ru' # Used in routes, e.g., /admin/collections/blog
     label: 'Posts (Russian)' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
+    folder: 'content/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'ru.md'
@@ -159,7 +159,7 @@ collections:
   #Pages (English)
   - name: 'pages-en' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages (English)' # Used in the UI
-    folder: 'pages' # The path to the folder where the documents are stored
+    folder: 'content/pages' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'en.md'
@@ -178,7 +178,7 @@ collections:
   #Pages (German)
   - name: 'pages-de' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages (German)' # Used in the UI
-    folder: 'pages' # The path to the folder where the documents are stored
+    folder: 'content/pages' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'de.md'
@@ -197,7 +197,7 @@ collections:
   #Pages (Russian)
   - name: 'pages-ru' # Used in routes, e.g., /admin/collections/blog
     label: 'Pages (Russian)' # Used in the UI
-    folder: 'pages' # The path to the folder where the documents are stored
+    folder: 'content/pages' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'ru.md'
@@ -216,7 +216,7 @@ collections:
   #Products (English)
   - name: 'products-en' # Used in routes, e.g., /admin/collections/blog
     label: 'Products (English)' # Used in the UI
-    folder: 'products' # The path to the folder where the documents are stored
+    folder: 'content/products' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'en.md'
@@ -237,7 +237,7 @@ collections:
   #Products (German)
   - name: 'products-de' # Used in routes, e.g., /admin/collections/blog
     label: 'Products (German)' # Used in the UI
-    folder: 'products' # The path to the folder where the documents are stored
+    folder: 'content/products' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'de.md'
@@ -259,7 +259,7 @@ collections:
   #Products (Russian)
   - name: 'products-ru' # Used in routes, e.g., /admin/collections/blog
     label: 'Products (Russian)' # Used in the UI
-    folder: 'products' # The path to the folder where the documents are stored
+    folder: 'content/products' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'ru.md'
@@ -280,7 +280,7 @@ collections:
   #Services (English)
   - name: 'services-en' # Used in routes, e.g., /admin/collections/blog
     label: 'Services (English)' # Used in the UI
-    folder: 'services' # The path to the folder where the documents are stored
+    folder: 'content/services' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'en.md'
@@ -301,7 +301,7 @@ collections:
   #Services (German)
   - name: 'services-de' # Used in routes, e.g., /admin/collections/blog
     label: 'Services (German)' # Used in the UI
-    folder: 'services' # The path to the folder where the documents are stored
+    folder: 'content/services' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'de.md'
@@ -322,7 +322,7 @@ collections:
   #Services (Russian)
   - name: 'services-ru' # Used in routes, e.g., /admin/collections/blog
     label: 'Services (Russian)' # Used in the UI
-    folder: 'services' # The path to the folder where the documents are stored
+    folder: 'content/services' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'ru.md'
@@ -343,7 +343,7 @@ collections:
   #Locations (English)
   - name: 'locations-en' # Used in routes, e.g., /admin/collections/blog
     label: 'Locations (English)' # Used in the UI
-    folder: 'location' # The path to the folder where the documents are stored
+    folder: 'content/location' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'en.md'
@@ -364,7 +364,7 @@ collections:
   #Locations (German)
   - name: 'locations-de' # Used in routes, e.g., /admin/collections/blog
     label: 'Locations (German)' # Used in the UI
-    folder: 'location' # The path to the folder where the documents are stored
+    folder: 'content/location' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'de.md'
@@ -385,7 +385,7 @@ collections:
   #Locations (Russian)
   - name: 'locations-ru' # Used in routes, e.g., /admin/collections/blog
     label: 'Locations (Russian)' # Used in the UI
-    folder: 'location' # The path to the folder where the documents are stored
+    folder: 'content/location' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'ru.md'
