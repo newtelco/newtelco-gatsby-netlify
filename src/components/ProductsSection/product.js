@@ -13,8 +13,10 @@ const Product = props => {
     fetch('https://newtelco.dev/.netlify/functions/netbox')
       .then(resp => resp.json())
       .then(data => {
-        console.log(data)
-        return data
+        console.log(data.results)
+        const siteNames = []
+        data.results.forEach(site => siteNames.push(site.name))
+        return siteNames
       })
       .catch(err => console.error(err))
   }
