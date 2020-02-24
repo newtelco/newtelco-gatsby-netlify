@@ -1,5 +1,6 @@
 import React from 'react'
 import useMenu from '../useMenu'
+import Languages from '../Languages'
 import newtelcoLogo from '../../images/newtelco-white.png'
 
 import * as S from './styled'
@@ -26,6 +27,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
           ))}
         </ul>
       </S.Navigation>
+      <Languages isActive={isActive} />
       <S.ShapeOverlays
         className="shape-overlays"
         id="shape-overlays"

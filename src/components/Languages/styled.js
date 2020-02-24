@@ -30,6 +30,8 @@ export const LanguageWrapper = styled.ul`
 
     &.active {
       display: inline-block;
+      position: relative;
+      width: 100%;
     }
   `}
 `
@@ -60,9 +62,13 @@ export const LanguageChoiceWrapper = styled.ul`
   }
 
   &.active {
+    position: absolute;
     flex-direction: row;
-    top: -60px;
-    left: calc(50% - 55px);
+    top: -100px;
+    left: 50%;
+    transform: translateX(calc(-50% + 10px));
+    background-color: transparent;
+    box-shadow: none;
   }
 `
 

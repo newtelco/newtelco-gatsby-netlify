@@ -69,14 +69,14 @@ export const Navigation = styled.div`
   ul {
     list-style: none;
     padding: 0;
-    margin: 15vh auto;
+    margin: 10vh auto;
     display: inline-block;
     position: relative;
     height: 100%;
 
     li {
       display: block;
-      height: calc(100% / 10);
+      height: calc(100% / 7);
       position: relative;
       margin-left: 0px;
       text-align: center;
@@ -109,9 +109,44 @@ export const Navigation = styled.div`
 export const NavigationLink = styled(LocalizedLink)`
   text-decoration: none;
   position: relative;
-  font-weight: 600;
   color: #fff;
   z-index: 101;
   text-align: center;
   font-size: 2.5rem;
+  font-family: var(--font-face-serif);
+  opacity: 0;
+  animation: fadeInRight 0.5s ease forwards;
+
+  &:nth-of-type(1) {
+    animation-delay: 150ms;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 200ms;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 250ms;
+  }
+  &:nth-of-type(4) {
+    animation-delay: 300ms;
+  }
+  &:nth-of-type(5) {
+    animation-delay: 350ms;
+  }
+  &:nth-of-type(6) {
+    animation-delay: 400ms;
+  }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 200px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &.active {
+    font-weight: 600;
+  }
 `

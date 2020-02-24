@@ -5,6 +5,6 @@
     { "name": "Produkte", "link": "/products" },
     { "name": "Team", "link": "/team" },
     { "name": "Kontakt", "link": "/contact" },
-    { "name": "Uber", "link": "/about" }
+    { "name": "Über", "link": "/about" }
   ]
 }
