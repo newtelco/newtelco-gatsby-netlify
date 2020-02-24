@@ -36,6 +36,7 @@ export const LogoLink = styled(LocalizedLink)`
   z-index: 2;
   ${media.lessThan('medium')`
     width: 200px;
+    margin-top: 5px;
   `}
 `
 

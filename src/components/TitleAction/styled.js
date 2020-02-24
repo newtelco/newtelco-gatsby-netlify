@@ -41,6 +41,12 @@ export const Wrapper = styled.div`
 
 export const TextWrapper = styled.div`
   margin: 5px 10px;
+
+  ${media.lessThan('medium')`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  `}
 `
 
 export const Text = styled.span`
@@ -48,9 +54,10 @@ export const Text = styled.span`
   color: var(--gray);
   font-weight: 600;
   line-height: 120%;
+
   ${media.lessThan('medium')`
     font-size: 1.7rem;
-    margin-right: 100%;
+    margin-right: 5px;
   `}
 `
 
