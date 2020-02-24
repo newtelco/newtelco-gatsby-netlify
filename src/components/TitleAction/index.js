@@ -6,39 +6,20 @@ import { Send, Phone, Inbox } from 'react-feather'
 import * as S from './styled'
 
 const TitleAction = props => {
-  const {
-    phone,
-    email,
-    phoneNumber,
-    emailAddress,
-    contactAction,
-  } = useTranslations()
-
-  const VIEWPORT_MOBILE = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 769) return true
-    return false
-  }
+  const { phoneNumber, emailAddress, contactAction } = useTranslations()
 
   return (
     <S.Wrapper>
       <div>
         <S.TextWrapper>
           <S.Text>
-            {VIEWPORT_MOBILE ? (
-              <Phone color="#67b246" size={20} />
-            ) : (
-              `${phone}:`
-            )}
+            <Phone color="#67b246" size={20} style={{ marginBottom: '-3px' }} />
           </S.Text>{' '}
           <S.TextValue>{phoneNumber}</S.TextValue>
         </S.TextWrapper>
         <S.TextWrapper>
           <S.Text>
-            {VIEWPORT_MOBILE ? (
-              <Inbox color="#67b246" size={20} />
-            ) : (
-              `${email}:`
-            )}
+            <Inbox color="#67b246" size={20} style={{ marginBottom: '-4px' }} />
           </S.Text>{' '}
           <S.TextValue>{emailAddress}</S.TextValue>
         </S.TextWrapper>

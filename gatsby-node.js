@@ -138,7 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
   contentMarkdown.forEach(({ node: file }) => {
     // Getting Slug and Title
     const slug = file.fields.slug
-    const title = file.frontmatter.title
+    const title = file.frontmatter.title.toLowerCase()
     let section = false
 
     // Use the fields created in exports.onCreateNode

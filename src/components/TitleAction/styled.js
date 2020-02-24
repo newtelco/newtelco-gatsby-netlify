@@ -54,6 +54,7 @@ export const Text = styled.span`
   color: var(--gray);
   font-weight: 600;
   line-height: 120%;
+  margin-right: 5px;
 
   ${media.lessThan('medium')`
     font-size: 1.7rem;
