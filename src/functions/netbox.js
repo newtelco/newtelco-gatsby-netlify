@@ -3,8 +3,8 @@ const { NETBOX_KEY } = process.env
 
 const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/sites/'
 
-exports.handler = async (event, context) => {
-  await fetch(API_ENDPOINT, {
+exports.handler = (event, context, callback) => {
+  fetch(API_ENDPOINT, {
     headers: {
       Accept: 'application/json',
       Authorization: `Token ${NETBOX_KEY}`,
@@ -13,10 +13,10 @@ exports.handler = async (event, context) => {
     .then(response => response.json())
     .then(data => {
       console.log(data)
-      return {
+      callback(null, {
         statusCode: 200,
-        body: data,
-      }
+        body: JSON.stringify(data),
+      })
     })
     .catch(error => ({ statusCode: 422, body: String(error) }))
 }

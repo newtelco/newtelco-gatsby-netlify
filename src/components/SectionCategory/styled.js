@@ -83,6 +83,14 @@ export const Header = styled.h3`
     margin: 0 1rem;
     transform: translateY(-1rem);
   }
+  ${media.lessThan('medium')`
+    &::before {
+      border-top: none;
+    }
+    &::after {
+      border-top: none;
+    }
+  `}
 `
 
 export const ActionBtn = styled.div`
