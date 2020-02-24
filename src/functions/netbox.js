@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch')
 const { NETBOX_KEY } = process.env
 
 const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/sites'
