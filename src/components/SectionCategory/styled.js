@@ -86,9 +86,13 @@ export const Header = styled.h3`
   ${media.lessThan('medium')`
     &::before {
       border-top: none;
+      display: none;
+      content: none;
     }
     &::after {
       border-top: none;
+      display: none;
+      content: none;
     }
   `}
 `
