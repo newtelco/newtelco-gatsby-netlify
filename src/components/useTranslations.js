@@ -56,7 +56,7 @@ const query = graphql`
 
             contactAction
             racks
-            customers
+            datacenters
             watts
             tbps
 

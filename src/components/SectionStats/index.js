@@ -7,7 +7,7 @@ import useTranslations from '../useTranslations'
 import * as S from './styled'
 
 const SectionStats = props => {
-  const { racks, customers, watts, tbps } = useTranslations()
+  const { racks, datacenters, watts, tbps } = useTranslations()
 
   const [ref, inView, entry] = useInView({
     threshold: 0.1,
@@ -25,7 +25,7 @@ const SectionStats = props => {
         />
         <S.Content ref={ref}>
           <StatBlock inView={inView} label={racks} value={457} />
-          <StatBlock inView={inView} label={customers} value={120} />
+          <StatBlock inView={inView} label={datacenters} value={26} />
           <StatBlock inView={inView} label={watts} value={1340} />
           <StatBlock inView={inView} label={tbps} value={3.5} />
         </S.Content>
