@@ -16,21 +16,21 @@ exports.handler = (event, context, callback) => {
     }
     callback(null, response)
     return
-  }
-
-  fetch(API_ENDPOINT, {
-    headers: {
-      Accept: 'application/json',
-      Authorization: `Token ${NETBOX_KEY}`,
-      'Access-Control-Allow-Origin': '*',
-    },
-  })
-    .then(response => response.json())
-    .then(data => {
-      callback(null, {
-        statusCode: 200,
-        body: JSON.stringify(data),
-      })
+  } else {
+    fetch(API_ENDPOINT, {
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Token ${NETBOX_KEY}`,
+        'Access-Control-Allow-Origin': '*',
+      },
     })
-    .catch(error => ({ statusCode: 422, body: String(error) }))
+      .then(response => response.json())
+      .then(data => {
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify(data),
+        })
+      })
+      .catch(error => ({ statusCode: 422, body: String(error) }))
+  }
 }

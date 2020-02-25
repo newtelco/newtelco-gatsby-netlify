@@ -57,6 +57,10 @@ export const Product = styled.div`
   font-weight: 300;
   opacity: 0;
 
+  &.textInView {
+    opacity: 1;
+  }
+
   #right.textInView {
     animation: slideInLeft .7s ease-in-out;
     opacity: 1;

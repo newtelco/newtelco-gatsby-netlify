@@ -10,7 +10,11 @@ const Product = props => {
     triggerOnce: true,
   })
   const getRooms = () => {
-    fetch('https://newtelco.dev/.netlify/functions/netbox')
+    fetch('https://newtelco.dev/.netlify/functions/netbox', {
+      headers: {
+        'Access-Control-Allow-Origin': 'http://localhost:8000',
+      },
+    })
       .then(resp => resp.json())
       .then(data => {
         console.log(data.results)
@@ -20,6 +24,7 @@ const Product = props => {
       })
       .catch(err => console.error(err))
   }
+  console.log(inView)
   return (
     <>
       <S.Header>{props.product.node.frontmatter.title}</S.Header>
