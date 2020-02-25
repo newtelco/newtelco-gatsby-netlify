@@ -44,6 +44,15 @@ export const Header = styled.div`
   `}
 `
 
+export const SectionWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+`
+
 export const Product = styled.div`
   --max-lines: 15;
   --lh: 2.1rem;
@@ -109,5 +118,5 @@ export const Product = styled.div`
 `
 
 export const ProductImage = styled.img`
-  max-width: 400px;
+  width: 400px;
 `

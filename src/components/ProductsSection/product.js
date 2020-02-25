@@ -10,11 +10,7 @@ const Product = props => {
     triggerOnce: true,
   })
   const getRooms = () => {
-    fetch('https://newtelco.dev/.netlify/functions/netbox', {
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:8000',
-      },
-    })
+    fetch('https://newtelco.dev/.netlify/functions/netbox', {})
       .then(resp => resp.json())
       .then(data => {
         console.log(data.results)
@@ -29,18 +25,20 @@ const Product = props => {
     <>
       <S.Header>{props.product.node.frontmatter.title}</S.Header>
       <div ref={ref}>
-        {typeof window !== 'undefined' &&
-          props.product.node.frontmatter.title === 'NCEX' &&
-          getRooms()}
-        <S.ProductImage
-          src={props.product.node.frontmatter.image}
-          alt="Product Image"
-        />
-        <S.Product
-          dangerouslySetInnerHTML={{ __html: props.product.node.html }}
-          className={inView ? 'textInView' : ''}
-          id={props.indexNr % 2 == 0 ? 'left' : 'right'}
-        ></S.Product>
+        <S.SectionWrapper>
+          {typeof window !== 'undefined' &&
+            props.product.node.frontmatter.title === 'NCEX' &&
+            getRooms()}
+          <S.ProductImage
+            src={props.product.node.frontmatter.image}
+            alt="Product Image"
+          />
+          <S.Product
+            dangerouslySetInnerHTML={{ __html: props.product.node.html }}
+            className={inView ? 'textInView' : ''}
+            id={props.indexNr % 2 == 0 ? 'left' : 'right'}
+          ></S.Product>
+        </S.SectionWrapper>
       </div>
     </>
   )

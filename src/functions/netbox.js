@@ -16,7 +16,7 @@ exports.handler = (event, context, callback) => {
     }
     callback(null, response)
     return
-  } else {
+  } else if (event.httpMethod === 'GET') {
     fetch(API_ENDPOINT, {
       headers: {
         Accept: 'application/json',
@@ -29,6 +29,9 @@ exports.handler = (event, context, callback) => {
         callback(null, {
           statusCode: 200,
           body: JSON.stringify(data),
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
         })
       })
       .catch(error => ({ statusCode: 422, body: String(error) }))
