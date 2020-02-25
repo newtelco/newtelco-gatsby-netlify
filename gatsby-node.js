@@ -109,7 +109,6 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               page
               section
-              description
             }
             parent {
               ... on File {
