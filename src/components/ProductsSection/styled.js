@@ -107,3 +107,7 @@ export const Product = styled.div`
     font-size: 1.8rem;
   `}
 `
+
+export const ProductImage = styled.img`
+  max-width: 400px;
+`

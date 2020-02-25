@@ -9,7 +9,6 @@ const Page = props => {
   const items = props.data.allMarkdownRemark.edges
   const page = props.data.markdownRemark
 
-  console.log(items)
   return (
     <>
       <SEO title={props.pageContext.title} />

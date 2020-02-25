@@ -32,6 +32,10 @@ const Product = props => {
         {typeof window !== 'undefined' &&
           props.product.node.frontmatter.title === 'NCEX' &&
           getRooms()}
+        <S.ProductImage
+          src={props.product.node.frontmatter.image}
+          alt="Product Image"
+        />
         <S.Product
           dangerouslySetInnerHTML={{ __html: props.product.node.html }}
           className={inView ? 'textInView' : ''}
