@@ -11,7 +11,6 @@ export const useSection = () => {
               frontmatter {
                 category
                 title
-                description
                 short
                 image
               }

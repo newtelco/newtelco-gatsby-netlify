@@ -43,13 +43,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content/pages`,
         name: `pages`,
       },
@@ -102,8 +95,20 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Open Sans`,
+            family: `Libre Baskerville`,
             variants: [`400`, `600`],
+          },
+          {
+            family: `Libre Franklin`,
+            variants: [`100`, `300`, `400`],
+          },
+          {
+            family: `Roboto Mono`,
+            variants: [`300`, `600`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`100`, `300`, `700`],
           },
         ],
       },

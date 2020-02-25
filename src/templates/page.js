@@ -12,7 +12,7 @@ const Page = props => {
   console.log(items)
   return (
     <>
-      <SEO title={props.pathContext.title} />
+      <SEO title={props.pageContext.title} />
       <S.Content>
         {/* <div dangerouslySetInnerHTML={{ __html: page.html }}></div> */}
         {props.pageContext.title === 'products' && (
@@ -32,7 +32,6 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            description
             image
           }
           html
@@ -42,7 +41,6 @@ export const query = graphql`
     markdownRemark(fields: { locale: { eq: "en" }, slug: { eq: "products" } }) {
       frontmatter {
         title
-        description
         image
       }
       html

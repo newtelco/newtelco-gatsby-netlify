@@ -88,9 +88,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   // Templates for Posts List and Single post
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+  // const postTemplate = path.resolve(`./src/templates/post.js`)
   const sectionItemTemplate = path.resolve(`./src/templates/sectionItem.js`)
-  const postsListTemplate = path.resolve(`./src/templates/posts-list.js`)
+  // const postsListTemplate = path.resolve(`./src/templates/posts-list.js`)
   const pageTemplate = path.resolve(`./src/templates/page.js`)
 
   const result = await graphql(`
@@ -109,6 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               page
               section
+              description
             }
             parent {
               ... on File {
@@ -153,7 +154,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     // Setting a template for page or post depending on the content
-    let template = isPage ? pageTemplate : postTemplate
+    let template = isPage ? pageTemplate : null
     if (isSection) {
       template = sectionItemTemplate
     }
@@ -174,32 +175,32 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // Creating Posts List and its Pagination
-  const postsPerPage = 4
-  const langs = Object.keys(locales).length
-  const numPages = Math.ceil(postsTotal / langs / postsPerPage)
+  // const postsPerPage = 4
+  // const langs = Object.keys(locales).length
+  // const numPages = Math.ceil(postsTotal / langs / postsPerPage)
 
-  Object.keys(locales).map(lang => {
-    // Use the values defined in "locales" to construct the path
-    const localizedPath = locales[lang].default
-      ? '/blog'
-      : `${locales[lang].path}/blog`
+  // Object.keys(locales).map(lang => {
+  //   // Use the values defined in "locales" to construct the path
+  //   const localizedPath = locales[lang].default
+  //     ? '/blog'
+  //     : `${locales[lang].path}/blog`
 
-    return Array.from({ length: numPages }).forEach((_, index) => {
-      createPage({
-        path:
-          index === 0
-            ? `${localizedPath}`
-            : `${localizedPath}/page/${index + 1}`,
-        component: postsListTemplate,
-        context: {
-          limit: postsPerPage,
-          skip: index * postsPerPage,
-          numPages,
-          currentPage: index + 1,
-          locale: lang,
-          dateFormat: locales[lang].dateFormat,
-        },
-      })
-    })
-  })
+  //   return Array.from({ length: numPages }).forEach((_, index) => {
+  //     createPage({
+  //       path:
+  //         index === 0
+  //           ? `${localizedPath}`
+  //           : `${localizedPath}/page/${index + 1}`,
+  //       component: postsListTemplate,
+  //       context: {
+  //         limit: postsPerPage,
+  //         skip: index * postsPerPage,
+  //         numPages,
+  //         currentPage: index + 1,
+  //         locale: lang,
+  //         dateFormat: locales[lang].dateFormat,
+  //       },
+  //     })
+  //   })
+  // })
 }
