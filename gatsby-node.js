@@ -132,7 +132,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Total of posts (only posts, no pages)
   // It will be increase by the next loop
-  let postsTotal = 0
+  // let postsTotal = 0
 
   // Creating each post
   contentMarkdown.forEach(({ node: file }) => {
@@ -158,7 +158,7 @@ exports.createPages = async ({ graphql, actions }) => {
       template = sectionItemTemplate
     }
     // Count posts
-    postsTotal = isPage ? postsTotal + 0 : postsTotal + 1
+    // postsTotal = isPage ? postsTotal + 0 : postsTotal + 1
 
     createPage({
       path: localizedSlug({ isDefault, locale, slug, isPage, section }),
@@ -174,32 +174,32 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // Creating Posts List and its Pagination
-  const postsPerPage = 4
-  const langs = Object.keys(locales).length
-  const numPages = Math.ceil(postsTotal / langs / postsPerPage)
+  // const postsPerPage = 4
+  // const langs = Object.keys(locales).length
+  // const numPages = Math.ceil(postsTotal / langs / postsPerPage)
 
-  Object.keys(locales).map(lang => {
-    // Use the values defined in "locales" to construct the path
-    const localizedPath = locales[lang].default
-      ? '/blog'
-      : `${locales[lang].path}/blog`
+  // Object.keys(locales).map(lang => {
+  //   // Use the values defined in "locales" to construct the path
+  //   const localizedPath = locales[lang].default
+  //     ? '/blog'
+  //     : `${locales[lang].path}/blog`
 
-    return Array.from({ length: numPages }).forEach((_, index) => {
-      createPage({
-        path:
-          index === 0
-            ? `${localizedPath}`
-            : `${localizedPath}/page/${index + 1}`,
-        component: postsListTemplate,
-        context: {
-          limit: postsPerPage,
-          skip: index * postsPerPage,
-          numPages,
-          currentPage: index + 1,
-          locale: lang,
-          dateFormat: locales[lang].dateFormat,
-        },
-      })
-    })
-  })
+  //   return Array.from({ length: numPages }).forEach((_, index) => {
+  //     createPage({
+  //       path:
+  //         index === 0
+  //           ? `${localizedPath}`
+  //           : `${localizedPath}/page/${index + 1}`,
+  //       component: postsListTemplate,
+  //       context: {
+  //         limit: postsPerPage,
+  //         skip: index * postsPerPage,
+  //         numPages,
+  //         currentPage: index + 1,
+  //         locale: lang,
+  //         dateFormat: locales[lang].dateFormat,
+  //       },
+  //     })
+  //   })
+  // })
 }
