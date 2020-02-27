@@ -10,7 +10,7 @@
 
 A starter Internationalization / i18n without third party plugins or packages for Posts and Pages. Different URLs dependending on the language. Focused on SEO, PWA, Image Optimization, Styled Components and more. This starter is also integrate with Netlify CMS to manage all pages, posts and images.
 
-![Screenshot](https://i.imgur.com/3smwtwt.png)
+![Screenshot](https://i.imgur.com/uz7bPIR.png)
 
 ### 🚀 Getting Started
 
