@@ -5,6 +5,9 @@ export const Content = styled.section`
   margin: auto;
   padding: var(--space-lg) 0;
 
+  display: flex;
+  align-items: flex-start;
+
   & > *:first-child {
     margin-top: 0 !important;
   }
@@ -423,4 +426,33 @@ export const Content = styled.section`
       border: none;
     }
   }
+`
+
+export const ContentHtml = styled.div`
+  opacity: 0;
+  animation: slideIn 750ms ease-in-out forwards;
+  animation-delay: 500ms;
+  flex-grow: 1;
+  flex-shrink: 2;
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(5vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0vw);
+    }
+  }
+`
+
+export const Netbox = styled.div`
+  align-self: flex-start;
+  flex-grow: 1;
+  min-width: 30%;
+`
+
+export const Site = styled.div`
+  margin: 10px 0;
 `

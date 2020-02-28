@@ -3,7 +3,7 @@ const locales = require(`./config/i18n`)
 const {
   localizedSlug,
   findKey,
-  removeTrailingSlash,
+  removeTrailingSlash
 } = require(`./src/utils/gatsby-node-helpers`)
 
 exports.onCreatePage = ({ page, actions }) => {
@@ -32,8 +32,8 @@ exports.onCreatePage = ({ page, actions }) => {
       context: {
         ...page.context,
         locale: lang,
-        dateFormat: locales[lang].dateFormat,
-      },
+        dateFormat: locales[lang].dateFormat
+      }
     })
   })
 }
@@ -68,12 +68,13 @@ exports.onCreateNode = ({ node, actions }) => {
     const slugFileName = name.split(`.`)[0]
     // Than remove the date if the name has the date info
     const slug = slugFileName
-    // slugFileName.length >= 10 ? slugFileName.slice(11) : slugFileName
 
-    const section = path
+    const sectionRaw = path
       .dirname(node.fileAbsolutePath)
       .split(path.sep)
       .pop()
+
+    const section = sectionRaw.charAt(0).toUpperCase() + sectionRaw.substring(1)
 
     // Adding the nodes on GraphQL for each post as "fields"
     createNodeField({ node, name: `slug`, value: slug })
@@ -88,9 +89,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   // Templates for Posts List and Single post
-  // const postTemplate = path.resolve(`./src/templates/post.js`)
   const sectionItemTemplate = path.resolve(`./src/templates/sectionItem.js`)
-  // const postsListTemplate = path.resolve(`./src/templates/posts-list.js`)
   const pageTemplate = path.resolve(`./src/templates/page.js`)
 
   const result = await graphql(`
@@ -130,15 +129,12 @@ exports.createPages = async ({ graphql, actions }) => {
   // Posts and Pages created by markdown (from blog and pages directory)
   const contentMarkdown = result.data.files.edges
 
-  // Total of posts (only posts, no pages)
-  // It will be increase by the next loop
-  // let postsTotal = 0
-
   // Creating each post
   contentMarkdown.forEach(({ node: file }) => {
     // Getting Slug and Title
     const slug = file.fields.slug
-    const title = file.frontmatter.title.toLowerCase()
+    // const title = file.frontmatter.title.toLowerCase()
+    const title = file.frontmatter.title
     let section = false
 
     // Use the fields created in exports.onCreateNode
@@ -149,16 +145,15 @@ exports.createPages = async ({ graphql, actions }) => {
     const isPage = file.frontmatter.page
     const isSection = file.frontmatter.section
     if (isSection) {
-      section = file.parent.sourceInstanceName
+      section = file.parent.sourceInstanceName.toLowerCase()
     }
 
     // Setting a template for page or post depending on the content
-    let template = isPage ? pageTemplate : null
+    // let template = isPage ? pageTemplate : null
+    let template = pageTemplate
     if (isSection) {
       template = sectionItemTemplate
     }
-    // Count posts
-    // postsTotal = isPage ? postsTotal + 0 : postsTotal + 1
 
     createPage({
       path: localizedSlug({ isDefault, locale, slug, isPage, section }),
@@ -168,8 +163,8 @@ exports.createPages = async ({ graphql, actions }) => {
         // Only the title would not have been sufficient as articles could have the same title
         // in different languages, e.g. because an english phrase is also common in german
         locale,
-        title,
-      },
+        title
+      }
     })
   })
 }

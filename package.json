@@ -31,18 +31,21 @@
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-remark": "^2.6.27",
     "gatsby-transformer-sharp": "^2.2.20",
-    "glsl-easings": "^1.0.0",
+    "isomorphic-unfetch": "^3.0.0",
     "lazysizes": "^5.1.2",
     "lodash.uniqby": "^4.7.0",
     "netlify-cms-app": "^2.9.7",
-    "node-fetch": "^2.6.0",
     "prismjs": "^1.17.1",
+    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-countup": "^4.3.3",
     "react-dom": "^16.8.6",
     "react-feather": "^2.0.3",
+    "react-form": "^4.0.1",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.25.3",
+    "react-loader-spinner": "^3.1.5",
+    "react-query": "^1.0.5",
     "react-spring": "^8.0.27",
     "styled-components": "^4.4.0",
     "styled-icons": "^8.4.2",
@@ -51,6 +54,20 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "prettier": "^1.18.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "graphql": false
+    },
+    "rules": {
+      "react/prop-types": [
+        0
+      ]
+    },
+    "parser": "babel-eslint"
   },
   "prettier": {
     "semi": false,

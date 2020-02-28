@@ -1,7 +1,7 @@
 const fetch = require('isomorphic-unfetch')
 const { NETBOX_KEY } = process.env
 
-const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/sites/'
+const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/rack-groups/'
 
 exports.handler = (event, context, callback) => {
   if (event.httpMethod === 'OPTIONS') {

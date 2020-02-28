@@ -10,7 +10,7 @@ const ScrollTop = props => {
   return (
     <S.ScrollBtnWrapper className={props.inView ? 'in-view' : ''}>
       <S.ScrollBtn onClick={scrollTo}>
-        <ArrowUp color="#fff" size={32} strokeWidth={4} />
+        <ArrowUp color="#fff" size={32} strokeWidth={2} />
       </S.ScrollBtn>
     </S.ScrollBtnWrapper>
   )

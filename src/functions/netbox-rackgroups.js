@@ -1,9 +1,11 @@
 const fetch = require('isomorphic-unfetch')
+const querystring = require('querystring')
 const { NETBOX_KEY } = process.env
 
-const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/sites/'
+const API_ENDPOINT = 'https://racks.newtelco.de/api/dcim/rack-groups/'
 
 exports.handler = (event, context, callback) => {
+  console.log(context)
   if (event.httpMethod === 'OPTIONS') {
     const response = {
       statusCode: 200,
@@ -17,7 +19,10 @@ exports.handler = (event, context, callback) => {
     callback(null, response)
     return
   } else if (event.httpMethod === 'GET') {
-    fetch(API_ENDPOINT, {
+    const params = querystring.parse(event.body)
+    const datacenter = params.dc
+
+    fetch(`${API_ENDPOINT}?site=${datacenter}`, {
       headers: {
         Accept: 'application/json',
         Authorization: `Token ${NETBOX_KEY}`,
@@ -26,6 +31,7 @@ exports.handler = (event, context, callback) => {
     })
       .then(response => response.json())
       .then(data => {
+        Array.isArray(data) && data.push(context)
         callback(null, {
           statusCode: 200,
           body: JSON.stringify(data),

@@ -19,7 +19,7 @@ const Footer = () => {
     contact,
     team,
     about,
-    company,
+    company
   } = useTranslations()
 
   const { allMarkdownRemark } = useStaticQuery(query)
@@ -27,14 +27,14 @@ const Footer = () => {
     return {
       title: item.frontmatter.title,
       slug: item.fields.slug,
-      section: item.fields.section,
+      section: item.fields.section
     }
   })
 
   const links = uniqBy(simplified, 'slug')
-  const productsItems = links.filter(link => link.section === 'products')
-  const servicesItems = links.filter(link => link.section === 'services')
-  const locationItems = links.filter(link => link.section === 'location')
+  const productsItems = links.filter(link => link.section === 'Products')
+  const servicesItems = links.filter(link => link.section === 'Services')
+  const locationItems = links.filter(link => link.section === 'Location')
 
   return (
     <S.FooterWrapper>
@@ -43,7 +43,7 @@ const Footer = () => {
         fill="#eaeaea"
         viewBox="0 0 1920 222.29"
         style={{
-          transform: 'translateY(1px)',
+          transform: 'translateY(1px)'
         }}
       >
         <g>

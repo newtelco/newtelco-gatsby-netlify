@@ -19,7 +19,7 @@ export const ScrollBtn = styled.button`
   border-radius: 50%;
   background-color: var(--primary-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  padding: 18px;
+  padding: 13px;
   border: none;
   transition: transform 250ms ease-in-out;
 
