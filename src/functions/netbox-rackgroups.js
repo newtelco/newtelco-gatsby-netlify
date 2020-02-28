@@ -20,11 +20,10 @@ exports.handler = (event, context, callback) => {
     return
   } else if (event.httpMethod === 'POST') {
     const params = querystring.parse(event.body)
-    const params2 = querystring.parse(JSON.parse(event.body))
     console.log('p', params)
-    console.log('p2', params2)
+    console.log('pp', JSON.parse(params))
     const datacenter = params.dc
-    const datacenter2 = params2.dc
+    const datacenter2 = JSON.parse(params.dc)
     console.log('d', datacenter)
     console.log('d2', datacenter2)
 
