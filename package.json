@@ -36,7 +36,6 @@
     "lodash.uniqby": "^4.7.0",
     "netlify-cms-app": "^2.9.7",
     "prismjs": "^1.17.1",
-    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-countup": "^4.3.3",
     "react-dom": "^16.8.6",
