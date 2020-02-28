@@ -172,34 +172,4 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-  // Creating Posts List and its Pagination
-  // const postsPerPage = 4
-  // const langs = Object.keys(locales).length
-  // const numPages = Math.ceil(postsTotal / langs / postsPerPage)
-
-  // Object.keys(locales).map(lang => {
-  //   // Use the values defined in "locales" to construct the path
-  //   const localizedPath = locales[lang].default
-  //     ? '/blog'
-  //     : `${locales[lang].path}/blog`
-
-  //   return Array.from({ length: numPages }).forEach((_, index) => {
-  //     createPage({
-  //       path:
-  //         index === 0
-  //           ? `${localizedPath}`
-  //           : `${localizedPath}/page/${index + 1}`,
-  //       component: postsListTemplate,
-  //       context: {
-  //         limit: postsPerPage,
-  //         skip: index * postsPerPage,
-  //         numPages,
-  //         currentPage: index + 1,
-  //         locale: lang,
-  //         dateFormat: locales[lang].dateFormat,
-  //       },
-  //     })
-  //   })
-  // })
 }

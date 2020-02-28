@@ -51,5 +51,10 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "none",
+    "singleQuote": true
   }
 }
