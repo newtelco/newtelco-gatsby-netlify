@@ -18,7 +18,7 @@ exports.handler = (event, context, callback) => {
     }
     callback(null, response)
     return
-  } else if (event.httpMethod === 'GET') {
+  } else if (event.httpMethod === 'POST') {
     const params = querystring.parse(event.body)
     const datacenter = params.dc
 

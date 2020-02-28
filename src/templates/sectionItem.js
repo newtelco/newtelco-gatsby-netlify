@@ -15,7 +15,7 @@ const SectionItem = props => {
   const title = post.frontmatter.title
 
   const siteNames = []
-  const { status, data, error, isFetching } = useQuery('projects', () => {
+  const { status, data, error, isFetching } = useQuery('datacenters', () => {
     if (title === 'Colocation') {
       return fetch('https://newtelco.dev/.netlify/functions/netbox')
     }

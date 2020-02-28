@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useForm, useField, splitFormProps } from 'react-form'
 import { useQuery } from 'react-query'
+import fetch from 'isomorphic-unfetch'
 
 async function fakeCheckValidName(name, instance) {
   if (!name) {
@@ -49,6 +50,7 @@ function SelectField(props) {
   } = useField(field, fieldOptions)
 
   const handleSelectChange = e => {
+    props.onChange(e.target.value)
     setValue(e.target.value)
   }
 
@@ -67,8 +69,22 @@ function SelectField(props) {
   )
 }
 
+const getRackGroups = datacenter => {
+  const { status, data, error, isFetching } = useQuery(
+    ['datacenter', datacenter],
+    (key, DC) => {
+      return fetch(
+        'https://newtelco.dev/.netlify/functions/netbox-rackgroups',
+        {
+          body: JSON.stringify({ dc: DC })
+        }
+      )
+    }
+  )
+}
+
 const Racks = props => {
-  const { rackGroups, setRackgroups } = useState(0)
+  const [racks, setRacks] = useState({})
   const {
     Form,
     meta: { isSubmitting, canSubmit }
@@ -83,21 +99,37 @@ const Racks = props => {
     debugForm: false
   })
 
+  if (status === 'success') {
+    const newRacks = racks
+    newRacks.availableRackgroups = data.results
+    setRacks(newRacks)
+  }
+
   const selectDatacenter = name => {
-    const { status, data, error, isFetching } = useQuery('projects', () => {
-      if (title === 'Colocation') {
-        return fetch(
-          'https://newtelco.dev/.netlify/functions/netbox-rackgroups',
-          {
-            body: JSON.stringify({ dc: name.replace(' ', '-') })
-          }
-        )
-      }
+    console.log('sD', name)
+    const newRacks = racks
+    name = name.toLowerCase().replace(' ', '-')
+    fetch('https://newtelco.dev/.netlify/functions/netbox-rackgroups', {
+      method: 'POST',
+      body: JSON.stringify({ dc: name })
     })
-    if (status === 'success' && data) {
-      console.log('rackGroup', data)
-      setRackgroups(data)
-    }
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data)
+        newRacks.datacenter = name
+        newRacks.groups = data.results
+        setRacks(newRacks)
+      })
+
+    // setRacks(newRacks)
+    // getRackGroups(newRacks.datacenter)
+  }
+
+  const selectRackGroup = group => {
+    console.log('sD', group)
+    const newRacks = racks
+    newRacks.rackgroup = name.toLowerCase().replace(' ', '-')
+    setRacks(newRacks)
   }
 
   return (
@@ -115,24 +147,28 @@ const Racks = props => {
             <SelectField
               field="datacenter"
               options={props.racks}
-              onSelect={name => selectDatacenter(name)}
+              onChange={name => selectDatacenter(name)}
               validate={value =>
                 !value ? 'Datacenter Selection Required!' : false
               }
             />
           </label>
         </div>
-        <div>
-          <label>
-            Room:{' '}
-            <SelectField
-              field="room"
-              options={props.racks}
-              onSelect={name => selectDatacenter(name)}
-              validate={value => (!value ? 'Room Selection Required!' : false)}
-            />
-          </label>
-        </div>
+        {Array.isArray(racks.groups) && (
+          <div>
+            <label>
+              Room:{' '}
+              <SelectField
+                field="room"
+                options={racks.groups}
+                onChange={group => selectRackGroup(group)}
+                validate={value =>
+                  !value ? 'Room Selection Required!' : false
+                }
+              />
+            </label>
+          </div>
+        )}
         <div>
           <label>
             Racks:{' '}
