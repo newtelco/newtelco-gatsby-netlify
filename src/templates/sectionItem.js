@@ -32,7 +32,15 @@ const SectionItem = props => {
             ) : status === 'error' ? (
               <span>Error: {error.message}</span>
             ) : (
-              data && <Racks racks={data.results.map(rack => rack.name)} />
+              data && (
+                <Racks
+                  datacenters={data.results
+                    .filter(dc => dc.rack_count !== null)
+                    .map(dc => {
+                      return { value: dc.name, label: dc.name }
+                    })}
+                />
+              )
             )}
           </S.Netbox>
         )}

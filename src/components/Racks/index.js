@@ -1,114 +1,32 @@
 import React, { useState } from 'react'
-import { useForm, useField, splitFormProps } from 'react-form'
-import { useQuery } from 'react-query'
+import Select from 'react-select'
 import fetch from 'isomorphic-unfetch'
+import * as S from './styled.js'
 
-async function fakeCheckValidName(name, instance) {
-  if (!name) {
-    return 'A name is required'
-  }
-
-  return instance.debounce(async () => {
-    console.log('checking name')
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    // All names are valid, so return a false error
-    return false
-  }, 500)
-}
-
-const InputField = React.forwardRef((props, ref) => {
-  // Let's use splitFormProps to get form-specific props
-  const [field, fieldOptions, rest] = splitFormProps(props)
-
-  // Use the useField hook with a field and field options
-  // to access field state
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps
-  } = useField(field, fieldOptions)
-
-  // Build the field
-  return (
-    <>
-      <input {...getInputProps({ ref, ...rest })} />{' '}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  )
-})
-
-function SelectField(props) {
-  const [field, fieldOptions, { options, ...rest }] = splitFormProps(props)
-
-  const {
-    value = '',
-    setValue,
-    meta: { error, isTouched }
-  } = useField(field, fieldOptions)
-
-  const handleSelectChange = e => {
-    props.onChange(e.target.value)
-    setValue(e.target.value)
-  }
-
-  return (
-    <>
-      <select {...rest} value={value} onChange={handleSelectChange}>
-        <option disabled value="" />
-        {options.map(option => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>{' '}
-      {isTouched && error ? <em>{error}</em> : null}
-    </>
-  )
-}
-
-const getRackGroups = datacenter => {
-  const { status, data, error, isFetching } = useQuery(
-    ['datacenter', datacenter],
-    (key, DC) => {
-      return fetch(
-        'https://newtelco.dev/.netlify/functions/netbox-rackgroups',
-        {
-          body: JSON.stringify({ dc: DC })
-        }
-      )
+class Racks extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      rackGroupLoading: false,
+      datacenterLoading: false,
+      datacenters: props.datacenters,
+      rackgroups: [],
+      availableracks: 0
     }
-  )
-}
-
-const Racks = props => {
-  const [racks, setRacks] = useState({})
-  const {
-    Form,
-    meta: { isSubmitting, canSubmit }
-  } = useForm({
-    // {
-    // onSubmit: async (values, instance) => {
-    //   // onSubmit (and everything else in React Form)
-    //   // has async support out-of-the-box
-    //   await sendToFakeServer(values)
-    //   console.log('Huzzah!')
-    // },
-    debugForm: false
-  })
-
-  if (status === 'success') {
-    const newRacks = racks
-    newRacks.availableRackgroups = data.results
-    setRacks(newRacks)
   }
 
-  const selectDatacenter = name => {
-    console.log('sD', name)
-    const newRacks = racks
-    name = name.toLowerCase().replace(' ', '-')
+  componentDidMount() {}
+
+  selectDatacenter = rawName => {
+    this.setState({
+      datacenterLoading: true
+    })
+    const name = rawName.label
+      .toLowerCase()
+      .replace(/\s/g, '-')
+      .replace(/\./g, '-')
+      .replace(/\(/g, '')
+      .replace(/\)/g, '')
     fetch('https://newtelco.dev/.netlify/functions/netbox-rackgroups', {
       method: 'POST',
       body: JSON.stringify({ dc: name })
@@ -116,81 +34,109 @@ const Racks = props => {
       .then(resp => resp.json())
       .then(data => {
         console.log(data)
-        newRacks.datacenter = name
-        newRacks.groups = data.results
-        setRacks(newRacks)
+        const groups = []
+        data.results.forEach(group => {
+          groups.push({ value: group.slug, label: group.name })
+        })
+        this.setState({
+          rackgroups: groups,
+          datacenterLoading: false
+        })
       })
-
-    // setRacks(newRacks)
-    // getRackGroups(newRacks.datacenter)
+      .catch(err => console.error(err))
   }
 
-  const selectRackGroup = group => {
-    console.log('sD', group)
-    const newRacks = racks
-    newRacks.rackgroup = name.toLowerCase().replace(' ', '-')
-    setRacks(newRacks)
+  selectRackGroup = rawGroup => {
+    console.log('rG', rawGroup)
+    const group = rawGroup.value
+    this.setState({
+      rackGroupLoading: true
+    })
+    fetch('https://newtelco.dev/.netlify/functions/netbox-racks', {
+      method: 'POST',
+      body: JSON.stringify({ rg: group })
+    })
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data)
+        this.setState({
+          selectedRackgroup: group,
+          availableRacks: data.count,
+          rackGroupLoading: false
+        })
+      })
+      .catch(err => console.error(err))
   }
 
-  return (
-    <div>
-      Racks
-      <Form data-netlify="true">
-        <div>
-          <label>
-            Name: <InputField field="name" validate={fakeCheckValidName} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Datacenter:{' '}
-            <SelectField
-              field="datacenter"
-              options={props.racks}
-              onChange={name => selectDatacenter(name)}
-              validate={value =>
-                !value ? 'Datacenter Selection Required!' : false
-              }
-            />
-          </label>
-        </div>
-        {Array.isArray(racks.groups) && (
-          <div>
+  render() {
+    const {
+      rackgroups,
+      availableRacks,
+      datacenters,
+      datacenterLoading,
+      rackGroupLoading
+    } = this.state
+    return (
+      <S.RacksWrapper>
+        <S.InputHeader>Racks</S.InputHeader>
+        <form data-netlify="true">
+          <S.InputWrapper>
             <label>
-              Room:{' '}
-              <SelectField
-                field="room"
-                options={racks.groups}
-                onChange={group => selectRackGroup(group)}
-                validate={value =>
-                  !value ? 'Room Selection Required!' : false
-                }
+              Full Name:
+              <S.InputField field="name" />
+            </label>
+          </S.InputWrapper>
+          <S.InputWrapper>
+            <label>
+              Email:
+              <S.InputField field="email" />
+            </label>
+          </S.InputWrapper>
+          <S.InputWrapper>
+            <label>
+              Datacenter:{' '}
+              <Select
+                field="datacenter"
+                options={datacenters}
+                isLoading={datacenterLoading}
+                onChange={name => this.selectDatacenter(name)}
               />
             </label>
-          </div>
-        )}
-        <div>
-          <label>
-            Racks:{' '}
-            <InputField
-              field="racks"
-              validate={value => (!value ? 'Rack Selection Required!' : false)}
-            />
-          </label>
-        </div>
+          </S.InputWrapper>
+          {Array.isArray(rackgroups) && (
+            <S.InputWrapper>
+              <label>
+                Room:{' '}
+                <Select
+                  field="room"
+                  options={rackgroups}
+                  isLoading={rackGroupLoading}
+                  loadingMessage={'Loading...'}
+                  onChange={group => this.selectRackGroup(group)}
+                />
+              </label>
+            </S.InputWrapper>
+          )}
+          <S.InputWrapper>
+            <label>
+              Racks Available:{' '}
+              <S.InputField disabled field="racks" value={availableRacks} />
+            </label>
+          </S.InputWrapper>
 
-        <div>
-          <button type="submit" disabled={!canSubmit}>
-            Submit
-          </button>
-        </div>
+          <S.InputWrapper>
+            <label>
+              Racks Requested: <S.InputField field="racksRequested" />
+            </label>
+          </S.InputWrapper>
 
-        <div>
-          <em>{isSubmitting ? 'Submitting...' : null}</em>
-        </div>
-      </Form>
-    </div>
-  )
+          <S.InputWrapper>
+            <S.SubmitBtn type="submit">Submit</S.SubmitBtn>
+          </S.InputWrapper>
+        </form>
+      </S.RacksWrapper>
+    )
+  }
 }
 
 export default Racks

@@ -1,0 +1,80 @@
+import styled from 'styled-components'
+import media from 'styled-media-query'
+
+export const RacksWrapper = styled.div`
+  position: relative;
+  &::before {
+    position: absolute;
+    height: 680px;
+    opacity: 0.1;
+    content: '';
+    background: linear-gradient(to right, #8cbf86, #66b4a6, #408ca3);
+
+    z-index: -1;
+    top: -30px;
+    border-radius: 60px;
+    transform: skew(0deg, -10deg) translateX(50%);
+    left: auto;
+    right: 50%;
+  }
+  ${media.lessThan('medium')`
+    &::before {
+      width: 100%;
+      height: 1550px;
+    }
+  `}
+  ${media.greaterThan('medium')`
+    &::before {
+      width: 130%;
+    }
+  `}
+`
+
+export const InputWrapper = styled.div`
+  margin: 15px;
+`
+
+export const InputHeader = styled.div`
+  font-size: 3rem;
+  font-family: var(--font-face-serif);
+  text-align: center;
+  margin-bottom: 10px;
+`
+
+export const InputField = styled.input`
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 38px;
+  outline: 0 !important;
+  color: hsl(0, 0%, 20%);
+  font-size: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  &:disabled {
+    background-color: #eae9e9;
+  }
+`
+
+export const SubmitBtn = styled.button`
+  width: 100%;
+  font-family: var(--font-face-san-serif);
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  background-color: #67b247;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 10px;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+`

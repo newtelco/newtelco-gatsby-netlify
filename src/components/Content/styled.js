@@ -7,6 +7,9 @@ export const Content = styled.section`
 
   display: flex;
   align-items: flex-start;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 
   & > *:first-child {
     margin-top: 0 !important;
@@ -450,7 +453,10 @@ export const ContentHtml = styled.div`
 export const Netbox = styled.div`
   align-self: flex-start;
   flex-grow: 1;
-  min-width: 30%;
+  min-width: 40%;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
 `
 
 export const Site = styled.div`
