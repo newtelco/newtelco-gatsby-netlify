@@ -19,13 +19,11 @@ exports.handler = (event, context, callback) => {
     callback(null, response)
     return
   } else if (event.httpMethod === 'POST') {
-    const params = querystring.parse(event.body)
+    console.log(event.body)
+    const params = JSON.parse(event.body)
     console.log('p', params)
-    console.log('pp', JSON.parse(params))
     const datacenter = params.dc
-    const datacenter2 = JSON.parse(params.dc)
     console.log('d', datacenter)
-    console.log('d2', datacenter2)
 
     fetch(`${API_ENDPOINT}?site=${datacenter}`, {
       headers: {
