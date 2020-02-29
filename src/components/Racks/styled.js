@@ -5,7 +5,7 @@ export const RacksWrapper = styled.div`
   position: relative;
   &::before {
     position: absolute;
-    height: 680px;
+    height: 720px;
     opacity: 0.1;
     content: '';
     background: linear-gradient(to right, #8cbf86, #66b4a6, #408ca3);
