@@ -74,6 +74,9 @@ export const SectionWrapper = styled.div`
     flex-direction: row;
     animation: slideInRight 0.7s ease-in-out forwards;
   }
+  ${media.lessThan('medium')`
+    flex-direction: column !important;
+  `}
   @keyframes slideInLeft {
     0% {
       opacity: 0;

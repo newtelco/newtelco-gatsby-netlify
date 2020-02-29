@@ -24,7 +24,10 @@ const SectionItem = props => {
     <>
       <SEO title={post.frontmatter.title} />
       <S.Content>
-        <S.ContentHtml dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <S.ContentHeader>{post.frontmatter.title}</S.ContentHeader>
+          <S.ContentHtml dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
         {post.frontmatter.title === 'Colocation' && (
           <S.Netbox className={isFetching ? 'loading' : ''}>
             {status === 'loading' ? (

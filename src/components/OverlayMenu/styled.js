@@ -21,14 +21,18 @@ export const OverlayWrapper = styled.div`
     visibility: visible;
     height: 100%;
   }
-  /* 
-  &:active li {
-    margin-left: 200px;
-  } */
 
   & #shape-overlays {
     z-index: -1;
   }
+`
+
+export const NavNumber = styled.div`
+  font-family: var(--font-face-serif);
+  font-size: 2rem;
+  color: var(--gray);
+  display: inline-block;
+  margin-right: 10px;
 `
 
 export const HeaderImage = styled.img`
@@ -58,9 +62,10 @@ export const ShapeOverlays = styled.svg`
 export const Navigation = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   height: 90%;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   position: relative;
   top: 50%;
@@ -69,7 +74,6 @@ export const Navigation = styled.div`
   ul {
     list-style: none;
     padding: 0;
-    margin: 5vh auto;
     display: inline-block;
     position: relative;
     height: 70%;
@@ -86,7 +90,7 @@ export const Navigation = styled.div`
       height: calc(100% / 7);
       position: relative;
       margin-left: 0px;
-      text-align: center;
+      text-align: left;
       opacity: 0;
       animation: fadeInRight 0.5s ease forwards;
 
@@ -127,12 +131,22 @@ export const NavigationLink = styled(LocalizedLink)`
   position: relative;
   color: #fff;
   z-index: 101;
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: var(--font-face-san-serif2);
+  text-align: left;
+  font-size: 2.8rem;
+  font-family: var(--font-face-serif);
   font-weight: 300;
 
   &.active {
-    font-weight: 700;
+    &:after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      border-bottom: 10px solid #fff;
+      width: 320px;
+      font-family: var(--font-face-san-serif);
+      position: absolute;
+      top: 40px;
+      left: -150px;
+    }
   }
 `

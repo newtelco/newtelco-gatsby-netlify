@@ -19,8 +19,7 @@ export const RacksWrapper = styled.div`
   }
   ${media.lessThan('medium')`
     &::before {
-      width: 100%;
-      height: 1550px;
+      width: 140%;
     }
   `}
   ${media.greaterThan('medium')`

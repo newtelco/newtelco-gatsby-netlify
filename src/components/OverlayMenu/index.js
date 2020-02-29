@@ -13,8 +13,9 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
       <S.HeaderImage src={newtelcoLogo} alt="Newtelco Logo" />
       <S.Navigation>
         <ul className={isActive ? 'active' : ''}>
-          {menuItems.map(menu => (
+          {menuItems.map((menu, index) => (
             <li key={menu.name}>
+              <S.NavNumber>{`0${index + 1}`}</S.NavNumber>
               <S.NavigationLink
                 to={menu.link}
                 aria-label={menu.name}

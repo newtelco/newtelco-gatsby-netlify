@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Select from 'react-select'
 import fetch from 'isomorphic-unfetch'
 import * as S from './styled.js'
@@ -14,8 +14,6 @@ class Racks extends React.Component {
       availableracks: 0
     }
   }
-
-  componentDidMount() {}
 
   selectDatacenter = rawName => {
     this.setState({

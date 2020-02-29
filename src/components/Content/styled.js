@@ -10,6 +10,9 @@ export const Content = styled.section`
   ${media.lessThan('medium')`
     flex-direction: column;
   `}
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+  `}
 
   & > *:first-child {
     margin-top: 0 !important;
@@ -436,7 +439,6 @@ export const ContentHtml = styled.div`
   animation: slideIn 750ms ease-in-out forwards;
   animation-delay: 500ms;
   flex-grow: 1;
-  flex-shrink: 2;
 
   @keyframes slideIn {
     0% {
@@ -461,4 +463,10 @@ export const Netbox = styled.div`
 
 export const Site = styled.div`
   margin: 10px 0;
+`
+
+export const ContentHeader = styled.h2`
+  text-align: center !important;
+  width: 100% !important;
+  border-bottom: none !important;
 `
