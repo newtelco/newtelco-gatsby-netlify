@@ -1,7 +1,5 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import LocalizedLink from '../LocalizedLink'
-import Sites from './sites'
 import { ArrowRight } from 'react-feather'
 
 import * as S from './styled.js'
@@ -45,7 +43,6 @@ const Product = props => {
             />
           </S.ActionButton>
         </S.ProductWrapper>
-        {/* <Sites sites={props.sites} /> */}
       </S.SectionWrapper>
     </>
   )

@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "start": "npm run develop",
     "prettier": "prettier --write **/*.{md,css,scss,yaml,yml,ts}",
     "lint": "eslint src/**/*.{js,jsx}"

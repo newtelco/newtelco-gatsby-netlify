@@ -10,16 +10,20 @@ import * as S from '../components/Content/styled'
 const Page = props => {
   const items = props.data.allMarkdownRemark.edges
   const page = props.data.markdownRemark
+  console.log(props)
+  console.log(page)
   const title = props.pageContext.title
 
   return (
     <>
       <SEO title={title.charAt(0).toUpperCase() + title.substring(1)} />
       <S.Content>
-        {/* <div dangerouslySetInnerHTML={{ __html: page.html }}></div> */}
         {props.pageContext.title === 'Products' && <Products items={items} />}
         {props.pageContext.title === 'Services' && <Services items={items} />}
         {props.pageContext.title === 'Team' && <Team items={items} />}
+        {/* {props.pageContext.title === 'Contact' && (
+          <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
+        )} */}
       </S.Content>
     </>
   )

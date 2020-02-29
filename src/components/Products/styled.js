@@ -68,11 +68,11 @@ export const SectionWrapper = styled.div`
 
   &#right.textInView {
     flex-direction: row-reverse;
-    animation: slideInLeft 0.7s ease-in-out forwards;
+    animation: slideInLeft 550ms ease-in-out forwards;
   }
   &#left.textInView {
     flex-direction: row;
-    animation: slideInRight 0.7s ease-in-out forwards;
+    animation: slideInRight 550ms ease-in-out forwards;
   }
   ${media.lessThan('medium')`
     flex-direction: column !important;

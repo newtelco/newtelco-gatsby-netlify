@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import fetch from '../utils/fetch'
@@ -10,11 +10,9 @@ import Racks from '../components/Racks'
 import * as S from '../components/Content/styled'
 
 const SectionItem = props => {
-  const [sites, setSites] = useState(0)
   const post = props.data.markdownRemark
   const title = post.frontmatter.title
 
-  const siteNames = []
   const { status, data, error, isFetching } = useQuery('datacenters', () => {
     if (title === 'Colocation') {
       return fetch('https://newtelco.dev/.netlify/functions/netbox')
@@ -31,7 +29,9 @@ const SectionItem = props => {
         {post.frontmatter.title === 'Colocation' && (
           <S.Netbox className={isFetching ? 'loading' : ''}>
             {status === 'loading' ? (
-              <Loader type="Puff" color="$67b246" />
+              <S.LoaderWrapper>
+                <Loader type="Puff" color="#67b24640" />
+              </S.LoaderWrapper>
             ) : status === 'error' ? (
               <span>Error: {error.message}</span>
             ) : (

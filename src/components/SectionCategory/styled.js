@@ -27,7 +27,7 @@ export const SectionSvg = styled.div`
   ${media.lessThan('medium')`
     &::before {
       width: 100%;
-      height: 1550px;
+      height: 1700px;
     }
   `}
   ${media.greaterThan('medium')`

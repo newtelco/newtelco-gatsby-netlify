@@ -440,6 +440,15 @@ export const ContentHtml = styled.div`
   animation-delay: 500ms;
   flex-grow: 1;
 
+  ${media.lessThan('medium')`
+    padding-left: 25px;
+    padding-right: 25px;
+  `}
+
+  ${media.greaterThan('medium')`
+    padding: 20px;
+  `}
+
   @keyframes slideIn {
     0% {
       opacity: 0;
@@ -452,6 +461,12 @@ export const ContentHtml = styled.div`
   }
 `
 
+export const LoaderWrapper = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+`
+
 export const Netbox = styled.div`
   align-self: flex-start;
   flex-grow: 1;
@@ -459,6 +474,13 @@ export const Netbox = styled.div`
   padding: 80px;
   display: flex;
   justify-content: center;
+  ${media.lessThan('medium')`
+    margin-top: 100px;
+    padding: 5px;
+  `}
+  ${media.greaterThan('medium')`
+    margin-top: 20px;
+  `}
 `
 
 export const Site = styled.div`

@@ -17,7 +17,7 @@ exports.handler = (event, context, callback) => {
     callback(null, response)
     return
   } else if (event.httpMethod === 'GET') {
-    fetch(API_ENDPOINT, {
+    fetch(`${API_ENDPOINT}?tag=forresale`, {
       headers: {
         Accept: 'application/json',
         Authorization: `Token ${NETBOX_KEY}`,
