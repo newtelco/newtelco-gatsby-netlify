@@ -95,6 +95,7 @@ export const InputField = styled.input`
     height: 64px;
     border-radius: 10px 0 0 10px;
     border: 2px solid #67b246;
+    -webkit-appearance: none;
   }
 `
 

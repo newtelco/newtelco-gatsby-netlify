@@ -1,41 +1,22 @@
 import React, { useState } from 'react'
-import Product from './product'
+import Service from './service'
 
 import * as S from './styled.js'
 
-const Products = props => {
-  const [sites, setSites] = useState(0)
-
-  const siteNames = []
-  // console.log(sites)
-  // if (sites.length === 0) {
-  //   fetch('https://newtelco.dev/.netlify/functions/netbox')
-  //     .then(resp => resp.json())
-  //     .then(data => {
-  //       data.results.forEach(site => siteNames.push(site.name))
-  //       console.log(siteNames.length)
-  //       setSites(siteNames)
-  //     })
-  //     .catch(err => console.error(err))
-  // }
+const Services = props => {
   console.log(props)
   return (
     <S.Wrapper>
-      Services!
-      {/* {props.items.map((product, index) => {
+      {props.items.map((service, index) => {
         const indexNr = index + 2
         return (
-          <React.Fragment key={product.node.frontmatter.title}>
-            <Product
-              product={product}
-              indexNr={indexNr}
-              sites={product.node.frontmatter.title === 'NCEX' ? sites : null}
-            />
+          <React.Fragment key={service.node.frontmatter.title}>
+            <Service service={service} indexNr={indexNr} />
           </React.Fragment>
         )
-      })} */}
+      })}
     </S.Wrapper>
   )
 }
 
-export default Products
+export default Services

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import LocalizedLink from '../LocalizedLink'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -12,6 +13,23 @@ export const Header = styled.div`
   font-size: 3.7rem;
   font-weight: 600;
   margin: 100px auto 50px auto;
+
+  opacity: 0;
+
+  &.textInView {
+    animation: slideUp 500ms ease-in-out forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0rem) scale(1);
+    }
+  }
 
   &:before {
     display: inline-block;
@@ -46,38 +64,19 @@ export const Header = styled.div`
 
 export const SectionWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-
-  &:nth-child(2n) {
-    flex-direction: row-reverse;
-  }
-`
-
-export const Product = styled.div`
-  --max-lines: 15;
-  --lh: 2.1rem;
-  line-height: var(--lh);
-  position: relative;
-  max-height: calc(var(--lh) * var(--max-lines));
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 1rem;
-
-  font-weight: 300;
   opacity: 0;
 
-  &.textInView {
-    opacity: 1;
+  &#right.textInView {
+    flex-direction: row-reverse;
+    animation: slideInLeft 550ms ease-in-out forwards;
   }
-
-  #right.textInView {
-    animation: slideInLeft .7s ease-in-out;
-    opacity: 1;
+  &#left.textInView {
+    flex-direction: row;
+    animation: slideInRight 550ms ease-in-out forwards;
   }
-  #left.textInView {
-    animation: slideInRight .7s ease-in-out;
-    opacity: 1;
-  }
+  ${media.lessThan('medium')`
+    flex-direction: column !important;
+  `}
   @keyframes slideInLeft {
     0% {
       opacity: 0;
@@ -98,6 +97,20 @@ export const Product = styled.div`
       transform: translateX(0rem) scale(1);
     }
   }
+`
+
+export const Product = styled.div`
+  --max-lines: 15;
+  --lh: 2.1rem;
+  line-height: var(--lh);
+  position: relative;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1rem;
+
+  font-weight: 300;
+
 
   ${media.lessThan('medium')`
     padding: 30px;
@@ -119,4 +132,32 @@ export const Product = styled.div`
 
 export const ProductImage = styled.img`
   width: 400px;
+`
+
+export const ProductWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+`
+
+export const ActionButton = styled(LocalizedLink)`
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff !important;
+  font-weight: 600;
+  line-height: 40px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
 `
