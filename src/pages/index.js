@@ -8,6 +8,7 @@ import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
+import Smallchat from '../components/SmallChat'
 
 const Index = () => {
   // useTranslations is aware of the global context (and therefore also "locale")
@@ -16,7 +17,7 @@ const Index = () => {
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0
   })
   return (
     <div className="homepage">
@@ -27,9 +28,9 @@ const Index = () => {
         <SectionCategory title={products}></SectionCategory>
         <SectionCategory title={services}></SectionCategory>
         <SectionLocation title={location}></SectionLocation>
-        {/* <LocalizedLink to={`/blog/`}>{allPosts}</LocalizedLink> */}
       </div>
       <ScrollTop inView={inView} />
+      <Smallchat />
     </div>
   )
 }

@@ -80,6 +80,13 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: var(--primaryColor)
   }
+  .notification {
+    opacity: 0.7 !important;
+    border-radius: 5px !important;
+  }
+  .notification-info {
+    background-color: #67b246 !important;
+  }
   .no-scroll {
     overflow: hidden;
     max-height: 100vh;
