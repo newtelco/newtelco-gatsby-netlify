@@ -91,6 +91,9 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     max-height: 100vh;
   }
+  #Smallchat .Layout.Layout-mobile {
+    z-index: 9996 !important;
+  }
   ::-webkit-scrollbar-track,
   ::-webkit-scrollbar-track-piece {
     visibility: none;

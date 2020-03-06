@@ -16,7 +16,7 @@ export const OverlayWrapper = styled.div`
   background-color: #67b246;
 
   &.active {
-    z-index: 99;
+    z-index: 9998;
     opacity: 1;
     visibility: visible;
     height: 100%;
@@ -65,7 +65,7 @@ export const Navigation = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 90%;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   position: relative;
   top: 50%;

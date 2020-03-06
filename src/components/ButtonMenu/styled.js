@@ -16,7 +16,7 @@ export const ButtonHamburger = styled.button`
   `}
 
   &.active {
-    z-index: 100;
+    z-index: 9999;
     position: fixed;
     span {
       background: transparent;

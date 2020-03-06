@@ -7,7 +7,7 @@ const Smallchat = () => {
       config: {
         slackTeamId: 'T85U0SU3Y',
         scChannelId: '-LQtxeATMBLgNg9p1cT9',
-        slackChannelId: 'GDZE088P2',
+        slackChannelId: 'CUTH8E5DL',
         uid: '-M1QhV1qOtIhqjHmopLB',
         planId: null,
         accountCreated: 1583160361291
@@ -22,7 +22,7 @@ const Smallchat = () => {
           'Add your name and email to make sure you see our reply:',
         contact_reply:
           "Thanks {{name}}! You'll get a response here or we'll contact you at {{contact}}.",
-        custom_css: '',
+        custom_css: 'zIndex: 9996',
         hide_logo: false,
         hide_team_icon: false,
         launcher_pos: 'left',

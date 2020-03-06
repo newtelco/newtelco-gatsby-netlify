@@ -462,8 +462,10 @@ export const ContentHtml = styled.div`
 `
 
 export const LoaderWrapper = styled.div`
-  width: 100vw;
+  width: 450px;
+  height: 600px;
   display: flex;
+  align-items: center;
   justify-content: center;
 `
 

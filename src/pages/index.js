@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
@@ -14,6 +14,13 @@ const Index = () => {
   // useTranslations is aware of the global context (and therefore also "locale")
   // so it'll automatically give back the right translations
   const { hello, subline, products, services, location } = useTranslations()
+  const [chatVisible, setChatVisible] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setChatVisible(true)
+    }, 3000)
+  }, [])
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -30,7 +37,7 @@ const Index = () => {
         <SectionLocation title={location}></SectionLocation>
       </div>
       <ScrollTop inView={inView} />
-      <Smallchat />
+      {chatVisible && <Smallchat />}
     </div>
   )
 }
