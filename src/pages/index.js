@@ -7,7 +7,7 @@ import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
-const Smallchat = React.lazy(() => import('../components/SmallChat'))
+// const Smallchat = React.lazy(() => import('../components/SmallChat'))
 
 const Index = () => {
   // useTranslations is aware of the global context (and therefore also "locale")
@@ -15,11 +15,11 @@ const Index = () => {
   const { hello, subline, products, services, location } = useTranslations()
   const [chatVisible, setChatVisible] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setChatVisible(true)
-    }, 3000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setChatVisible(true)
+  //   }, 3000)
+  // }, [])
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
@@ -36,11 +36,11 @@ const Index = () => {
         <SectionLocation title={location}></SectionLocation>
       </div>
       <ScrollTop inView={inView} />
-      {chatVisible && (
+      {/* {chatVisible && (
         <React.Suspense fallback={<div />}>
           <Smallchat />
         </React.Suspense>
-      )}
+      )} */}
     </div>
   )
 }
