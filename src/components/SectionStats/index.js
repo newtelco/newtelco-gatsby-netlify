@@ -1,6 +1,6 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import datacenter from '../../images/servers.png'
+import datacenter from '../../images/servers.jpg'
 import StatBlock from '../StatBlock'
 import useTranslations from '../useTranslations'
 
@@ -11,7 +11,7 @@ const SectionStats = props => {
 
   const [ref, inView, entry] = useInView({
     threshold: 0.1,
-    triggerOnce: true,
+    triggerOnce: true
   })
 
   return (
