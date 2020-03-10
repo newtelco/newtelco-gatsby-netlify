@@ -15,6 +15,7 @@ const SectionItem = props => {
         className={props.inView ? 'sectionInView imageWrapper' : 'imageWrapper'}
         id={indexNr % 2 == 0 ? 'right' : 'left'}
         src={props.item.frontmatter.image}
+        alt={`${props.item.frontmatter.title} Image`}
       />
       <S.SectionTextWrapper>
         <S.Header className={props.inView ? 'textInView' : ''}>

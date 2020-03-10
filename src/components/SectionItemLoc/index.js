@@ -12,7 +12,7 @@ const SectionItemLoc = React.forwardRef((props, ref) => {
 
   return (
     <S.Wrapper ref={ref} className={props.inView ? 'locationInView' : ''}>
-      <LocalizedLink to={url}>
+      <LocalizedLink to={url} aria-label={props.item.frontmatter.title}>
         <S.SvgImage>
           <svg height="400px" width="340px">
             <g>

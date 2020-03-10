@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
@@ -8,7 +7,7 @@ import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
-import Smallchat from '../components/SmallChat'
+const Smallchat = React.lazy(() => import('../components/SmallChat'))
 
 const Index = () => {
   // useTranslations is aware of the global context (and therefore also "locale")
@@ -37,39 +36,13 @@ const Index = () => {
         <SectionLocation title={location}></SectionLocation>
       </div>
       <ScrollTop inView={inView} />
-      {chatVisible && <Smallchat />}
+      {chatVisible && (
+        <React.Suspense fallback={<div />}>
+          <Smallchat />
+        </React.Suspense>
+      )}
     </div>
   )
 }
 
 export default Index
-
-// export const query = graphql`
-//   query Index($locale: String!, $dateFormat: String!, ) {
-//     allMarkdownRemark(
-//       filter: {
-//         fields: { locale: { eq: $locale } }
-//         fileAbsolutePath: {regex: "/(blog)\/.*\\.md$/"}
-//       }
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       limit: 2
-//     ) {
-//       edges {
-//         node {
-//           frontmatter {
-//             title
-//             category
-//             image
-//             date(formatString: $dateFormat)
-
-//           }
-//           timeToRead
-//           fields {
-//             locale
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
