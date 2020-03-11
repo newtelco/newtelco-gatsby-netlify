@@ -1,6 +1,6 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import datacenter from '../../images/servers2.png'
+import datacenter from '../../images/servers.png'
 import StatBlock from '../StatBlock'
 import useTranslations from '../useTranslations'
 
