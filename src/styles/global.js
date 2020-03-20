@@ -91,6 +91,13 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     max-height: 100vh;
   }
+  .react-cookie-law-accept-btn {
+    transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
+  }
+  .react-cookie-law-accept-btn:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+  }
   #Smallchat .Layout.Layout-mobile {
     z-index: 9996 !important;
   }

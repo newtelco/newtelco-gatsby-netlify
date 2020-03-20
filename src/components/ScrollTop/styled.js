@@ -7,11 +7,13 @@ export const ScrollBtnWrapper = styled.div`
   right: 5vw;
   z-index: 101;
   opacity: 0;
+  visibility: hidden;
   outline: none;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 
   &.in-view {
     opacity: 1;
+    visibility: visible;
   }
 `
 

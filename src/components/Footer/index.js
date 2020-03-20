@@ -17,10 +17,10 @@ const Footer = () => {
     services,
     location,
     contact,
-    team,
     about,
     company,
-    legalNotice
+    legalNotice,
+    privacyPolicy
   } = useTranslations()
 
   const { allMarkdownRemark } = useStaticQuery(query)
@@ -96,8 +96,8 @@ const Footer = () => {
             <S.FooterLinkSectionHeader>{company}</S.FooterLinkSectionHeader>
             <LocalizedLink to="/about"> {about} </LocalizedLink>
             <LocalizedLink to="/legal"> {legalNotice} </LocalizedLink>
+            <LocalizedLink to="/privacy"> {privacyPolicy} </LocalizedLink>
             <LocalizedLink to="/contact"> {contact} </LocalizedLink>
-            <LocalizedLink to="/team"> {team} </LocalizedLink>
           </S.FooterLinkSection>
         </S.FooterLinkContainer>
         <S.FooterBottomContainer>

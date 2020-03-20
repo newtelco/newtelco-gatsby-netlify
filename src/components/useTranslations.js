@@ -71,6 +71,7 @@ const query = graphql`
             maintainedBy
 
             legalNotice
+            privacyPolicy
           }
         }
       }

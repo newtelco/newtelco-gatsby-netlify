@@ -6,6 +6,14 @@ import useTranslations from '../components/useTranslations'
 
 const Content = styled.div`
   position: relative;
+  margin-top: 50px;
+
+  & p,
+  & ul,
+  & li,
+  & ol {
+    margin: 10px 0;
+  }
 `
 
 const Legal = props => {
@@ -32,7 +40,7 @@ const Legal = props => {
             fontSize: '3rem'
           }}
         >
-          {legalNotice}
+          {props.data.allMarkdownRemark.edges[0].node.frontmatter.title}
         </h1>
         <Content
           dangerouslySetInnerHTML={{
