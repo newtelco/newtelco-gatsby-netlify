@@ -9,7 +9,6 @@ import * as S from '../components/Content/styled'
 
 const Page = props => {
   const items = props.data.allMarkdownRemark.edges
-  const page = props.data.markdownRemark
   const title = props.pageContext.title
 
   return (

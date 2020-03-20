@@ -91,6 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Templates for Posts List and Single post
   const sectionItemTemplate = path.resolve(`./src/templates/sectionItem.js`)
   const pageTemplate = path.resolve(`./src/templates/page.js`)
+  const miscTemplate = path.resolve(`./src/templates/misc.js`)
 
   const result = await graphql(`
     {
@@ -108,6 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               page
               section
+              misc
             }
             parent {
               ... on File {
@@ -144,6 +146,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Check if it's page (to differentiate post and page)
     const isPage = file.frontmatter.page
     const isSection = file.frontmatter.section
+    const isMisc = file.frontmatter.misc
     if (isSection) {
       section = file.parent.sourceInstanceName.toLowerCase()
     }
@@ -153,6 +156,9 @@ exports.createPages = async ({ graphql, actions }) => {
     let template = pageTemplate
     if (isSection) {
       template = sectionItemTemplate
+    }
+    if (isMisc) {
+      template = miscTemplate
     }
 
     createPage({
