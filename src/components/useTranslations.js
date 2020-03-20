@@ -12,7 +12,7 @@ function useTranslations() {
   const simplified = rawData.edges.map(item => {
     return {
       name: item.node.name,
-      translations: item.node.translations,
+      translations: item.node.translations
     }
   })
 
@@ -69,6 +69,8 @@ const query = graphql`
             aboutProject
             seeMorePWA
             maintainedBy
+
+            legalNotice
           }
         }
       }
