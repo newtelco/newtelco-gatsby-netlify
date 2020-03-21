@@ -102,7 +102,7 @@ export const SectionWrapper = styled.div`
 export const Product = styled.div`
   --max-lines: 15;
   --lh: 2.1rem;
-  line-height: var(--lh);
+  line-height: calc(var(--lh) * 1.4);
   position: relative;
   max-height: calc(var(--lh) * var(--max-lines));
   overflow: hidden;

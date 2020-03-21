@@ -35,12 +35,7 @@ const Product = props => {
               props.product.node.fields.slug
             }`}
           >
-            More
-            <ArrowRight
-              size={24}
-              strokeWidth={3}
-              style={{ marginLeft: '10px' }}
-            />
+            Read More
           </S.ActionButton>
         </S.ProductWrapper>
       </S.SectionWrapper>

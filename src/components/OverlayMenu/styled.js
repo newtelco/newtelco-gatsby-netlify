@@ -9,22 +9,24 @@ export const OverlayWrapper = styled.div`
   top: 0;
   left: 0;
   z-index: -2;
-  opacity: 0;
-  visibility: hidden;
   transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
   background-color: #67b246;
 
   &.active {
     z-index: 9998;
-    opacity: 1;
-    visibility: visible;
+    transform: translate(0%, 0%);
     height: 100%;
   }
-
-  & #shape-overlays {
-    z-index: -1;
+  &.hidden {
+    z-index: 99998;
+    transform: translate(0%, 0%);
+    height: 0vh;
   }
+
+  /* & #shape-overlays {
+    z-index: -1;
+  } */
 `
 
 export const NavNumber = styled.div`
@@ -62,21 +64,22 @@ export const ShapeOverlays = styled.svg`
 export const Navigation = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   height: 90%;
   width: 60%;
   margin: 0 auto;
   position: relative;
   top: 50%;
+  left: -10%;
   transform: translateY(-50%);
 
-  ul {
+  & ul {
     list-style: none;
     padding: 0;
     display: inline-block;
     position: relative;
-    height: 70%;
+    height: 90%;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
     transition-delay: 300ms;
@@ -85,43 +88,14 @@ export const Navigation = styled.div`
       opacity: 1;
     }
 
-    li {
+    & li {
       display: block;
       height: calc(100% / 7);
       position: relative;
       margin-left: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px;
       text-align: left;
-      opacity: 0;
-      animation: fadeInRight 0.5s ease forwards;
-
-      &:nth-of-type(1) {
-        animation-delay: 150ms;
-      }
-      &:nth-of-type(2) {
-        animation-delay: 200ms;
-      }
-      &:nth-of-type(3) {
-        animation-delay: 250ms;
-      }
-      &:nth-of-type(4) {
-        animation-delay: 300ms;
-      }
-      &:nth-of-type(5) {
-        animation-delay: 350ms;
-      }
-      &:nth-of-type(6) {
-        animation-delay: 400ms;
-      }
-      @keyframes fadeInRight {
-        0% {
-          opacity: 0;
-          left: 200px;
-        }
-        100% {
-          opacity: 1;
-          left: 0;
-        }
-      }
     }
   }
 `
