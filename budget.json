@@ -1,11 +1,11 @@
 [
   {
     "resourceSizes": [
-      { "resourceType": "document", "budget": 20 },
+      { "resourceType": "document", "budget": 40 },
       { "resourceType": "stylesheet", "budget": 50 },
-      { "resourceType": "font", "budget": 50 },
-      { "resourceType": "image", "budget": 300 },
-      { "resourceType": "script", "budget": 100 }
+      { "resourceType": "font", "budget": 200 },
+      { "resourceType": "image", "budget": 750 },
+      { "resourceType": "script", "budget": 300 }
     ]
   }
 ]
