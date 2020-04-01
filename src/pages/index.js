@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
+import { navigate } from 'gatsby'
 import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
@@ -11,6 +12,36 @@ import { CookieBanner } from '@palmabit/react-cookie-law'
 
 const Index = () => {
   const { hello, subline, products, services, location } = useTranslations()
+
+  const languagePref = lang => {
+    if (lang.includes('de')) {
+      navigate('/de')
+    } else if (lang.includes('ru')) {
+      navigate('/ru')
+    } else if (lang.includes('en-US') || lang.includes('en-GB')) {
+      navigate('/')
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const langLocalStorage = window.localStorage.getItem('nt_lang')
+      if (!langLocalStorage) {
+        fetch(
+          `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEO_KEY}&fields=languages`
+        )
+          .then(r => r.json())
+          .then(data => {
+            if (data.languages) {
+              languagePref(data.languages)
+              window.localStorage.setItem('nt_lang', data.languages)
+            }
+          })
+      } else {
+        languagePref(langLocalStorage)
+      }
+    }
+  }, [])
 
   const [ref, inView, entry] = useInView({
     threshold: 0

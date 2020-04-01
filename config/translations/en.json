@@ -48,5 +48,7 @@
   "maintainedBy": "Designed and Maintained by",
 
   "legalNotice": "Imprint",
-  "privacyPolicy": "Privacy Policy"
+  "privacyPolicy": "Privacy Policy",
+
+  "developmentNotice": "This is a development version - no information is guaranteed to be accurate!"
 }

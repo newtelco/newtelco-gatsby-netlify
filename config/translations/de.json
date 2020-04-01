@@ -48,5 +48,7 @@
   "maintainedBy": "Designed und Entwickelt von",
 
   "legalNotice": "Impressum",
-  "privacyPolicy": "Datenschutz"
+  "privacyPolicy": "Datenschutz",
+
+  "developmentNotice": "Diese Version ist noch in Entwickelung, der Inhalt ist nicht zwingend korrekt."
 }

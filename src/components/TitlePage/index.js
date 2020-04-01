@@ -4,12 +4,14 @@ import TitleAction from '../TitleAction'
 import ScrollIndicator from '../ScrollIndicator'
 import { useInView } from 'react-intersection-observer'
 import 'react-notifications/lib/notifications.css'
+import useTranslations from '../useTranslations'
 import { NotificationContainer, NotificationManager } from 'react-notifications'
 
 import * as S from './styled'
 
 const TitlePage = props => {
   const { text, subtitle } = props
+  const { developmentNotice } = useTranslations()
 
   const [ref, inView, entry] = useInView({
     threshold: 0.1,
@@ -17,10 +19,9 @@ const TitlePage = props => {
   })
 
   useEffect(() => {
-    NotificationManager.info(
-      'This is a development version - no information is guaranteed to be accurate!',
-      'Development Version'
-    )
+    setTimeout(() => {
+      NotificationManager.info(developmentNotice, 'Development Version')
+    }, 3000)
   }, [])
 
   return (

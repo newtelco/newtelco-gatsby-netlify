@@ -47,6 +47,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
                 variants={variants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
+                key={index}
               >
                 <li key={menu.name}>
                   <S.NavNumber>{`0${index + 1}`}</S.NavNumber>
