@@ -67,8 +67,6 @@ const query = graphql`
             button
 
             aboutProject
-            seeMorePWA
-            maintainedBy
 
             legalNotice
             privacyPolicy

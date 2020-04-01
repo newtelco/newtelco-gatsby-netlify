@@ -125,3 +125,14 @@ export const FooterBottomContainer = styled.div`
     z-index: 2;
   }
 `
+
+export const MaintainerLink = styled.a`
+  margin-left: 5px;
+  text-decoration: none;
+  transition: color 500ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+`

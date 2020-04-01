@@ -27,7 +27,7 @@ const SectionItemLoc = React.forwardRef((props, ref) => {
             </g>
             <image
               x="-50%"
-              y="-50%"
+              y="-40%"
               clipPath="url(#location-path)"
               href={props.item.frontmatter.image}
             />
