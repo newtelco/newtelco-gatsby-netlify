@@ -22,6 +22,7 @@ const SectionStats = props => {
           src={datacenter}
           alt="datacenter"
           className={inView ? 'imageInView' : ''}
+          loading="lazy"
         />
         <S.Content ref={ref}>
           <StatBlock inView={inView} label={racks} value={457} />

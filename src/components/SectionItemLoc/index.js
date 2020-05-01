@@ -1,5 +1,4 @@
 import React from 'react'
-import useTranslations from '../useTranslations'
 import LocalizedLink from '../LocalizedLink'
 
 import * as S from './styled'

@@ -23,6 +23,7 @@ const Product = props => {
         <S.ProductImage
           src={props.product.node.frontmatter.image}
           alt="Product Image"
+          loading="lazy"
         />
         <S.ProductWrapper>
           <S.Product
