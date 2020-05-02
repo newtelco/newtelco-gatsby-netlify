@@ -97,6 +97,7 @@ const Footer = () => {
             <LocalizedLink to="/legal"> {legalNotice} </LocalizedLink>
             <LocalizedLink to="/privacy"> {privacyPolicy} </LocalizedLink>
             <LocalizedLink to="/contact"> {contact} </LocalizedLink>
+            <a href="https://is.newtelco.online" target="_blank" rel="noopener noreferrer">Status</a>
           </S.FooterLinkSection>
         </S.FooterLinkContainer>
         <S.FooterBottomContainer>
