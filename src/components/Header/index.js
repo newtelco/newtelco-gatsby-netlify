@@ -31,6 +31,7 @@ const Header = () => {
         <ButtonMenu handleClick={handleToggleMenu} isActive={toggleMenu} />
         <OverlayMenu toggleMenu={handleToggleMenu} isActive={toggleMenu} />
       </S.Container>
+      <noscript><img src='https://analytics.newtelco.dev/ingress/7b6297e9-5457-450d-b09e-227f09babeea/pixel.gif' /></noscript> <script src='https://analytics.newtelco.dev/ingress/7b6297e9-5457-450d-b09e-227f09babeea/script.js'></script>
     </S.HeaderWrapper>
   )
 }
