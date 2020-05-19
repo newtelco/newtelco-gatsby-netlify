@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   height: 800px;
   flex-direction: column;
-  margin: 200px 0;
+  margin: 50px 0 200px 0;
   position: relative;
 
   ${media.lessThan('medium')`

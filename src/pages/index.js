@@ -6,6 +6,7 @@ import useTranslations from '../components/useTranslations'
 import SectionCategory from '../components/SectionCategory'
 import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
+import SectionTestimonial from '../components/SectionTestimonials'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
 // import { CookieBanner } from '@palmabit/react-cookie-law'
@@ -51,11 +52,12 @@ const Index = () => {
     <div className="homepage">
       <SEO title="Home" />
       <TitlePage text={hello} subtitle={subline} />
+      <SectionTestimonial />
       <SectionStats />
       <div ref={ref}>
         <SectionCategory title={products}></SectionCategory>
         <SectionCategory title={services}></SectionCategory>
-        <SectionLocation title={location}></SectionLocation>
+        {/* <SectionLocation title={location}></SectionLocation> */}
       </div>
       <ScrollTop inView={inView} />
       {/* <CookieBanner
