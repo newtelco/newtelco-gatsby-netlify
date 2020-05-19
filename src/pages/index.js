@@ -23,29 +23,30 @@ const Index = () => {
     }
   }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const langLocalStorage = window.localStorage.getItem('nt_lang')
-      if (!langLocalStorage) {
-        fetch(
-          `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEO_KEY}&fields=languages`
-        )
-          .then(r => r.json())
-          .then(data => {
-            if (data.languages) {
-              languagePref(data.languages)
-              window.localStorage.setItem('nt_lang', data.languages)
-            }
-          })
-      } else {
-        languagePref(langLocalStorage)
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const langLocalStorage = window.localStorage.getItem('nt_lang')
+  //     if (!langLocalStorage) {
+  //       fetch(
+  //         `https://api.ipgeolocation.io/ipgeo?apiKey=${process.env.GEO_KEY}&fields=languages`
+  //       )
+  //         .then(r => r.json())
+  //         .then(data => {
+  //           if (data.languages) {
+  //             languagePref(data.languages)
+  //             window.localStorage.setItem('nt_lang', data.languages)
+  //           }
+  //         })
+  //     } else {
+  //       languagePref(langLocalStorage)
+  //     }
+  //   }
+  // }, [])
 
   const [ref, inView, entry] = useInView({
     threshold: 0
   })
+
   return (
     <div className="homepage">
       <SEO title="Home" />
@@ -57,7 +58,7 @@ const Index = () => {
         <SectionLocation title={location}></SectionLocation>
       </div>
       <ScrollTop inView={inView} />
-      <CookieBanner
+      {/* <CookieBanner
         message="Newtelco Cookie Policy"
         policyLink="https://newtelco.dev/privacy"
         styles={{
@@ -118,7 +119,7 @@ const Index = () => {
             fontFamily: 'Libre Baskerville'
           }
         }}
-      />
+      /> */}
     </div>
   )
 }
