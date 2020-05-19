@@ -8,7 +8,7 @@ import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
-import { CookieBanner } from '@palmabit/react-cookie-law'
+// import { CookieBanner } from '@palmabit/react-cookie-law'
 
 const Index = () => {
   const { hello, subline, products, services, location } = useTranslations()
