@@ -93,12 +93,12 @@ class Racks extends React.Component {
     const validFullnameRegex = RegExp(/.*/i)
     validFullnameRegex.test(fullname)
       ? this.setState({
-          form: { ...this.state.form, fullname: fullname },
-          errors: { ...this.state.errors, fullname: '' }
-        })
+        form: { ...this.state.form, fullname: fullname },
+        errors: { ...this.state.errors, fullname: '' }
+      })
       : this.setState({
-          errors: { ...this.state.errors, fullname: 'Fullname is not valid!' }
-        })
+        errors: { ...this.state.errors, fullname: 'Fullname is not valid!' }
+      })
   }
   handleEmailChange = e => {
     e.preventDefault()
@@ -115,12 +115,12 @@ class Racks extends React.Component {
     const email = e.target.value
     validEmailRegex.test(email)
       ? this.setState({
-          form: { ...this.state.form, email: email },
-          errors: { ...this.state.errors, email: '' }
-        })
+        form: { ...this.state.form, email: email },
+        errors: { ...this.state.errors, email: '' }
+      })
       : this.setState({
-          errors: { ...this.state.errors, email: 'Email is not valid!' }
-        })
+        errors: { ...this.state.errors, email: 'Email is not valid!' }
+      })
   }
   handleRequestedRacksChange = e => {
     e.preventDefault()
@@ -130,12 +130,12 @@ class Racks extends React.Component {
     const validRequestedRacksRegex = RegExp(/[0-9]*/g)
     validRequestedRacksRegex.test(requestedRacks)
       ? this.setState({
-          form: { ...this.state.form, requestedRacks: requestedRacks },
-          errors: { ...this.state.errors, requestedRacks: '' }
-        })
+        form: { ...this.state.form, requestedRacks: requestedRacks },
+        errors: { ...this.state.errors, requestedRacks: '' }
+      })
       : this.setState({
-          errors: { ...this.state.errors, requestedRacks: 'Requested Racks' }
-        })
+        errors: { ...this.state.errors, requestedRacks: 'Requested Racks' }
+      })
   }
 
   handleIncrementRequested = e => {
@@ -184,7 +184,8 @@ class Racks extends React.Component {
     return (
       <S.RacksWrapper>
         <S.InputHeader>Racks</S.InputHeader>
-        <S.RacksForm data-netlify="true">
+        <S.RacksForm data-netlify="true" name="racks" action="#" method="post" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="racks" />
           <S.InputWrapper>
             <label>
               <S.InputLabel>Full Name</S.InputLabel>
