@@ -52,9 +52,9 @@ const Index = () => {
     <div className="homepage">
       <SEO title="Home" />
       <TitlePage text={hello} subtitle={subline} />
-      <SectionTestimonial />
       <SectionStats />
       <div ref={ref}>
+        <SectionTestimonial />
         <SectionCategory title={products}></SectionCategory>
         <SectionCategory title={services}></SectionCategory>
         {/* <SectionLocation title={location}></SectionLocation> */}
