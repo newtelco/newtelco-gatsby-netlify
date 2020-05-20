@@ -46,6 +46,12 @@ export const FooterLinkContainer = styled.div`
   & * {
     z-index: 2;
   }
+  ${media.lessThan('medium')`
+    flex-wrap: wrap-reverse;
+    justify-content: stretch;
+    max-width: 290px;
+    margin: 10px auto;
+  `}
 `
 
 export const FooterLinkSection = styled.div`
@@ -63,6 +69,7 @@ export const FooterLinkSection = styled.div`
     align-items;
     padding: 5px;
     font-size: 1.3rem;
+    margin: 5px 20px;
     min-width:100px;
 
     &:nth-child(1) {

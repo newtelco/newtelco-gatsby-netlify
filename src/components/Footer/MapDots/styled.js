@@ -10,6 +10,6 @@ export const MapImage = styled.img`
   opacity: 0.15;
 
   ${media.lessThan('medium')`
-    bottom: 80px;
+    bottom: 200px;
   `}
 `

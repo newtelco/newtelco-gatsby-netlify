@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const SocialLinksList = styled.ul`
   display: flex;
   ${media.lessThan('medium')`
-    flex-direction: column;
+    margin-top: 10px;
   `}
 `
 
