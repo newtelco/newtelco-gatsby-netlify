@@ -14,12 +14,12 @@ const Index = () => {
 
   const [ref, inView, entry] = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 0
   })
 
   return (
-    <div className="homepage">
-      <SEO title="Products" />
+    <div className='homepage'>
+      <SEO title='Products' />
       <div ref={ref}>
         <ProductsSection />
       </div>

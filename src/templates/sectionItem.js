@@ -30,7 +30,7 @@ const SectionItem = props => {
           <S.Netbox className={isFetching ? 'loading' : ''}>
             {status === 'loading' ? (
               <S.LoaderWrapper>
-                <Loader type="Puff" color="#67b24640" />
+                <Loader type='Puff' color='#67b24640' />
               </S.LoaderWrapper>
             ) : status === 'error' ? (
               <span>Error: {error.message}</span>

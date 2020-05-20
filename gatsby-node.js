@@ -6,6 +6,8 @@ const {
   removeTrailingSlash
 } = require('./src/utils/gatsby-node-helpers')
 
+// Refactor Gatsby Queries: https://github.com/gatsbyjs/gatsby/issues/1634
+
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 

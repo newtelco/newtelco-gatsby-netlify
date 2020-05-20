@@ -20,7 +20,7 @@ const Products = props => {
   console.log(props)
   return (
     <S.Wrapper>
-      Team Page. Coming Soon!
+      Contact Page. Coming Soon!
       {/* {props.items.map((product, index) => {
         const indexNr = index + 2
         return (
