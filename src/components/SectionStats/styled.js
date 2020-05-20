@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
   ${media.lessThan('medium')`
     height: 1250px;
-    margin: 300px 0 175px 0;
+    margin: 300px 0 0 0;
   `}
 `
 
