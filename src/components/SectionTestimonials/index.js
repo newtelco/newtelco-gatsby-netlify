@@ -10,7 +10,7 @@ const SectionTestimonial = () => {
     return {
       author: item.node.frontmatter.author,
       company: item.node.frontmatter.company,
-      body: item.node.html,
+      content: item.node.frontmatter.content,
       id: index
     }
   })
@@ -31,7 +31,7 @@ const SectionTestimonial = () => {
               <S.Testimonial key={id} scale={scale} offset='true'>
                 <S.Author>{testimonials[id].author}</S.Author>
                 <S.Company>{testimonials[id].company}</S.Company>
-                <S.Body dangerouslySetInnerHTML={{ __html: testimonials[id].body }} />
+                <S.Body dangerouslySetInnerHTML={{ __html: testimonials[id].content }} />
               </S.Testimonial>
             ))}
           </Marquee>
@@ -51,8 +51,8 @@ const query = graphql`
           frontmatter{
             author
             company
+            content
           }
-          html
         }
       }
     }

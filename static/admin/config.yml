@@ -420,3 +420,4 @@ collections:
         }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Company", name: "company", widget: "string" }
+      - { label: "Content", name: "content", widget: "markdown" }
