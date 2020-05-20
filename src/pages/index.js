@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { navigate } from 'gatsby'
 import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
 import SectionCategory from '../components/SectionCategory'
-import SectionLocation from '../components/SectionLocation'
 import SectionStats from '../components/SectionStats'
-import SectionTestimonial from '../components/SectionTestimonials'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
+import loadable from '@loadable/component'
+const SectionPartners = loadable(() => import('../components/SectionPartners'))
 // import { CookieBanner } from '@palmabit/react-cookie-law'
+// import SectionLocation from '../components/SectionLocation'
 
 const Index = () => {
   const { hello, subline, products, services, location } = useTranslations()
@@ -53,8 +54,8 @@ const Index = () => {
       <SEO title='Home' />
       <TitlePage text={hello} subtitle={subline} />
       <SectionStats />
+      <SectionPartners />
       <div ref={ref}>
-        <SectionTestimonial />
         <SectionCategory title={products} />
         <SectionCategory title={services} />
         {/* <SectionLocation title={location}></SectionLocation> */}

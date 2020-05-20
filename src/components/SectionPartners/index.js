@@ -2,14 +2,12 @@ import React from 'react'
 import Carousel from './Carousel'
 import * as S from './styled'
 
-const SectionTestimonial = props => {
+const SectionPartners = props => {
   return (
     <S.Wrapper>
-      <S.Content>
-        <Carousel />
-      </S.Content>
+      <Carousel />
     </S.Wrapper>
   )
 }
 
-export default SectionTestimonial
+export default SectionPartners
