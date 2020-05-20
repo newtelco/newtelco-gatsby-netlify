@@ -7,7 +7,7 @@ const ScrollIndicator = React.forwardRef((props, ref) => {
     <S.Wrapper ref={ref} className={props.visible ? '' : 'outOfView'}>
       <S.Container>
         <S.Animation>
-          <ArrowDown color="#475060" />
+          <ArrowDown color='#475060' />
         </S.Animation>
       </S.Container>
     </S.Wrapper>

@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
 `
 
 export const Testimonial = styled.div`
-  /* position: absolute;
-  transform: scale(0.8);
+  position: relative;
+  /* transform: scale(0.8);
   object-position: center center;
   will-change: transform, opacity; */
   width: ${props => props.scale * 500}px;
@@ -48,14 +48,15 @@ export const Height = styled.div`
 export const Author = styled.div`
   position: relative;
   font-size: 2rem;
-  font-family: var(--font-family-serif);
-  margin-bottom: 5px;
+  font-family: var(--font-face-serif);
+  margin-bottom: 10px;
 `
 
 export const Company = styled.div`
   position: relative;
   font-size: 2rem;
-  font-family: var(--font-family-serif);
+  font-weight: 700;
+  font-family: var(--font-face-serif);
 
   &:after {
     content: '';
@@ -72,5 +73,6 @@ export const Company = styled.div`
 export const Body = styled.div`
   position: relative;
   font-size: 1.5rem;
-  font-family: var(--font-face-san-serif);
+  font-family: var(--font-face-san-serif2);
+  z-index: 9;
 `

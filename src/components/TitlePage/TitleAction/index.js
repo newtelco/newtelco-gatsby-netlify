@@ -13,22 +13,22 @@ const TitleAction = props => {
       <div>
         <S.TextWrapper>
           <S.Text>
-            <Phone color="#67b246" size={20} style={{ marginBottom: '-3px' }} />
+            <Phone color='#67b246' size={20} style={{ marginBottom: '-3px' }} />
           </S.Text>{' '}
           <S.TextValue>{phoneNumber}</S.TextValue>
         </S.TextWrapper>
         <S.TextWrapper>
           <S.Text>
-            <Inbox color="#67b246" size={20} style={{ marginBottom: '-4px' }} />
+            <Inbox color='#67b246' size={20} style={{ marginBottom: '-4px' }} />
           </S.Text>{' '}
           <S.TextValue>{emailAddress}</S.TextValue>
         </S.TextWrapper>
       </div>
-      <Link to="/contact" style={{ textDecoration: 'none' }}>
+      <Link to='/contact' style={{ textDecoration: 'none' }}>
         <S.Button>
           {contactAction}
           <S.ButtonIcon>
-            <Send color="white" />
+            <Send color='white' />
           </S.ButtonIcon>
         </S.Button>
       </Link>

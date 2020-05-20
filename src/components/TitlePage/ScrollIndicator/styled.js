@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
-  margin-top: 25vh;
+  margin-top: 12vh;
   opacity: 0.6;
   transition: opacity 500ms ease-in-out;
 

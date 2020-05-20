@@ -19,14 +19,11 @@ const SectionTestimonial = () => {
   return (
     <S.Wrapper>
       <S.FullWidth>
-        <S.Height height={400}>
+        <S.Height height={450}>
           <Marquee
             key='1'
             velocity={10}
-          // scatterRandomly
-          // minScale={0.7}
           >
-            {/* {testimonials.map((testimonial, index) => ( */}
             {times(testimonials.length, Number).map(id => (
               <S.Testimonial key={id} scale={scale} offset='true'>
                 <S.Author>{testimonials[id].author}</S.Author>

@@ -4,12 +4,10 @@
   "email": "Email",
   "phoneNumber": "+49 69 27 00 75 20",
   "emailAddress": "service@newtelco.de",
-
   "products": "Products",
   "services": "Services",
   "location": "Locations",
   "company": "Company",
-
   "colocation": "Colocation",
   "ncex": "NCEX",
   "vpop": "VPOP",
@@ -18,35 +16,27 @@
   "integration": "Integration",
   "interconnection": "Interconnection",
   "technical": "Technical",
-
-  "hello": "Newtelco GmbH",
+  "hello": "NewTelco GmbH",
   "subline": "Newtelco is your partner in datacenter services and more!",
   "latestPosts": "Latest posts",
   "category": "Category",
   "allPosts": "All Posts",
   "toRead": "to read",
   "pageNotFound": "Page Not Found",
-
   "contact": "Contact",
   "team": "Team",
   "about": "About Us",
-
   "contactAction": "Contact",
   "racks": "Racks",
   "datacenters": "Datacenters",
   "watts": "kWh",
   "tbps": "Tbps",
-
   "next": "Next",
   "prev": "Prev",
   "of": "of",
-
   "button": "Button",
-
-  "aboutProject": "Newtelco GmbH",
-
+  "aboutProject": "NewTelco GmbH",
   "legalNotice": "Imprint",
   "privacyPolicy": "Privacy Policy",
-
   "developmentNotice": "This is a development version - no information is guaranteed to be accurate!"
 }

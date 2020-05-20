@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Newtelco GmbH',
-    description: 'Newtelco GmbH Homepage',
+    title: 'NewTelco GmbH',
+    description: 'NewTelco GmbH Homepage',
     author: '@ndom91',
     siteUrl: 'https://newtelco.dev/'
   },
@@ -132,8 +132,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Newtelco GmbH',
-        short_name: 'Newtelco',
+        name: 'NewTelco GmbH',
+        short_name: 'NewTelco',
         start_url: '/',
         background_color: '#4b4c4d',
         theme_color: '#67b246',

@@ -4,12 +4,10 @@
   "email": "Эл. адрес",
   "phoneNumber": "+49 69 27 00 75 20",
   "emailAddress": "service@newtelco.de",
-
   "products": "Товары",
   "services": "Сервисы",
   "location": "Места",
   "company": "Компания",
-
   "colocation": "Colocation",
   "ncex": "NCEX",
   "vpop": "VPOP",
@@ -18,35 +16,27 @@
   "integration": "интеграция",
   "interconnection": "взаимосвязь",
   "technical": "технический",
-
-  "hello": "Newtelco GmbH",
+  "hello": "NewTelco GmbH",
   "subline": "Newtelco - ваш партнер во всем, что связано с центром обработки данных",
   "latestPosts": "Letzte Posts",
   "category": "категория",
   "allPosts": "Alle Posts",
   "toRead": "Zum Lesen",
   "pageNotFound": "Страница не найдена",
-
   "contact": "контакт",
   "team": "команда",
   "about": "Насчет нас",
-
   "contactAction": "контакт",
   "racks": "стеллаж",
   "datacenters": "датацентров",
   "watts": "Ватт",
   "tbps": "Tbps",
-
   "next": "следующий",
   "prev": "назад",
   "of": "ru",
-
   "button": "кнопка",
-
-  "aboutProject": "Newtelco GmbH",
-
+  "aboutProject": "NewTelco GmbH",
   "legalNotice": "отпечаток",
   "privacyPolicy": "политика конфиденциальности",
-
   "developmentNotice": "Это версия для разработки - точная информация не гарантируется!"
 }
