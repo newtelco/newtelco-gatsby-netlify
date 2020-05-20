@@ -184,7 +184,7 @@ class Racks extends React.Component {
     return (
       <S.RacksWrapper>
         <S.InputHeader>Racks</S.InputHeader>
-        <S.RacksForm data-netlify="true" name="racks" action="#" method="post" data-netlify-honeypot="bot-field">
+        <S.RacksForm data-netlify="true" name="racks" action="" method="post" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="racks" />
           <S.InputWrapper>
             <label>
