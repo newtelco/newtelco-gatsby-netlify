@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
-import SectionItem from '../SectionItem'
+import SectionItem from './SectionItem'
 import { useSection } from '../useSection'
 import LocalizedLink from '../LocalizedLink'
 import { useInView } from 'react-intersection-observer'
@@ -16,7 +16,7 @@ const SectionCategory = props => {
   const simplified = rawData.edges.map(item => {
     return {
       name: item.node.name,
-      translations: item.node.translations,
+      translations: item.node.translations
     }
   })
 
@@ -38,7 +38,7 @@ const SectionCategory = props => {
   const [ref, inView, entry] = useInView({
     threshold: 0.2,
     rootMargin: '50px 20px 75px 30px',
-    triggerOnce: true,
+    triggerOnce: true
   })
 
   return (
@@ -54,7 +54,7 @@ const SectionCategory = props => {
           )
         })}
         <S.ActionBtn>
-          <LocalizedLink to={'#'}>More</LocalizedLink>
+          <LocalizedLink to='#'>More</LocalizedLink>
         </S.ActionBtn>
       </S.Content>
     </S.Wrapper>

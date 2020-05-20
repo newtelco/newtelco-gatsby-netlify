@@ -1,7 +1,7 @@
 import React from 'react'
-import useMenu from '../useMenu'
+import useMenu from '../../useMenu'
 import Languages from '../Languages'
-import newtelcoLogo from '../../images/newtelco-white.png'
+import newtelcoLogo from '../../../images/newtelco-white.png'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 
 import * as S from './styled'

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LocalizedLink from '../LocalizedLink'
+import LocalizedLink from '../../LocalizedLink'
 
 export const OverlayWrapper = styled.div`
   width: 100vw;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import LocalizedLink from '../LocalizedLink'
+import LocalizedLink from '../../LocalizedLink'
 import { Link } from 'gatsby'
 
 export const Navigation = styled.nav`

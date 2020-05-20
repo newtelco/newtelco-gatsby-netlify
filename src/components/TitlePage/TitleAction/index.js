@@ -1,5 +1,5 @@
 import React from 'react'
-import useTranslations from '../useTranslations'
+import useTranslations from '../../useTranslations'
 import { Link } from 'gatsby'
 import { Send, Phone, Inbox } from 'react-feather'
 

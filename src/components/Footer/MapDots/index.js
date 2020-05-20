@@ -1,5 +1,5 @@
 import React from 'react'
-import map from '../../images/map_dots.svg'
+import map from '../../../images/map_dots.svg'
 import * as S from './styled'
 
 const MapDots = () => {

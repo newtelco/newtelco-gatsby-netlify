@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useReducer } from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
+import 'pure-react-carousel/dist/react-carousel.es.css'
 import * as S from './styled'
 
 const Carousel = () => {
@@ -22,10 +22,10 @@ const Carousel = () => {
       interval={5000}
       isPlaying
       infinite
-      isIntrinsicHeight={true}
+      isIntrinsicHeight
     >
-      <S.Wrapper >
-        <Slider >
+      <S.Wrapper>
+        <Slider>
           <Slide index={0}>
             <S.Partner>
               <img src='/assets/img/partners/supermicro.svg' alt='supermicro logo' />
@@ -59,7 +59,7 @@ const Carousel = () => {
         </Slider>
       </S.Wrapper>
     </CarouselProvider>
-  );
+  )
 }
 
 export default Carousel

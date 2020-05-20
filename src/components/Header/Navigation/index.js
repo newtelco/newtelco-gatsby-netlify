@@ -1,5 +1,5 @@
 import React from 'react'
-import useMenu from '../useMenu'
+import useMenu from '../../useMenu'
 
 import * as S from './styled'
 
@@ -21,7 +21,7 @@ const Navigation = ({ isActive, handleToggleMenu, isPartiallyCurrent }) => {
             key={menu.name}
             partiallyActive={
               typeof window !== 'undefined' &&
-              window.location.pathname.includes(menu.name.toLowerCase())
+                window.location.pathname.includes(menu.name.toLowerCase())
                 ? true
                 : false
             }

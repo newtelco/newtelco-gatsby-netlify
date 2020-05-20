@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from '../Layout'
-import SectionItemLoc from '../SectionItemLoc'
+import SectionItemLoc from './SectionItemLoc'
 import { useSection } from '../useSection'
 import { useInView } from 'react-intersection-observer'
 
@@ -15,7 +15,7 @@ const SectionLocation = props => {
   const simplified = rawData.edges.map(item => {
     return {
       name: item.node.name,
-      translations: item.node.translations,
+      translations: item.node.translations
     }
   })
 
@@ -37,7 +37,7 @@ const SectionLocation = props => {
   const [ref, inView, entry] = useInView({
     threshold: 0.8,
     rootMargin: '50px 20px 75px 30px',
-    triggerOnce: true,
+    triggerOnce: true
   })
 
   return (

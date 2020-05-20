@@ -1,5 +1,5 @@
 import React from 'react'
-import LocalizedLink from '../LocalizedLink'
+import LocalizedLink from '../../LocalizedLink'
 
 import * as S from './styled'
 

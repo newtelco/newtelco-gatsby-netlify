@@ -1,5 +1,5 @@
 import React from 'react'
-import language from '../../images/language-solid.svg'
+import language from '../../../images/language-solid.svg'
 import * as S from './styled'
 
 const Languages = props => {

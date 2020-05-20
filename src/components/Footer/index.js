@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import useTranslations from '../useTranslations'
-import SocialLinks from '../SocialLinks'
-import MapDots from '../MapDots'
+import SocialLinks from './SocialLinks'
+import MapDots from './MapDots'
 import LocalizedLink from '../LocalizedLink'
 import uniqBy from 'lodash.uniqby'
 
@@ -39,9 +39,9 @@ const Footer = () => {
   return (
     <S.FooterWrapper>
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="#eaeaea"
-        viewBox="0 0 1920 222.29"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='#eaeaea'
+        viewBox='0 0 1920 222.29'
         style={{
           transform: 'translateY(1px)'
         }}
@@ -49,9 +49,9 @@ const Footer = () => {
         <g>
           <g>
             <path
-              fill="#eaeaea"
-              d="M0,222.29S547.82,11.93,1248.06.64C1867.75-9.36,1920,101.3,1920,101.3v121Z"
-            ></path>
+              fill='#eaeaea'
+              d='M0,222.29S547.82,11.93,1248.06.64C1867.75-9.36,1920,101.3,1920,101.3v121Z'
+             />
           </g>
         </g>
       </svg>
@@ -93,11 +93,11 @@ const Footer = () => {
           </S.FooterLinkSection>
           <S.FooterLinkSection>
             <S.FooterLinkSectionHeader>{company}</S.FooterLinkSectionHeader>
-            <LocalizedLink to="/about"> {about} </LocalizedLink>
-            <LocalizedLink to="/legal"> {legalNotice} </LocalizedLink>
-            <LocalizedLink to="/privacy"> {privacyPolicy} </LocalizedLink>
-            <LocalizedLink to="/contact"> {contact} </LocalizedLink>
-            <a href="https://is.newtelco.online" target="_blank" rel="noopener noreferrer">Status</a>
+            <LocalizedLink to='/about'> {about} </LocalizedLink>
+            <LocalizedLink to='/legal'> {legalNotice} </LocalizedLink>
+            <LocalizedLink to='/privacy'> {privacyPolicy} </LocalizedLink>
+            <LocalizedLink to='/contact'> {contact} </LocalizedLink>
+            <a href='https://is.newtelco.online' target='_blank' rel='noopener noreferrer'>Status</a>
           </S.FooterLinkSection>
         </S.FooterLinkContainer>
         <S.FooterBottomContainer>
@@ -110,22 +110,22 @@ const Footer = () => {
             }}
           >
             <svg
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              class="w-8 h-8"
-              width="16"
-              height="16"
+              fill='currentColor'
+              viewBox='0 0 20 20'
+              class='w-8 h-8'
+              width='16'
+              height='16'
             >
               <path
-                fill-rule="evenodd"
-                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
+                fill-rule='evenodd'
+                d='M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z'
+                clip-rule='evenodd'
+               />
             </svg>
             <S.MaintainerLink
-              rel="noopener noreferrer"
-              href="mailto:ndomino@newtelco.de"
-              target="_blank"
+              rel='noopener noreferrer'
+              href='mailto:ndomino@newtelco.de'
+              target='_blank'
             >
               ndomino
             </S.MaintainerLink>
