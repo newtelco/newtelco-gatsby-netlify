@@ -62,6 +62,24 @@ const Footer = () => {
             <SocialLinks />
           </S.FooterLinkSection>
           <S.FooterLinkSection>
+            <S.FooterLinkSectionHeader>{location}</S.FooterLinkSectionHeader>
+            {locationItems.map(loc => {
+              return (
+                <LocalizedLink key={loc.slug} to={loc.slug}>
+                  {loc.title}
+                </LocalizedLink>
+              )
+            })}
+          </S.FooterLinkSection>
+          <S.FooterLinkSection>
+            <S.FooterLinkSectionHeader>{company}</S.FooterLinkSectionHeader>
+            <LocalizedLink to='/about'> {about} </LocalizedLink>
+            <LocalizedLink to='/legal'> {legalNotice} </LocalizedLink>
+            <LocalizedLink to='/privacy'> {privacyPolicy} </LocalizedLink>
+            <LocalizedLink to='/contact'> {contact} </LocalizedLink>
+            <a href='https://is.newtelco.online' target='_blank' rel='noopener noreferrer'>Status</a>
+          </S.FooterLinkSection>
+          <S.FooterLinkSection>
             <S.FooterLinkSectionHeader>{products}</S.FooterLinkSectionHeader>
             {productsItems.map(prod => {
               return (
@@ -80,24 +98,6 @@ const Footer = () => {
                 </LocalizedLink>
               )
             })}
-          </S.FooterLinkSection>
-          <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>{location}</S.FooterLinkSectionHeader>
-            {locationItems.map(loc => {
-              return (
-                <LocalizedLink key={loc.slug} to={loc.slug}>
-                  {loc.title}
-                </LocalizedLink>
-              )
-            })}
-          </S.FooterLinkSection>
-          <S.FooterLinkSection>
-            <S.FooterLinkSectionHeader>{company}</S.FooterLinkSectionHeader>
-            <LocalizedLink to='/about'> {about} </LocalizedLink>
-            <LocalizedLink to='/legal'> {legalNotice} </LocalizedLink>
-            <LocalizedLink to='/privacy'> {privacyPolicy} </LocalizedLink>
-            <LocalizedLink to='/contact'> {contact} </LocalizedLink>
-            <a href='https://is.newtelco.online' target='_blank' rel='noopener noreferrer'>Status</a>
           </S.FooterLinkSection>
         </S.FooterLinkContainer>
         <S.FooterBottomContainer>
