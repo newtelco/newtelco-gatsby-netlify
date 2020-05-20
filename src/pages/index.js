@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import TitlePage from '../components/TitlePage'
 import useTranslations from '../components/useTranslations'
 import SectionCategory from '../components/SectionCategory'
+import SectionTestimonials from '../components/SectionTestimonials'
 import SectionStats from '../components/SectionStats'
 import { useInView } from 'react-intersection-observer'
 import ScrollTop from '../components/ScrollTop'
@@ -59,6 +60,7 @@ const Index = () => {
         <SectionCategory title={products} />
         <SectionCategory title={services} />
         {/* <SectionLocation title={location}></SectionLocation> */}
+        <SectionTestimonials />
       </div>
       <ScrollTop inView={inView} />
       {/* <CookieBanner

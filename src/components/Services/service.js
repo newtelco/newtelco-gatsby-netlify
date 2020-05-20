@@ -1,6 +1,5 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import { ArrowRight } from 'react-feather'
 
 import * as S from './styled.js'
 
@@ -19,22 +18,23 @@ const Service = props => {
         className={inView ? 'textInView' : ''}
         id={props.indexNr % 2 == 0 ? 'left' : 'right'}
       >
-        <div ref={ref}></div>
+        <div ref={ref} />
         <S.ProductImage
           src={props.service.node.frontmatter.image}
-          alt="Product Image"
-          loading="lazy"
+          alt='Product Image'
+          loading='lazy'
         />
         <S.ProductWrapper>
           <S.Product
             dangerouslySetInnerHTML={{
               __html: props.service.node.frontmatter.short
             }}
-          ></S.Product>
+          >
+          </S.Product>
           <S.ActionButton
             to={`/${props.service.node.fields.section.toLowerCase()}/${
               props.service.node.fields.slug
-            }`}
+              }`}
           >
             Read More
           </S.ActionButton>

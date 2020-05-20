@@ -1,10 +1,10 @@
-const path = require(`path`)
-const locales = require(`./config/i18n`)
+const path = require('path')
+const locales = require('./config/i18n')
 const {
   localizedSlug,
   findKey,
   removeTrailingSlash
-} = require(`./src/utils/gatsby-node-helpers`)
+} = require('./src/utils/gatsby-node-helpers')
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
@@ -46,26 +46,26 @@ exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
   // Check for "MarkdownRemark" type so that other files (e.g. images) are exluded
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     // Use path.basename
     // https://nodejs.org/api/path.html#path_path_basename_path_ext
     // It will return the file name without '.md' string (e.g. "file-name" or "file-name.lang")
-    const name = path.basename(node.fileAbsolutePath, `.md`)
+    const name = path.basename(node.fileAbsolutePath, '.md')
 
     // Find the key that has "default: true" set (in this case it returns "en")
     const defaultKey = findKey(locales, o => o.default === true)
 
     // Check if file.name.lang has the default lang type.
     // (in this case the default language is for files set with "en")
-    const isDefault = name.split(`.`)[1] === defaultKey
+    const isDefault = name.split('.')[1] === defaultKey
 
     // Files are defined with "name-with-dashes.lang.md"
     // So grab the lang from that string
     // If it's the default language, pass the locale for that
-    const lang = isDefault ? defaultKey : name.split(`.`)[1]
+    const lang = isDefault ? defaultKey : name.split('.')[1]
 
     // Get the entire file name and remove the lang of it
-    const slugFileName = name.split(`.`)[0]
+    const slugFileName = name.split('.')[0]
     // Than remove the date if the name has the date info
     const slug = slugFileName
 
@@ -77,10 +77,10 @@ exports.onCreateNode = ({ node, actions }) => {
     const section = sectionRaw.charAt(0).toUpperCase() + sectionRaw.substring(1)
 
     // Adding the nodes on GraphQL for each post as "fields"
-    createNodeField({ node, name: `slug`, value: slug })
-    createNodeField({ node, name: `locale`, value: lang })
-    createNodeField({ node, name: `isDefault`, value: isDefault })
-    createNodeField({ node, name: `section`, value: section })
+    createNodeField({ node, name: 'slug', value: slug })
+    createNodeField({ node, name: 'locale', value: lang })
+    createNodeField({ node, name: 'isDefault', value: isDefault })
+    createNodeField({ node, name: 'section', value: section })
   }
 }
 
@@ -89,9 +89,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   // Templates for Posts List and Single post
-  const sectionItemTemplate = path.resolve(`./src/templates/sectionItem.js`)
-  const pageTemplate = path.resolve(`./src/templates/page.js`)
-  const miscTemplate = path.resolve(`./src/templates/misc.js`)
+  const sectionItemTemplate = path.resolve('./src/templates/sectionItem.js')
+  const pageTemplate = path.resolve('./src/templates/page.js')
+  const miscTemplate = path.resolve('./src/templates/misc.js')
 
   const result = await graphql(`
     {
@@ -153,15 +153,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Setting a template for page or post depending on the content
     // let template = isPage ? pageTemplate : null
-    let template = pageTemplate
-    if (isSection) {
-      template = sectionItemTemplate
-    }
-    if (isMisc) {
-      template = miscTemplate
-    }
-
-    createPage({
+    const template = isPage ? pageTemplate : isSection ? sectionItemTemplate : isMisc ? miscTemplate : null
+    // if (isSection) {
+    //   template = sectionItemTemplate
+    // }
+    // if (isMisc) {
+    //   template = miscTemplate
+    // }
+    template !== null && createPage({
       path: localizedSlug({ isDefault, locale, slug, isPage, section }),
       component: template,
       context: {

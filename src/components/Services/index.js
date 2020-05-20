@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Service from './service'
 
 import * as S from './styled.js'
