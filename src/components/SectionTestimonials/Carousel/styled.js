@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: relative;
   width: 90vw;
   min-height: 300px;
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
 `
 
 export const Partner = styled.div`

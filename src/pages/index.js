@@ -49,14 +49,14 @@ const Index = () => {
   })
 
   return (
-    <div className="homepage">
-      <SEO title="Home" />
+    <div className='homepage'>
+      <SEO title='Home' />
       <TitlePage text={hello} subtitle={subline} />
       <SectionStats />
       <div ref={ref}>
         <SectionTestimonial />
-        <SectionCategory title={products}></SectionCategory>
-        <SectionCategory title={services}></SectionCategory>
+        <SectionCategory title={products} />
+        <SectionCategory title={services} />
         {/* <SectionLocation title={location}></SectionLocation> */}
       </div>
       <ScrollTop inView={inView} />

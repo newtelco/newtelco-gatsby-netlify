@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   height: 300px;
   flex-direction: column;
-  margin: 50px 0px 0px 0px;
+  margin: 0px 0px -50px 0px;
 `
 export const SectionSvg = styled.div`
   position: absolute;
