@@ -22,7 +22,7 @@ const SectionTestimonial = () => {
         <S.Height height={400}>
           <Marquee
             key='1'
-            velocity={20}
+            velocity={10}
           // scatterRandomly
           // minScale={0.7}
           >

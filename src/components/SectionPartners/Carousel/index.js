@@ -49,7 +49,7 @@ const Carousel = React.memo(({ size }) => {
       <S.Height height={700}>
         <Marquee
           key='1'
-          velocity={12}
+          velocity={18}
           scatterRandomly
           minScale={0.7}
           resetAfterTries={200}
