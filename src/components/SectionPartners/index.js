@@ -5,6 +5,9 @@ import * as S from './styled'
 const SectionPartners = props => {
   return (
     <S.Wrapper>
+      <S.Header>
+        Partners
+      </S.Header>
       <Carousel />
     </S.Wrapper>
   )

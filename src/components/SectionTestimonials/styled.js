@@ -10,6 +10,7 @@ export const Testimonial = styled.div`
   object-position: center center;
   will-change: transform, opacity; */
   width: ${props => props.scale * 500}px;
+  overflow: visible;
   /* height: ${props => props.scale * 300}px; */
   border-radius: 10px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.07);

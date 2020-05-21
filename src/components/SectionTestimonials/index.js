@@ -2,6 +2,7 @@ import React from 'react'
 import Marquee from 'react-marquee-slider'
 import times from 'lodash.times'
 import { useStaticQuery, graphql } from 'gatsby'
+import { QuoteAltRight } from 'styled-icons/boxicons-solid/QuoteAltRight'
 import * as S from './styled'
 
 const SectionTestimonial = () => {
@@ -15,7 +16,6 @@ const SectionTestimonial = () => {
     }
   })
   const scale = 1
-  console.log(testimonials)
   return (
     <S.Wrapper>
       <S.FullWidth>
@@ -26,6 +26,15 @@ const SectionTestimonial = () => {
           >
             {times(testimonials.length, Number).map(id => (
               <S.Testimonial key={id} scale={scale} offset='true'>
+                <QuoteAltRight
+                  style={{
+                    color: 'var(--primary-color)',
+                    position: 'absolute',
+                    top: '-10px',
+                    right: '-30px',
+                    width: '64px'
+                  }}
+                />
                 <S.Author>{testimonials[id].author}</S.Author>
                 <S.Company>{testimonials[id].company}</S.Company>
                 <S.Body dangerouslySetInnerHTML={{ __html: testimonials[id].content }} />
