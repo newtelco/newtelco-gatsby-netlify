@@ -12,5 +12,9 @@
       "picture": "",
       "dept": "sales"
     }
-  ]
+  ],
+  "dept": "sales",
+  "name": "Natascha Hartmann",
+  "email": "nhartmann@newtelco.de",
+  "picture": "assets/img/integration.svg"
 }
