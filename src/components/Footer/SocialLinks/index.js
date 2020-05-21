@@ -3,7 +3,7 @@ import React from 'react'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
 import { Github } from 'styled-icons/boxicons-logos/Github'
 import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
-import { Facebook } from 'styled-icons/boxicons-logos/Facebook'
+import { FacebookSquare } from 'styled-icons/boxicons-logos/FacebookSquare'
 
 import * as S from './styled'
 
@@ -13,11 +13,11 @@ const SocialLinks = () => {
       <S.SocialLinksItem>
         <S.SocialLinksLink
           href='https://facebook.com/newtelco'
-          title='Facebook'
+          title='FacebookSquare'
           rel='noopener noreferrer'
           target='_blank'
         >
-          <Facebook />
+          <FacebookSquare />
         </S.SocialLinksLink>
       </S.SocialLinksItem>
       <S.SocialLinksItem>
