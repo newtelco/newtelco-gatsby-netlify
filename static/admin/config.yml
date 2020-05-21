@@ -307,20 +307,24 @@ collections:
         name: "members"
         file: "content/teamMembers.json"
         fields:
-          - { label: "Name", name: name, widget: string }
-          - { label: "Email", name: email, widget: string }
-          - {
-              label: "Picture",
-              name: picture,
-              widget: image,
-              allow_multiple: false,
-            }
-          - label: "Department"
-            name: "dept"
-            widget: "select"
-            options:
-              - { label: "Sales", value: "sales" }
-              - { label: "Marketing", value: "marketing" }
-              - { label: "Billing", value: "billing" }
-              - { label: "Engineering", value: "engineering" }
-              - { label: "Order", value: "order" }
+          - label: Members
+            name: Members
+            widget: list
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Email", name: email, widget: string }
+              - {
+                  label: "Picture",
+                  name: picture,
+                  widget: image,
+                  allow_multiple: false,
+                }
+              - label: "Department"
+                name: "dept"
+                widget: "select"
+                options:
+                  - { label: "Sales", value: "sales" }
+                  - { label: "Marketing", value: "marketing" }
+                  - { label: "Billing", value: "billing" }
+                  - { label: "Engineering", value: "engineering" }
+                  - { label: "Order", value: "order" }
