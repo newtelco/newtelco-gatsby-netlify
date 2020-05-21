@@ -1,0 +1,16 @@
+{
+  "members": [
+    {
+      "name": "Jens Skribek",
+      "email": "jskribek@newtelco.de",
+      "picture": "",
+      "dept": "engineering"
+    },
+    {
+      "name": "Natascha Hartmann",
+      "email": "nhartmann@newtelco.de",
+      "picture": "",
+      "dept": "sales"
+    }
+  ]
+}
