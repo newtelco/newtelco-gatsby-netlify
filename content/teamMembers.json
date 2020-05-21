@@ -16,5 +16,13 @@
   "dept": "sales",
   "name": "Natascha Hartmann",
   "email": "nhartmann@newtelco.de",
-  "picture": "assets/img/integration.svg"
+  "picture": "assets/img/integration.svg",
+  "Members": [
+    {
+      "name": "Jens Leuchters",
+      "email": "jleuchters@newtelco.de",
+      "picture": "assets/img/colocation.svg",
+      "dept": "sales"
+    }
+  ]
 }
