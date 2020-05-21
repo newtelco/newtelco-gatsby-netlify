@@ -318,6 +318,7 @@ collections:
                   name: picture,
                   widget: image,
                   allow_multiple: false,
+                  optional: true,
                 }
               - label: "Department"
                 name: "dept"
@@ -328,3 +329,4 @@ collections:
                   - { label: "Billing", value: "billing" }
                   - { label: "Engineering", value: "engineering" }
                   - { label: "Order", value: "order" }
+                  - { label: "Management", value: "management" }
