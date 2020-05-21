@@ -20,13 +20,11 @@ const Navigation = ({ isActive, handleToggleMenu, isPartiallyCurrent }) => {
             to={menu.link}
             key={menu.name}
             partiallyActive={
-              typeof window !== 'undefined' &&
-                window.location.pathname.includes(menu.name.toLowerCase())
-                ? true
-                : false
+              !!(typeof window !== 'undefined' &&
+                window.location.pathname.includes(menu.name.toLowerCase()))
             }
             aria-label={menu.name}
-            activeClassName="active"
+            activeClassName='active'
             onClick={() => closeMenu()}
           >
             {menu.name}

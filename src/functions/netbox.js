@@ -15,7 +15,6 @@ exports.handler = (event, context, callback) => {
       body: JSON.stringify({ message: 'You can use CORS' })
     }
     callback(null, response)
-    return
   } else if (event.httpMethod === 'GET') {
     fetch(`${API_ENDPOINT}?tag=forresale`, {
       headers: {

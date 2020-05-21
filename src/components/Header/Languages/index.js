@@ -10,13 +10,13 @@ const Languages = props => {
   return (
     <S.LanguageWrapper className={props.isActive ? 'active' : ''}>
       <S.LanguageItem className={props.isActive ? 'active' : ''}>
-        <S.LanguageImage src={language} alt="Language" />
+        <S.LanguageImage src={language} alt='Language' />
       </S.LanguageItem>
       <S.LanguageChoiceWrapper className={props.isActive ? 'active' : ''}>
         <S.LanguageItemDropdown>
           <S.LanguageLink
-            to="/"
-            hrefLang="en"
+            to='/'
+            hrefLang='en'
             onClick={() => setLanguage('en-GB')}
           >
             🇬🇧
@@ -24,8 +24,8 @@ const Languages = props => {
         </S.LanguageItemDropdown>
         <S.LanguageItemDropdown>
           <S.LanguageLink
-            to="/de"
-            hrefLang="de"
+            to='/de'
+            hrefLang='de'
             onClick={() => setLanguage('de')}
           >
             🇩🇪
@@ -33,8 +33,8 @@ const Languages = props => {
         </S.LanguageItemDropdown>
         <S.LanguageItemDropdown>
           <S.LanguageLink
-            to="/ru"
-            hrefLang="ru"
+            to='/ru'
+            hrefLang='ru'
             onClick={() => setLanguage('ru')}
           >
             🇷🇺

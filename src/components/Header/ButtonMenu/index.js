@@ -6,9 +6,9 @@ export const ButtonMenu = props => {
     <S.ButtonHamburger
       onClick={props.handleClick}
       className={props.isActive ? 'active' : ''}
-      aria-label="Menu Button"
+      aria-label='Menu Button'
     >
-      <span></span>
+      <span />
     </S.ButtonHamburger>
   )
 }

@@ -34,7 +34,7 @@ const Service = props => {
           <S.ActionButton
             to={`/${props.service.node.fields.section.toLowerCase()}/${
               props.service.node.fields.slug
-              }`}
+            }`}
           >
             Read More
           </S.ActionButton>

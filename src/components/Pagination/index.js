@@ -11,7 +11,7 @@ const Pagination = ({
   currentPage,
   numPages,
   prevPage,
-  nextPage,
+  nextPage
 }) => {
   const { next, prev, of } = useTranslations()
 
@@ -36,7 +36,7 @@ Pagination.propTypes = {
   currentPage: propTypes.number.isRequired,
   numPages: propTypes.number.isRequired,
   prevPage: propTypes.string,
-  nextPage: propTypes.string,
+  nextPage: propTypes.string
 }
 
 export default Pagination

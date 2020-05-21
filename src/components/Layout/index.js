@@ -3,9 +3,9 @@ import Header from '../Header'
 import Footer from '../Footer'
 import GlobalStyles from '../../styles/global'
 
-const LocaleContext = React.createContext()
-
 import * as S from './styled'
+
+const LocaleContext = React.createContext()
 
 // Use the built-in Context API to make the "locale" available to every component in the tree
 // This e.g. enables the LocalizedLink to function correctly
@@ -18,7 +18,7 @@ const Layout = ({ children, pageContext: { locale } }) => {
       <GlobalStyles />
       <S.Wrapper>
         <Header />
-        <S.SiteContent role="main">
+        <S.SiteContent role='main'>
           <S.Container>{children}</S.Container>
         </S.SiteContent>
         <Footer />

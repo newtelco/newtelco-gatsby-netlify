@@ -75,8 +75,8 @@ const Smallchat = () => {
 
   return (
     <Helmet>
-      <link rel="stylesheet" href="https://static.small.chat/messenger.css" />
-      <script async src="https://static.small.chat/messenger.js" />
+      <link rel='stylesheet' href='https://static.small.chat/messenger.css' />
+      <script async src='https://static.small.chat/messenger.js' />
     </Helmet>
   )
 }

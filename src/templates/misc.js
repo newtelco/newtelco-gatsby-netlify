@@ -26,7 +26,7 @@ const Legal = props => {
 
   return (
     <>
-      <SEO title="Legal Notice" />
+      <SEO title='Legal Notice' />
       <div
         style={{
           display: 'flex',
@@ -46,7 +46,7 @@ const Legal = props => {
           dangerouslySetInnerHTML={{
             __html: props.data.allMarkdownRemark.edges[0].node.html
           }}
-        ></Content>
+        />
       </div>
     </>
   )

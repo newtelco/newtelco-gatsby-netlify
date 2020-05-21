@@ -7,7 +7,7 @@ import locales from '../../../config/i18n'
 const LocalizedLink = ({ to, ...props }) => {
   const { locale } = React.useContext(LocaleContext)
 
-  const isIndex = to === `/`
+  const isIndex = to === '/'
 
   // If it's the default language, don't do anything
   // If it's another language, add the "path"
@@ -15,7 +15,7 @@ const LocalizedLink = ({ to, ...props }) => {
   // Because otherwise this would add a trailing slash
   const path = locales[locale].default
     ? to
-    : `${locales[locale].path}${isIndex ? `` : `${to}`}`
+    : `${locales[locale].path}${isIndex ? '' : `${to}`}`
 
   return <Link {...props} to={path} />
 }

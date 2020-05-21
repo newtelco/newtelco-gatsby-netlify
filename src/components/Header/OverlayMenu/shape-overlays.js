@@ -1,103 +1,108 @@
 class ShapeOverlays {
-  constructor(elm) {
-    this.elm = elm;
-    this.path = elm.querySelectorAll('path');
-    this.numPoints = 2;
-    this.duration = 600;
-    this.delayPointsArray = [];
-    this.delayPointsMax = 0;
-    this.delayPerPath = 200;
-    this.timeStart = Date.now();
-    this.isOpened = false;
-    this.isAnimating = false;
+  constructor (elm) {
+    this.elm = elm
+    this.path = elm.querySelectorAll('path')
+    this.numPoints = 2
+    this.duration = 600
+    this.delayPointsArray = []
+    this.delayPointsMax = 0
+    this.delayPerPath = 200
+    this.timeStart = Date.now()
+    this.isOpened = false
+    this.isAnimating = false
   }
-  toggle() {
-    this.isAnimating = true;
+
+  toggle () {
+    this.isAnimating = true
     for (var i = 0; i < this.numPoints; i++) {
-      this.delayPointsArray[i] = 0;
+      this.delayPointsArray[i] = 0
     }
     if (this.isOpened === false) {
-      this.open();
+      this.open()
     } else {
-      this.close();
+      this.close()
     }
   }
-  open() {
-    this.isOpened = true;
-    this.elm.classList.add('is-opened');
-    this.timeStart = Date.now();
-    this.renderLoop();
+
+  open () {
+    this.isOpened = true
+    this.elm.classList.add('is-opened')
+    this.timeStart = Date.now()
+    this.renderLoop()
   }
-  close() {
-    this.isOpened = false;
-    this.elm.classList.remove('is-opened');
-    this.timeStart = Date.now();
-    this.renderLoop();
+
+  close () {
+    this.isOpened = false
+    this.elm.classList.remove('is-opened')
+    this.timeStart = Date.now()
+    this.renderLoop()
   }
-  updatePath(time) {
-    const points = [];
+
+  updatePath (time) {
+    const points = []
     for (var i = 0; i < this.numPoints; i++) {
-      const thisEase = this.isOpened ? 
-                        (i == 1) ? ease.cubicOut : ease.cubicInOut:
-                        (i == 1) ? ease.cubicInOut : ease.cubicOut;
+      const thisEase = this.isOpened
+        ? (i == 1) ? ease.cubicOut : ease.cubicInOut
+        : (i == 1) ? ease.cubicInOut : ease.cubicOut
       points[i] = thisEase(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1)) * 100
     }
 
-    let str = '';
-    str += (this.isOpened) ? `M 0 0 V ${points[0]} ` : `M 0 ${points[0]} `;
+    let str = ''
+    str += (this.isOpened) ? `M 0 0 V ${points[0]} ` : `M 0 ${points[0]} `
     for (var i = 0; i < this.numPoints - 1; i++) {
-      const p = (i + 1) / (this.numPoints - 1) * 100;
-      const cp = p - (1 / (this.numPoints - 1) * 100) / 2;
-      str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${points[i + 1]} `;
+      const p = (i + 1) / (this.numPoints - 1) * 100
+      const cp = p - (1 / (this.numPoints - 1) * 100) / 2
+      str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${points[i + 1]} `
     }
-    str += (this.isOpened) ? `V 0 H 0` : `V 100 H 0`;
-    return str;
+    str += (this.isOpened) ? 'V 0 H 0' : 'V 100 H 0'
+    return str
   }
-  render() {
+
+  render () {
     if (this.isOpened) {
       for (var i = 0; i < this.path.length; i++) {
-        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * i)));
+        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * i)))
       }
     } else {
       for (var i = 0; i < this.path.length; i++) {
-        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * (this.path.length - i - 1))));
+        this.path[i].setAttribute('d', this.updatePath(Date.now() - (this.timeStart + this.delayPerPath * (this.path.length - i - 1))))
       }
     }
   }
-  renderLoop() {
-    this.render();
+
+  renderLoop () {
+    this.render()
     if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
       requestAnimationFrame(() => {
-        this.renderLoop();
-      });
-    }
-    else {
-      this.isAnimating = false;
+        this.renderLoop()
+      })
+    } else {
+      this.isAnimating = false
     }
   }
 }
 
-(function() {
-  const elmHamburger = document.querySelector('.hamburger');
-  const gNavItems = document.querySelectorAll('.global-menu__item');
-  const elmOverlay = document.querySelector('.shape-overlays');
-  const overlay = new ShapeOverlays(elmOverlay);
+(function () {
+  const elmHamburger = document.querySelector('.hamburger')
+  const gNavItems = document.querySelectorAll('.global-menu__item')
+  const elmOverlay = document.querySelector('.shape-overlays')
+  const overlay = new ShapeOverlays(elmOverlay)
 
   elmHamburger.addEventListener('click', () => {
     if (overlay.isAnimating) {
-      return false;
+      return false
     }
-    overlay.toggle();
+    overlay.toggle()
     if (overlay.isOpened === true) {
-      elmHamburger.classList.add('is-opened-navi');
+      elmHamburger.classList.add('is-opened-navi')
       for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.add('is-opened');
+        gNavItems[i].classList.add('is-opened')
       }
     } else {
-      elmHamburger.classList.remove('is-opened-navi');
+      elmHamburger.classList.remove('is-opened-navi')
       for (var i = 0; i < gNavItems.length; i++) {
-        gNavItems[i].classList.remove('is-opened');
+        gNavItems[i].classList.remove('is-opened')
       }
     }
-  });
-}());
+  })
+}())

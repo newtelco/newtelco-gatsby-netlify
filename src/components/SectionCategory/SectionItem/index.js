@@ -16,7 +16,7 @@ const SectionItem = props => {
         id={indexNr % 2 == 0 ? 'right' : 'left'}
         src={props.item.frontmatter.image}
         alt={`${props.item.frontmatter.title} Image`}
-        loading="lazy"
+        loading='lazy'
       />
       <S.SectionTextWrapper>
         <S.Header className={props.inView ? 'textInView' : ''}>
@@ -25,7 +25,7 @@ const SectionItem = props => {
         <S.Content className={props.inView ? 'textInView' : ''}>
           <div
             dangerouslySetInnerHTML={{ __html: props.item.frontmatter.short }}
-          ></div>
+          />
         </S.Content>
       </S.SectionTextWrapper>
     </S.Wrapper>

@@ -8,7 +8,7 @@ const Product = props => {
   const [ref, inView, entry] = useInView({
     threshold: 0.8,
     rootMargin: '50px 20px 75px 30px',
-    triggerOnce: true,
+    triggerOnce: true
   })
   // const siteNames = []
   // console.log(sites.length)
@@ -27,16 +27,17 @@ const Product = props => {
     <>
       <S.Header>{props.product.node.frontmatter.title}</S.Header>
       <S.SectionWrapper>
-        <div ref={ref}></div>
+        <div ref={ref} />
         <S.ProductImage
           src={props.product.node.frontmatter.image}
-          alt="Product Image"
+          alt='Product Image'
         />
         <S.Product
           dangerouslySetInnerHTML={{ __html: props.product.node.html }}
           className={inView ? 'textInView' : ''}
           id={props.indexNr % 2 == 0 ? 'left' : 'right'}
-        ></S.Product>
+        >
+        </S.Product>
         <Sites sites={props.sites} />
       </S.SectionWrapper>
     </>

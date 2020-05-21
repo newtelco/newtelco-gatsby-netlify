@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { LocaleContext } from './Layout'
 
-function useMenu() {
+function useMenu () {
   // Grab the locale (passed through context) from the Context Provider
   const { locale } = React.useContext(LocaleContext)
   // Query the JSON files in <rootDir>/i18n/translations
@@ -12,7 +12,7 @@ function useMenu() {
   const simplified = rawData.edges.map(item => {
     return {
       name: item.node.name,
-      menuItems: item.node.translations.menuItems,
+      menuItems: item.node.translations.menuItems
     }
   })
 

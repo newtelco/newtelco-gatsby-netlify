@@ -20,9 +20,9 @@ const SectionStats = props => {
       <S.ContentWrapper>
         <S.Datacenter
           src={datacenter}
-          alt="datacenter"
+          alt='datacenter'
           className={inView ? 'imageInView' : ''}
-          loading="lazy"
+          loading='lazy'
         />
         <S.Content ref={ref}>
           <StatBlock inView={inView} label={racks} value={457} />

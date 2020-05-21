@@ -33,7 +33,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
   }
   return (
     <S.OverlayWrapper className={isActive ? 'active' : 'hidden'}>
-      <S.HeaderImage src={newtelcoLogo} alt="Newtelco Logo" />
+      <S.HeaderImage src={newtelcoLogo} alt='Newtelco Logo' />
       <S.Navigation>
         <ul className={isActive ? 'active' : ''}>
           <motion.div
@@ -43,7 +43,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
           >
             {menuItems.map((menu, index) => (
               <motion.div
-                initial="hidden"
+                initial='hidden'
                 variants={variants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
@@ -54,7 +54,7 @@ const OverlayMenu = ({ toggleMenu, isActive }) => {
                   <S.NavigationLink
                     to={menu.link}
                     aria-label={menu.name}
-                    activeClassName="active"
+                    activeClassName='active'
                     onClick={toggleMenu}
                   >
                     {menu.name}

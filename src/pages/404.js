@@ -8,20 +8,20 @@ const NotFound = () => {
 
   return (
     <>
-      <SEO title="404: Not found" />
+      <SEO title='404: Not found' />
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          margin: '50px',
+          margin: '50px'
         }}
       >
-        <img src={image} alt="404 Image" style={{ maxWidth: '80%' }} />
+        <img src={image} alt='404 Image' style={{ maxWidth: '80%' }} />
         <h1
           style={{
             fontSize: '3rem',
-            marginTop: '100px',
+            marginTop: '100px'
           }}
         >
           {pageNotFound}
